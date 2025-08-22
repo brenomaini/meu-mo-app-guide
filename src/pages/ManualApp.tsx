@@ -1,6 +1,6 @@
 import Layout from "@/components/Layout";
 import { Card } from "@/components/ui/card";
-import { Smartphone, Download, User, Key, Bell, Calendar, MessageSquare, CreditCard, AlertTriangle, Users, Lightbulb, MessagesSquare, BookOpen, AlertCircle, CheckCircle } from "lucide-react";
+import { Smartphone, Download, User, Key, Bell, Calendar, MessageSquare, CreditCard, AlertTriangle, Users, Lightbulb, MessagesSquare, BookOpen, AlertCircle, CheckCircle, Map, MapPin } from "lucide-react";
 
 const ManualApp = () => {
   const sections = [
@@ -183,6 +183,15 @@ const ManualApp = () => {
                 <h3 className="font-semibold text-text-primary mb-2">Sugestões</h3>
                 <a href="#sugestoes" className="text-primary hover:text-primary/80 text-sm block">
                   • Como Dar Sugestões na Plataforma
+                </a>
+              </div>
+              <div>
+                <h3 className="font-semibold text-text-primary mb-2">Mapas de Áreas</h3>
+                <a href="#mapas-churrasqueiras" className="text-primary hover:text-primary/80 text-sm block">
+                  • Mapas de Churrasqueiras
+                </a>
+                <a href="#mapas-saloes" className="text-primary hover:text-primary/80 text-sm block">
+                  • Mapa de Salões
                 </a>
               </div>
             </div>
@@ -525,6 +534,164 @@ const ManualApp = () => {
             </div>
           </Card>
 
+        </div>
+
+        {/* Guias de Mapas de Áreas */}
+        <div className="mt-12">
+          <h2 className="text-2xl font-bold text-text-primary mb-8 text-center">
+            Guias de Mapas de Áreas
+          </h2>
+          
+          {/* Mapas de Churrasqueiras */}
+          <Card id="mapas-churrasqueiras" className="mb-8 p-6 border-orange-200 bg-orange-50/50">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-3 rounded-lg bg-orange-100">
+                <Map className="h-7 w-7 text-orange-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-orange-700">
+                Mapas de Churrasqueiras
+              </h3>
+            </div>
+            
+            <div className="bg-orange-50 border border-orange-200 rounded-lg p-4 mb-6">
+              <p className="text-orange-800 text-sm">
+                <strong>IMPORTANTE:</strong> Use este mapa para localizar e verificar a disponibilidade das churrasqueiras do condomínio antes de fazer sua reserva.
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              <div>
+                <h4 className="font-semibold text-text-primary mb-2">Como Acessar o Mapa de Churrasqueiras:</h4>
+                <ol className="space-y-3 text-text-secondary">
+                  <li className="flex gap-3">
+                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">1</span>
+                    <div>
+                      <strong>Acesse a seção de Reservas:</strong> No menu principal do aplicativo, clique em "Reservas" ou "Áreas Comuns".
+                      <div className="mt-2 p-3 bg-gray-100 rounded-lg border border-dashed border-gray-300">
+                        <p className="text-sm text-gray-600 italic">
+                          📱 Espaço reservado para imagem: Tela de Reservas mostrando o acesso aos mapas
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">2</span>
+                    <div><strong>Procure por "Churrasqueiras":</strong> Na lista de áreas disponíveis, localize a seção "Churrasqueiras" ou "Área de Churrascos".</div>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">3</span>
+                    <div><strong>Visualize o Mapa:</strong> Clique no ícone de mapa ou na opção "Ver Localização" para acessar o mapa interativo das churrasqueiras.</div>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">4</span>
+                    <div><strong>Identifique as Churrasqueiras:</strong> No mapa, você verá a localização de cada churrasqueira identificada por números ou letras.</div>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">5</span>
+                    <div><strong>Verifique Disponibilidade:</strong> Algumas churrasqueiras podem mostrar status de disponibilidade (livre/ocupada) diretamente no mapa.</div>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">6</span>
+                    <div><strong>Selecione para Reservar:</strong> Clique na churrasqueira desejada para iniciar o processo de reserva.</div>
+                  </li>
+                </ol>
+              </div>
+
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mt-6">
+                <div className="flex items-start gap-3">
+                  <MapPin className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-blue-800 text-sm">
+                      <strong>Dica:</strong> Use o mapa para escolher a churrasqueira mais próxima da sua torre ou com melhor localização para o seu evento.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Card>
+
+          {/* Mapa de Salões */}
+          <Card id="mapas-saloes" className="mb-8 p-6 border-purple-200 bg-purple-50/50">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-3 rounded-lg bg-purple-100">
+                <MapPin className="h-7 w-7 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-purple-700">
+                Mapa de Salões
+              </h3>
+            </div>
+            
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-4 mb-6">
+              <p className="text-purple-800 text-sm">
+                <strong>IMPORTANTE:</strong> Use este mapa para localizar e verificar a disponibilidade dos salões de festa e salões de reuniões do condomínio.
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              <div>
+                <h4 className="font-semibold text-text-primary mb-2">Como Acessar o Mapa de Salões:</h4>
+                <ol className="space-y-3 text-text-secondary">
+                  <li className="flex gap-3">
+                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">1</span>
+                    <div>
+                      <strong>Acesse a seção de Reservas:</strong> No menu principal do aplicativo, clique em "Reservas" ou "Áreas Comuns".
+                      <div className="mt-2 p-3 bg-gray-100 rounded-lg border border-dashed border-gray-300">
+                        <p className="text-sm text-gray-600 italic">
+                          📱 Espaço reservado para imagem: Tela de Reservas mostrando salões disponíveis
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">2</span>
+                    <div><strong>Localize os Salões:</strong> Na lista de áreas disponíveis, procure por "Salão de Festas", "Salão de Reuniões" ou "Espaços para Eventos".</div>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">3</span>
+                    <div><strong>Visualize o Mapa:</strong> Clique no ícone de mapa ou na opção "Ver Localização" para acessar o mapa interativo dos salões.</div>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">4</span>
+                    <div><strong>Identifique os Salões:</strong> No mapa, você verá a localização de cada salão com suas respectivas identificações e capacidade.</div>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">5</span>
+                    <div><strong>Veja Informações Detalhadas:</strong> Clique em cada salão para ver informações como capacidade, equipamentos disponíveis e fotos do espaço.</div>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">6</span>
+                    <div><strong>Verifique Disponibilidade:</strong> O mapa mostrará a disponibilidade em tempo real de cada salão para as datas desejadas.</div>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">7</span>
+                    <div><strong>Faça sua Reserva:</strong> Selecione o salão desejado, escolha data e horário, e complete o processo de reserva.</div>
+                  </li>
+                </ol>
+              </div>
+
+              <div className="bg-green-50 border border-green-200 rounded-lg p-4 mt-6">
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-green-800 text-sm">
+                      <strong>Dica:</strong> Compare os diferentes salões no mapa para escolher o que melhor atende às suas necessidades em termos de localização, tamanho e equipamentos.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mt-4">
+                <div className="flex items-start gap-3">
+                  <AlertCircle className="h-5 w-5 text-yellow-600 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-yellow-800 text-sm">
+                      <strong>Importante:</strong> Alguns salões podem ter regras específicas de uso ou exigir taxas adicionais. Verifique sempre os termos e condições antes de confirmar a reserva.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Card>
         </div>
 
         <Card className="mt-8 p-6 bg-primary/5 border-primary/20">
