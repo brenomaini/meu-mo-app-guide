@@ -18,7 +18,6 @@ interface Space {
   capacity: number;
   amenities: string[];
   hours: string;
-  available: boolean;
 }
 
 const towers: Tower[] = [
@@ -32,24 +31,21 @@ const towers: Tower[] = [
         name: "Salão de Festas com Copa",
         capacity: 80,
         amenities: ["Copa", "Som", "Iluminação", "Ar-condicionado"],
-        hours: "8h às 2h",
-        available: true
+        hours: "8h às 2h"
       },
       {
         id: "home-office-1",
         name: "Home Office",
         capacity: 15,
         amenities: ["Mesas", "Wi-Fi", "Ar-condicionado", "Impressora"],
-        hours: "6h às 22h",
-        available: true
+        hours: "6h às 22h"
       },
       {
         id: "espaco-gourmet-1",
         name: "Espaço Gourmet",
         capacity: 40,
         amenities: ["Churrasqueira", "Bancada", "Geladeira", "Pia"],
-        hours: "8h às 22h",
-        available: false
+        hours: "8h às 22h"
       }
     ]
   },
@@ -63,16 +59,14 @@ const towers: Tower[] = [
         name: "Espaço Teen com Lavabo",
         capacity: 25,
         amenities: ["Jogos", "Lavabo", "Som", "Iluminação"],
-        hours: "8h às 22h",
-        available: true
+        hours: "8h às 22h"
       },
       {
         id: "salao-festa-2",
         name: "Salão de Festa com Copa",
         capacity: 70,
         amenities: ["Copa", "Som", "Iluminação", "Ar-condicionado"],
-        hours: "8h às 2h",
-        available: true
+        hours: "8h às 2h"
       }
     ]
   },
@@ -86,8 +80,7 @@ const towers: Tower[] = [
         name: "Salão de Festas com Copa",
         capacity: 75,
         amenities: ["Copa", "Som", "Iluminação", "Ar-condicionado"],
-        hours: "8h às 2h",
-        available: true
+        hours: "8h às 2h"
       }
     ]
   },
@@ -101,16 +94,14 @@ const towers: Tower[] = [
         name: "Oficina de Bricolagem",
         capacity: 15,
         amenities: ["Ferramentas", "Bancadas", "Iluminação", "Ventilação"],
-        hours: "8h às 18h",
-        available: true
+        hours: "8h às 18h"
       },
       {
         id: "bicicletario-4",
         name: "Bicicletário",
         capacity: 50,
         amenities: ["Suportes", "Segurança", "Cobertura"],
-        hours: "24h",
-        available: true
+        hours: "24h"
       }
     ]
   },
@@ -124,24 +115,21 @@ const towers: Tower[] = [
         name: "Espaço Gourmet",
         capacity: 45,
         amenities: ["Churrasqueira", "Bancada", "Geladeira", "Pia"],
-        hours: "8h às 22h",
-        available: true
+        hours: "8h às 22h"
       },
       {
         id: "salao-jogos-5",
         name: "Salão de Jogos Adulto",
         capacity: 30,
         amenities: ["Mesa de Sinuca", "Jogos", "Som", "Ar-condicionado"],
-        hours: "8h às 22h",
-        available: false
+        hours: "8h às 22h"
       },
       {
         id: "bicicletario-5",
         name: "Bicicletário",
         capacity: 50,
         amenities: ["Suportes", "Segurança", "Cobertura"],
-        hours: "24h",
-        available: true
+        hours: "24h"
       }
     ]
   },
@@ -155,16 +143,14 @@ const towers: Tower[] = [
         name: "Espaço Yoga",
         capacity: 20,
         amenities: ["Tatames", "Espelhos", "Som", "Ar-condicionado"],
-        hours: "6h às 22h",
-        available: true
+        hours: "6h às 22h"
       },
       {
         id: "biblioteca-6",
         name: "Biblioteca com Espaço Leitura",
         capacity: 25,
         amenities: ["Livros", "Poltronas", "Mesas", "Wi-Fi", "Silêncio"],
-        hours: "8h às 20h",
-        available: true
+        hours: "8h às 20h"
       }
     ]
   },
@@ -178,16 +164,14 @@ const towers: Tower[] = [
         name: "Espaço com Terraço",
         capacity: 35,
         amenities: ["Terraço", "Vista", "Mobiliário", "Iluminação"],
-        hours: "8h às 22h",
-        available: true
+        hours: "8h às 22h"
       },
       {
         id: "brinquedoteca-7",
         name: "Brinquedoteca com Terraço Leitura",
         capacity: 20,
         amenities: ["Brinquedos", "Terraço", "Livros", "Segurança"],
-        hours: "8h às 18h",
-        available: true
+        hours: "8h às 18h"
       }
     ]
   },
@@ -201,32 +185,28 @@ const towers: Tower[] = [
         name: "Salão de Reuniões com Terraço",
         capacity: 20,
         amenities: ["Mesa", "Projetor", "Wi-Fi", "Terraço", "Ar-condicionado"],
-        hours: "8h às 18h",
-        available: true
+        hours: "8h às 18h"
       },
       {
         id: "foyer-cinema-8",
         name: "Foyer de Cinema",
         capacity: 15,
         amenities: ["Poltronas", "Iluminação", "Decoração"],
-        hours: "19h às 23h",
-        available: true
+        hours: "19h às 23h"
       },
       {
         id: "sala-projecao-8",
         name: "Sala de Projeção",
         capacity: 8,
         amenities: ["Projetor", "Som", "Controles", "Ar-condicionado"],
-        hours: "19h às 23h",
-        available: false
+        hours: "19h às 23h"
       },
       {
         id: "cinema-8",
         name: "Cinema",
         capacity: 40,
         amenities: ["Poltronas", "Tela", "Som Surround", "Ar-condicionado"],
-        hours: "19h às 23h",
-        available: true
+        hours: "19h às 23h"
       }
     ]
   },
@@ -240,32 +220,28 @@ const towers: Tower[] = [
         name: "Salão de Festas com Copa",
         capacity: 85,
         amenities: ["Copa", "Som", "Iluminação", "Ar-condicionado", "Varanda"],
-        hours: "8h às 2h",
-        available: true
+        hours: "8h às 2h"
       },
       {
         id: "espaco-gourmet-9",
         name: "Espaço Gourmet",
         capacity: 50,
         amenities: ["Churrasqueira", "Bancada", "Geladeira", "Pia", "Forno"],
-        hours: "8h às 22h",
-        available: true
+        hours: "8h às 22h"
       },
       {
         id: "brinquedoteca-9",
         name: "Brinquedoteca com Terraço",
         capacity: 25,
         amenities: ["Brinquedos", "Terraço", "Segurança", "Climatização"],
-        hours: "8h às 18h",
-        available: false
+        hours: "8h às 18h"
       },
       {
         id: "espaco-stadium-9",
         name: "Espaço Stadium",
         capacity: 100,
         amenities: ["Telão", "Som", "Arquibancada", "Climatização"],
-        hours: "8h às 23h",
-        available: true
+        hours: "8h às 23h"
       }
     ]
   }
@@ -362,28 +338,23 @@ const InteractiveCondominiumMap = () => {
               
               <div className="space-y-4">
                 <h4 className="text-lg font-semibold text-gray-800">
-                  Espaços Disponíveis ({selectedTower.spaces.length})
+                  Espaços da Torre ({selectedTower.spaces.length})
                 </h4>
                 
                 {selectedTower.spaces.map((space) => (
-                  <Card key={space.id} className={`p-4 border-l-4 ${space.available ? 'border-l-green-500 bg-green-50/50' : 'border-l-red-500 bg-red-50/50'}`}>
-                    <div className="flex items-start justify-between mb-3">
-                      <div>
-                        <h5 className="font-semibold text-gray-800">{space.name}</h5>
-                        <div className="flex items-center gap-4 text-sm text-gray-600 mt-1">
-                          <span className="flex items-center gap-1">
-                            <Users className="h-4 w-4" />
-                            {space.capacity} pessoas
-                          </span>
-                          <span className="flex items-center gap-1">
-                            <Clock className="h-4 w-4" />
-                            {space.hours}
-                          </span>
-                        </div>
+                  <Card key={space.id} className="p-4 border-l-4 border-l-primary bg-primary/5">
+                    <div className="mb-3">
+                      <h5 className="font-semibold text-gray-800 mb-2">{space.name}</h5>
+                      <div className="flex items-center gap-4 text-sm text-gray-600">
+                        <span className="flex items-center gap-1">
+                          <Users className="h-4 w-4" />
+                          {space.capacity} pessoas
+                        </span>
+                        <span className="flex items-center gap-1">
+                          <Clock className="h-4 w-4" />
+                          {space.hours}
+                        </span>
                       </div>
-                      <Badge variant={space.available ? "default" : "destructive"}>
-                        {space.available ? "Disponível" : "Ocupado"}
-                      </Badge>
                     </div>
                     
                     <div className="flex flex-wrap gap-2">
@@ -394,12 +365,6 @@ const InteractiveCondominiumMap = () => {
                         </Badge>
                       ))}
                     </div>
-                    
-                    {space.available && (
-                      <Button className="w-full mt-3" size="sm">
-                        Reservar {space.name}
-                      </Button>
-                    )}
                   </Card>
                 ))}
               </div>
@@ -414,8 +379,7 @@ const InteractiveCondominiumMap = () => {
         <ul className="text-sm text-gray-600 space-y-1">
           <li>• Clique nos pontos <span className="inline-block w-3 h-3 bg-primary rounded-full mx-1"></span> no mapa para ver os espaços de cada torre</li>
           <li>• Passe o mouse sobre os pontos para ver o nome da torre</li>
-          <li>• Espaços com borda verde estão disponíveis para reserva</li>
-          <li>• Espaços com borda vermelha estão atualmente ocupados</li>
+          <li>• Visualize informações sobre capacidade, comodidades e horários de funcionamento</li>
         </ul>
       </div>
     </div>
