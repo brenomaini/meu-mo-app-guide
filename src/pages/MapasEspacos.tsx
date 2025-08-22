@@ -73,15 +73,15 @@ const MapasEspacos = () => {
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span>Salão de Festas:</span>
-                  <span>8h às 2h</span>
+                  <span>10h às 22h</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Quadras:</span>
-                  <span>6h às 22h</span>
+                  <span>8h às 22h</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Playground:</span>
-                  <span>6h às 20h</span>
+                  <span>8h às 20h</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Academia:</span>

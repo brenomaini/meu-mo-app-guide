@@ -94,11 +94,11 @@ const MapasChurrasqueiras = () => {
           <div className="space-y-3">
             <div className="flex items-start gap-3">
               <div className="w-2 h-2 bg-orange-500 rounded-full mt-2"></div>
-              <p className="text-gray-600">Horário de funcionamento: 8h às 22h</p>
+              <p className="text-gray-600">Horário de funcionamento: 10h às 22h</p>
             </div>
             <div className="flex items-start gap-3">
               <div className="w-2 h-2 bg-orange-500 rounded-full mt-2"></div>
-              <p className="text-gray-600">Máximo 6 horas por reserva</p>
+              <p className="text-gray-600">Capacidade máxima de 20 pessoas</p>
             </div>
             <div className="flex items-start gap-3">
               <div className="w-2 h-2 bg-orange-500 rounded-full mt-2"></div>
@@ -106,7 +106,7 @@ const MapasChurrasqueiras = () => {
             </div>
             <div className="flex items-start gap-3">
               <div className="w-2 h-2 bg-orange-500 rounded-full mt-2"></div>
-              <p className="text-gray-600">Respeitar o limite de pessoas por área</p>
+              <p className="text-gray-600">Proibido som alto após as 22h</p>
             </div>
           </div>
         </Card>
