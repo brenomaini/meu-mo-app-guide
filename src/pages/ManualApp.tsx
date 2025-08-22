@@ -228,9 +228,10 @@ const ManualApp = () => {
         {/* Seção com Tabs */}
         <div className="mt-12">
           <Tabs defaultValue="comunicacao" className="w-full">
-            <TabsList className="grid w-full grid-cols-2">
+            <TabsList className="grid w-full grid-cols-3">
               <TabsTrigger value="comunicacao">Utilização do App</TabsTrigger>
-              <TabsTrigger value="mapas">Mapas</TabsTrigger>
+              <TabsTrigger value="mapas-churrasqueiras">Mapas de Churrasqueiras</TabsTrigger>
+              <TabsTrigger value="mapas-espacos">Mapa de Espaços</TabsTrigger>
             </TabsList>
             
             <TabsContent value="comunicacao" className="mt-8">
@@ -544,9 +545,9 @@ const ManualApp = () => {
 
             </TabsContent>
             
-            <TabsContent value="mapas" className="mt-8">
+            <TabsContent value="mapas-churrasqueiras" className="mt-8">
               <h2 className="text-2xl font-bold text-text-primary mb-8 text-center">
-                Mapas das Áreas do Condomínio
+                Mapas de Churrasqueiras
               </h2>
               
               {/* Mapas de Churrasqueiras */}
@@ -616,6 +617,13 @@ const ManualApp = () => {
                   </div>
                 </div>
               </Card>
+
+            </TabsContent>
+            
+            <TabsContent value="mapas-espacos" className="mt-8">
+              <h2 className="text-2xl font-bold text-text-primary mb-8 text-center">
+                Mapa de Espaços
+              </h2>
 
               {/* Mapa de Espaços */}
               <Card id="mapas-espacos" className="mb-8 p-6 border-purple-200 bg-purple-50/50">
