@@ -96,6 +96,36 @@ const ManualApp = () => {
             Guia completo para usar o aplicativo do morador e aproveitar todas as funcionalidades disponíveis.
           </p>
         </div>
+
+        {/* Sumário */}
+        <div className="mb-12">
+          <Card className="p-6 border-primary/20 bg-primary/5">
+            <h2 className="text-xl font-bold text-text-primary mb-4 flex items-center gap-2">
+              <User className="h-5 w-5" />
+              Sumário dos Tutoriais
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <h3 className="font-semibold text-text-primary mb-2">Comunicação Urgente</h3>
+                <a href="#sindico-urgente" className="text-primary hover:text-primary/80 text-sm block">
+                  • Como Falar com o Síndico sobre algo URGENTE
+                </a>
+              </div>
+              <div>
+                <h3 className="font-semibold text-text-primary mb-2">Comunicação Geral</h3>
+                <a href="#administracao" className="text-primary hover:text-primary/80 text-sm block">
+                  • Como Falar com a Administração sobre Amenidades e Chatices
+                </a>
+              </div>
+              <div>
+                <h3 className="font-semibold text-text-primary mb-2">Sugestões</h3>
+                <a href="#sugestoes" className="text-primary hover:text-primary/80 text-sm block">
+                  • Como Dar Sugestões na Plataforma
+                </a>
+              </div>
+            </div>
+          </Card>
+        </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {sections.map((section, index) => {
@@ -130,7 +160,7 @@ const ManualApp = () => {
           </h2>
           
           {/* Como Falar com o Síndico sobre algo URGENTE */}
-          <Card className="mb-8 p-6 border-red-200 bg-red-50/50">
+          <Card id="sindico-urgente" className="mb-8 p-6 border-red-200 bg-red-50/50">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 rounded-lg bg-red-100">
                 <AlertTriangle className="h-7 w-7 text-red-600" />
@@ -176,8 +206,13 @@ const ManualApp = () => {
                     <div><strong>Selecione o Tipo de Ocorrência:</strong> No campo "Tipo Ocorrencia", selecione a opção que melhor se encaixa na sua situação. Para urgências, "Reclamacao" ou "Outros Assuntos" são as mais indicadas.</div>
                   </li>
                   <li className="flex gap-3">
-                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">5</span>
-                    <div><strong>Encaminhe para o Síndico:</strong> No campo "Encaminhar para:", selecione "Síndico/Representante da Torre...".</div>
+                    <span className="bg-red-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">5</span>
+                    <div className="bg-red-100 border border-red-300 rounded-lg p-3">
+                      <strong className="text-red-800">⚠️ DIFERENÇA IMPORTANTE - Encaminhe para o Síndico:</strong> 
+                      <span className="text-red-700"> No campo "Encaminhar para:", selecione </span>
+                      <strong className="text-red-800">"Síndico/Representante da Torre..."</strong>
+                      <span className="text-red-700"> (não Administração).</span>
+                    </div>
                   </li>
                   <li className="flex gap-3">
                     <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">6</span>
@@ -193,7 +228,7 @@ const ManualApp = () => {
           </Card>
 
           {/* Como Falar com a Administração sobre Amenidades e Chatices */}
-          <Card className="mb-8 p-6 border-blue-200 bg-blue-50/50">
+          <Card id="administracao" className="mb-8 p-6 border-blue-200 bg-blue-50/50">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 rounded-lg bg-blue-100">
                 <Users className="h-7 w-7 text-blue-600" />
@@ -231,8 +266,13 @@ const ManualApp = () => {
                     <div><strong>Selecione o Tipo de Ocorrência:</strong> No campo "Tipo Ocorrencia", selecione a opção que melhor se encaixa na sua situação. Para reclamações, escolha "Reclamacao". Para sugestões, escolha "Sugestao". Para outros assuntos, "Outros Assuntos".</div>
                   </li>
                   <li className="flex gap-3">
-                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">5</span>
-                    <div><strong>Encaminhe para a Administração:</strong> No campo "Encaminhar para:", selecione "Administração".</div>
+                    <span className="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">5</span>
+                    <div className="bg-blue-100 border border-blue-300 rounded-lg p-3">
+                      <strong className="text-blue-800">📋 DIFERENÇA IMPORTANTE - Encaminhe para a Administração:</strong> 
+                      <span className="text-blue-700"> No campo "Encaminhar para:", selecione </span>
+                      <strong className="text-blue-800">"Administração"</strong>
+                      <span className="text-blue-700"> (não Síndico).</span>
+                    </div>
                   </li>
                   <li className="flex gap-3">
                     <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">6</span>
@@ -248,7 +288,7 @@ const ManualApp = () => {
           </Card>
 
           {/* Como Dar Sugestões na Plataforma */}
-          <Card className="mb-8 p-6 border-green-200 bg-green-50/50">
+          <Card id="sugestoes" className="mb-8 p-6 border-green-200 bg-green-50/50">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 rounded-lg bg-green-100">
                 <Lightbulb className="h-7 w-7 text-green-600" />
@@ -332,86 +372,6 @@ const ManualApp = () => {
             </div>
           </Card>
 
-          {/* Como Debater Coisas na Plataforma */}
-          <Card className="mb-8 p-6 border-purple-200 bg-purple-50/50">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="p-3 rounded-lg bg-purple-100">
-                <MessagesSquare className="h-7 w-7 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-purple-700">
-                Como Debater Coisas na Plataforma Morador Online
-              </h3>
-            </div>
-
-            <div className="space-y-6">
-              <div>
-                <h4 className="font-semibold text-text-primary mb-3 text-lg">1. Debatendo no Fórum</h4>
-                <p className="text-text-secondary mb-4">O Fórum é o espaço ideal para discussões abertas e contínuas sobre diversos temas do condomínio.</p>
-                
-                <ol className="space-y-3 text-text-secondary">
-                  <li className="flex gap-3">
-                    <span className="bg-purple-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">1</span>
-                    <div>
-                      <strong>Acesse a seção de Fórum:</strong> No menu lateral esquerdo da plataforma, clique em "Fórum".
-                      <div className="mt-2 p-3 bg-gray-100 rounded-lg border border-dashed border-gray-300">
-                        <p className="text-sm text-gray-600 italic">
-                          📱 Espaço reservado para imagem: Tela do Fórum (versão web e mobile)
-                        </p>
-                      </div>
-                    </div>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="bg-purple-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">2</span>
-                    <div>
-                      <strong>Crie um Novo Tópico (se desejar iniciar um novo debate):</strong>
-                      <ul className="mt-2 space-y-1 text-sm">
-                        <li>• Procure pela opção "Crie seu Tópico" ou similar.</li>
-                        <li>• Defina um título claro e convidativo para o seu tópico de debate.</li>
-                        <li>• No corpo do tópico, apresente o assunto que deseja debater, seus pontos de vista e convide outros moradores a participar.</li>
-                        <li>• Publique o tópico.</li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="bg-purple-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">3</span>
-                    <div>
-                      <strong>Participe de Tópicos Existentes:</strong>
-                      <ul className="mt-2 space-y-1 text-sm">
-                        <li>• Na página do Fórum, você verá uma lista de tópicos criados por outros moradores.</li>
-                        <li>• Clique no tópico que deseja participar.</li>
-                        <li>• Leia as mensagens existentes e utilize o campo de resposta para adicionar seus comentários, opiniões ou perguntas.</li>
-                        <li>• Você também pode "curtir" mensagens ou tópicos que considerar relevantes.</li>
-                      </ul>
-                    </div>
-                  </li>
-                </ol>
-              </div>
-
-              <div>
-                <h4 className="font-semibold text-text-primary mb-3 text-lg">2. Debatendo em Discussões sobre Tópicos (Assembleias)</h4>
-                <p className="text-text-secondary mb-4">Esta seção permite discutir tópicos que podem se tornar pauta de assembleias futuras.</p>
-                
-                <ol className="space-y-3 text-text-secondary">
-                  <li className="flex gap-3">
-                    <span className="bg-purple-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">1</span>
-                    <div><strong>Acesse a seção de Assembleias:</strong> No menu lateral esquerdo da plataforma, clique em "Assembleias".</div>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="bg-purple-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">2</span>
-                    <div><strong>Acesse "Discussões Sobre Tópicos":</strong> Dentro da seção de Assembleias, clique em "Discussões Sobre Tópicos".</div>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="bg-purple-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">3</span>
-                    <div><strong>Crie um Tópico para Discussão:</strong> Procure pela opção "Crie seu Tópico" e crie um tópico com sua sugestão para ser discutida em assembleia. Os tópicos mais curtidos podem se tornar pauta.</div>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="bg-purple-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">4</span>
-                    <div><strong>Participe de Discussões Existentes:</strong> Navegue pelos tópicos existentes, clique nos que lhe interessam, contribua com seus comentários e "curta" os tópicos que você apoia.</div>
-                  </li>
-                </ol>
-              </div>
-            </div>
-          </Card>
         </div>
 
         <Card className="mt-8 p-6 bg-primary/5 border-primary/20">
