@@ -1,4 +1,4 @@
-import { FileText, Home, HelpCircle, Phone, Smartphone } from "lucide-react";
+import { FileText, Home, HelpCircle, Phone, Smartphone, MapPin, Building } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
@@ -11,6 +11,8 @@ const Header = () => {
     { path: "/faq", label: "FAQ", icon: HelpCircle },
     { path: "/contatos", label: "Contatos Úteis", icon: Phone },
     { path: "/manual-app", label: "Manual de utilização do app MO", icon: Smartphone },
+    { path: "/mapas-churrasqueiras", label: "Mapas de Churrasqueiras", icon: MapPin },
+    { path: "/mapas-espacos", label: "Mapa de Espaços", icon: Building },
   ];
 
   return (
