@@ -2,7 +2,8 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { X, MapPin, Users, Clock, Wifi, Car } from "lucide-react";
+import { X, MapPin, Users, Clock, Wifi, Car, ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
 import condominioImage from "@/assets/condominio-vista-aerea.png";
 
 interface Tower {
@@ -368,6 +369,21 @@ const InteractiveCondominiumMap = () => {
                   </Card>
                 ))}
               </div>
+              
+              {/* Botão para o manual do app */}
+              <div className="mt-6 p-4 bg-primary/10 rounded-lg border border-primary/20">
+                <h4 className="font-semibold text-primary mb-2">Como fazer reservas?</h4>
+                <p className="text-sm text-gray-600 mb-3">
+                  As reservas dos espaços são feitas através do aplicativo Morador Online. 
+                  Consulte nosso manual para saber como utilizar o app.
+                </p>
+                <Link to="/manual-app">
+                  <Button className="w-full" variant="default">
+                    <ExternalLink className="h-4 w-4 mr-2" />
+                    Ver Manual do App Morador Online
+                  </Button>
+                </Link>
+              </div>
             </div>
           </Card>
         </div>
@@ -376,11 +392,23 @@ const InteractiveCondominiumMap = () => {
       {/* Legenda */}
       <div className="mt-4 p-4 bg-gray-50 rounded-lg">
         <h4 className="font-semibold text-gray-800 mb-2">Como usar:</h4>
-        <ul className="text-sm text-gray-600 space-y-1">
+        <ul className="text-sm text-gray-600 space-y-1 mb-4">
           <li>• Clique nos pontos <span className="inline-block w-3 h-3 bg-primary rounded-full mx-1"></span> no mapa para ver os espaços de cada torre</li>
           <li>• Passe o mouse sobre os pontos para ver o nome da torre</li>
           <li>• Visualize informações sobre capacidade, comodidades e horários de funcionamento</li>
         </ul>
+        
+        <div className="pt-3 border-t border-gray-200">
+          <p className="text-sm text-gray-600 mb-2">
+            <strong>Para fazer reservas:</strong> Use o aplicativo Morador Online
+          </p>
+          <Link to="/manual-app">
+            <Button size="sm" variant="outline">
+              <ExternalLink className="h-3 w-3 mr-1" />
+              Manual do App
+            </Button>
+          </Link>
+        </div>
       </div>
     </div>
   );
