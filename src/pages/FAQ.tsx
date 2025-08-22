@@ -10,27 +10,31 @@ const FAQ = () => {
   const faqs = [
     {
       question: "O que fazer em caso de vazamento de gás?",
-      answer: "Feche imediatamente o registro de gás, abra as janelas para ventilar o ambiente, não acenda luzes nem use equipamentos elétricos, e entre em contato com a administração do condomínio ou a Supergasbras."
+      answer: "Feche imediatamente o registro de gás na saída do ponto de alimentação do aparelho. Mantenha o ambiente ventilado, abrindo as janelas e portas. Não utilize nenhum equipamento elétrico ou acione qualquer interruptor. Caso persista, acione o Corpo de Bombeiros."
     },
     {
-      question: "Posso furar qualquer parede para instalar um armário?",
-      answer: "Não. É terminantemente proibido fazer furos, rasgos ou modificações em paredes de concreto estrutural. Para instalações em paredes de alvenaria, consulte sempre a administração antes de qualquer intervenção."
+      question: "Posso furar qualquer parede?",
+      answer: "Não. É terminantemente proibido fazer furos, rasgos ou modificações em paredes de concreto estrutural. Antes de fazer furações em paredes, consulte os desenhos das instalações e os projetos para evitar danos às instalações embutidas."
     },
     {
       question: "Como funciona a coleta de lixo?",
-      answer: "A coleta de lixo comum é realizada às segundas, quartas e sextas-feiras. O lixo reciclável é coletado às terças e quintas-feiras. Deposite o lixo nos locais apropriados conforme orientação da administração."
+      answer: "O lixo doméstico deve ser cuidadosamente ensacado. Os resíduos devem ser colocados nos cestos específicos no logradouro até duas horas antes do horário de coleta. É proibido o acúmulo de resíduos em vias públicas fora do dia e horário da coleta municipal."
     },
     {
-      question: "A garantia do meu apartamento cobre problemas por falta de manutenção?",
-      answer: "Não. A garantia do apartamento não cobre problemas causados por falta de manutenção adequada. É importante seguir todas as orientações de manutenção preventiva descritas no manual."
-    },
-    {
-      question: "Posso fechar minha varanda com vidro?",
-      answer: "O fechamento de varanda com vidro só é permitido após aprovação em assembleia de condôminos, para manter a uniformidade visual do edifício. Consulte a administração para mais informações sobre o processo."
+      question: "Posso fechar a minha varanda com vidro?",
+      answer: "O envidraçamento da varanda só é permitido após aprovação em assembleia de condôminos, para manter a uniformidade visual do edifício. Consulte a administração para mais informações sobre o processo."
     },
     {
       question: "O que fazer se o disjuntor geral desarmar?",
-      answer: "Primeiro, identifique se há algum equipamento com defeito ou sobrecarga na rede elétrica. Desligue todos os aparelhos, religue o disjuntor e ligue os equipamentos um por vez. Se o problema persistir, consulte um eletricista."
+      answer: "Primeiro, verifique se há algum aparelho com problema de isolamento ou sobrecarga. Desligue todos os disjuntores e religue um por um para identificar a causa. Se o problema persistir, chame um profissional habilitado."
+    },
+    {
+      question: "Pequenas fissuras e deformações são normais na construção?",
+      answer: "Sim, pequenas deformações ou fissuras na estrutura e paredes são consideradas variações admissíveis, decorrentes da acomodação do edifício e variações de temperatura, desde que dentro dos limites das normas da ABNT."
+    },
+    {
+      question: "Diferenças de tonalidade em pedras e revestimentos são consideradas defeitos?",
+      answer: "Não, diferenças de textura e cor em pedras naturais e revestimentos cerâmicos são variações normais e não são consideradas defeitos, não exigindo reparos ou trocas."
     }
   ];
 

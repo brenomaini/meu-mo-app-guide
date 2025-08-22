@@ -21,7 +21,7 @@ const Header = () => {
         <div className="flex items-center justify-between py-4">
           <Link to="/" className="flex items-center space-x-3">
             <img src={logo} alt="Reserva Parque Clube" className="h-12 w-12" />
-            <div className="text-white">
+            <div className="text-primary-foreground">
               <h1 className="text-xl font-bold">Reserva Parque Clube</h1>
               <p className="text-sm opacity-90">Manual Digital do Morador</p>
             </div>
@@ -40,8 +40,8 @@ const Header = () => {
                   to={item.path}
                   className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors ${
                     isActive
-                      ? "bg-white/20 text-white"
-                      : "text-white/80 hover:bg-white/10 hover:text-white"
+                      ? "bg-primary/20 text-primary-foreground"
+                      : "text-primary-foreground/80 hover:bg-primary/10 hover:text-primary-foreground"
                   }`}
                 >
                   <Icon className="h-4 w-4" />

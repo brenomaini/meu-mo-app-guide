@@ -5,45 +5,24 @@ import { Phone, Clock, MapPin, Shield, Wrench, Zap } from "lucide-react";
 const Contatos = () => {
   const contacts = [
     {
-      category: "Administração",
-      icon: MapPin,
-      items: [
-        { label: "Administração do Condomínio", phone: "(11) 3456-7890", hours: "Segunda a Sexta: 8h às 18h" },
-        { label: "Síndico", phone: "(11) 9876-5432", hours: "Emergências: 24h" }
-      ]
-    },
-    {
-      category: "Portaria e Segurança",
-      icon: Shield,
-      items: [
-        { label: "Portaria Principal", phone: "(11) 3456-7891", hours: "24 horas" },
-        { label: "Central de Segurança", phone: "(11) 3456-7892", hours: "24 horas" }
-      ]
-    },
-    {
-      category: "Manutenção",
-      icon: Wrench,
-      items: [
-        { label: "Zelador", phone: "(11) 9876-5433", hours: "Segunda a Sábado: 7h às 17h" },
-        { label: "Manutenção Predial", phone: "(11) 3456-7893", hours: "Segunda a Sexta: 8h às 17h" }
-      ]
-    },
-    {
       category: "Serviços Públicos",
       icon: Zap,
       items: [
-        { label: "Neoenergia (Energia)", phone: "0800-720-0196", hours: "24 horas" },
-        { label: "Supergasbras (Gás)", phone: "(11) 3003-4040", hours: "Segunda a Sexta: 8h às 18h" },
-        { label: "SABESP (Água)", phone: "0800-011-9911", hours: "24 horas" }
+        { label: "ANATEL (Agência Nacional de Telecomunicações)", phone: "1331", hours: "Segunda a Sexta: 8h às 20h" },
+        { label: "ANEEL (Agência Nacional de Energia Elétrica)", phone: "167", hours: "Segunda a Sexta: 8h às 20h" },
+        { label: "SUPERGASBRAS", phone: "0800 704 3433", hours: "Atendimento de emergência: 24h" },
+        { label: "NEOENERGIA (Agência Nacional de Energia Elétrica)", phone: "116", hours: "24 horas" },
+        { label: "Defesa Civil", phone: "199", hours: "24 horas" },
+        { label: "PROCON Rio", phone: "162", hours: "Segunda a Sexta: 7h às 21h; Sábado e Domingo: 8h às 18h" },
       ]
     },
     {
       category: "Emergência",
       icon: Phone,
       items: [
-        { label: "Bombeiros", phone: "193", hours: "24 horas" },
-        { label: "SAMU", phone: "192", hours: "24 horas" },
-        { label: "Polícia Militar", phone: "190", hours: "24 horas" }
+        { label: "Corpo de Bombeiros Militar", phone: "193", hours: "24 horas" },
+        { label: "Polícia Civil", phone: "197", hours: "(61) 98626-1197 - Chamada tarifada. Denúncias: 24h" },
+        { label: "Polícia Militar", phone: "190", hours: "24 horas" },
       ]
     }
   ];
