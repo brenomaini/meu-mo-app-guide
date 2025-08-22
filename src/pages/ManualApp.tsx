@@ -97,6 +97,62 @@ const ManualApp = () => {
           </p>
         </div>
 
+        {/* Links de Acesso */}
+        <div className="mb-8">
+          <Card className="p-6 border-primary/30 bg-gradient-to-r from-primary/5 to-primary/10">
+            <h2 className="text-xl font-bold text-text-primary mb-4 flex items-center gap-2">
+              <Download className="h-5 w-5" />
+              Links de Acesso ao Aplicativo
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <a 
+                href="https://reservaparqueclube.mo.app.br/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 p-4 bg-white rounded-lg border border-primary/20 hover:border-primary/40 transition-colors group"
+              >
+                <div className="p-2 rounded-lg bg-blue-100 group-hover:bg-blue-200 transition-colors">
+                  <Smartphone className="h-6 w-6 text-blue-600" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-text-primary">Versão Web</h3>
+                  <p className="text-sm text-text-secondary">Acesse pelo navegador</p>
+                </div>
+              </a>
+              
+              <a 
+                href="https://play.google.com/store/apps/details?id=br.app.mo.novomo&hl=pt_BR" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 p-4 bg-white rounded-lg border border-primary/20 hover:border-primary/40 transition-colors group"
+              >
+                <div className="p-2 rounded-lg bg-green-100 group-hover:bg-green-200 transition-colors">
+                  <Download className="h-6 w-6 text-green-600" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-text-primary">Google Play</h3>
+                  <p className="text-sm text-text-secondary">Para Android</p>
+                </div>
+              </a>
+              
+              <a 
+                href="https://apps.apple.com/br/app/morador-online-2-0/id1598971439" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 p-4 bg-white rounded-lg border border-primary/20 hover:border-primary/40 transition-colors group"
+              >
+                <div className="p-2 rounded-lg bg-gray-100 group-hover:bg-gray-200 transition-colors">
+                  <Download className="h-6 w-6 text-gray-600" />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-text-primary">App Store</h3>
+                  <p className="text-sm text-text-secondary">Para iOS</p>
+                </div>
+              </a>
+            </div>
+          </Card>
+        </div>
+
         {/* Sumário */}
         <div className="mb-12">
           <Card className="p-6 border-primary/20 bg-primary/5">
