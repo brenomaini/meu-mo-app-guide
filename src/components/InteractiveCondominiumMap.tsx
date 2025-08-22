@@ -23,108 +23,248 @@ interface Space {
 
 const towers: Tower[] = [
   {
-    id: "torre-a",
-    name: "Torre A",
-    position: { x: 20, y: 40 },
+    id: "torre-1",
+    name: "Torre 1",
+    position: { x: 15, y: 35 },
     spaces: [
       {
-        id: "salao-a",
-        name: "Salão de Festas A",
+        id: "salao-festas-1",
+        name: "Salão de Festas com Copa",
         capacity: 80,
-        amenities: ["Som", "Iluminação", "Cozinha", "Ar-condicionado"],
+        amenities: ["Copa", "Som", "Iluminação", "Ar-condicionado"],
         hours: "8h às 2h",
         available: true
       },
       {
-        id: "academia-a",
-        name: "Academia Torre A",
+        id: "home-office-1",
+        name: "Home Office",
         capacity: 15,
-        amenities: ["Equipamentos", "Vestiário", "Ar-condicionado"],
+        amenities: ["Mesas", "Wi-Fi", "Ar-condicionado", "Impressora"],
         hours: "6h às 22h",
         available: true
+      },
+      {
+        id: "espaco-gourmet-1",
+        name: "Espaço Gourmet",
+        capacity: 40,
+        amenities: ["Churrasqueira", "Bancada", "Geladeira", "Pia"],
+        hours: "8h às 22h",
+        available: false
       }
     ]
   },
   {
-    id: "torre-b",
-    name: "Torre B",
-    position: { x: 35, y: 45 },
+    id: "torre-2",
+    name: "Torre 2",
+    position: { x: 25, y: 45 },
     spaces: [
       {
-        id: "salao-b",
-        name: "Salão de Festas B",
-        capacity: 60,
-        amenities: ["Som", "Cozinha", "Varanda"],
-        hours: "8h às 2h",
-        available: false
+        id: "espaco-teen-2",
+        name: "Espaço Teen com Lavabo",
+        capacity: 25,
+        amenities: ["Jogos", "Lavabo", "Som", "Iluminação"],
+        hours: "8h às 22h",
+        available: true
       },
       {
-        id: "playground-b",
-        name: "Playground Torre B",
-        capacity: 20,
-        amenities: ["Brinquedos", "Área coberta", "Bancos"],
-        hours: "6h às 20h",
+        id: "salao-festa-2",
+        name: "Salão de Festa com Copa",
+        capacity: 70,
+        amenities: ["Copa", "Som", "Iluminação", "Ar-condicionado"],
+        hours: "8h às 2h",
         available: true
       }
     ]
   },
   {
-    id: "torre-c",
-    name: "Torre C",
-    position: { x: 50, y: 35 },
+    id: "torre-3",
+    name: "Torre 3",
+    position: { x: 35, y: 30 },
     spaces: [
       {
-        id: "espaco-gourmet-c",
-        name: "Espaço Gourmet C",
-        capacity: 40,
+        id: "salao-festas-3",
+        name: "Salão de Festas com Copa",
+        capacity: 75,
+        amenities: ["Copa", "Som", "Iluminação", "Ar-condicionado"],
+        hours: "8h às 2h",
+        available: true
+      }
+    ]
+  },
+  {
+    id: "torre-4",
+    name: "Torre 4",
+    position: { x: 45, y: 40 },
+    spaces: [
+      {
+        id: "oficina-bricolagem-4",
+        name: "Oficina de Bricolagem",
+        capacity: 15,
+        amenities: ["Ferramentas", "Bancadas", "Iluminação", "Ventilação"],
+        hours: "8h às 18h",
+        available: true
+      },
+      {
+        id: "bicicletario-4",
+        name: "Bicicletário",
+        capacity: 50,
+        amenities: ["Suportes", "Segurança", "Cobertura"],
+        hours: "24h",
+        available: true
+      }
+    ]
+  },
+  {
+    id: "torre-5",
+    name: "Torre 5",
+    position: { x: 55, y: 50 },
+    spaces: [
+      {
+        id: "espaco-gourmet-5",
+        name: "Espaço Gourmet",
+        capacity: 45,
         amenities: ["Churrasqueira", "Bancada", "Geladeira", "Pia"],
         hours: "8h às 22h",
         available: true
       },
       {
-        id: "sala-reuniao-c",
-        name: "Sala de Reuniões C",
-        capacity: 12,
-        amenities: ["Mesa", "Cadeiras", "TV", "Wi-Fi"],
+        id: "salao-jogos-5",
+        name: "Salão de Jogos Adulto",
+        capacity: 30,
+        amenities: ["Mesa de Sinuca", "Jogos", "Som", "Ar-condicionado"],
+        hours: "8h às 22h",
+        available: false
+      },
+      {
+        id: "bicicletario-5",
+        name: "Bicicletário",
+        capacity: 50,
+        amenities: ["Suportes", "Segurança", "Cobertura"],
+        hours: "24h",
+        available: true
+      }
+    ]
+  },
+  {
+    id: "torre-6",
+    name: "Torre 6",
+    position: { x: 65, y: 35 },
+    spaces: [
+      {
+        id: "espaco-yoga-6",
+        name: "Espaço Yoga",
+        capacity: 20,
+        amenities: ["Tatames", "Espelhos", "Som", "Ar-condicionado"],
+        hours: "6h às 22h",
+        available: true
+      },
+      {
+        id: "biblioteca-6",
+        name: "Biblioteca com Espaço Leitura",
+        capacity: 25,
+        amenities: ["Livros", "Poltronas", "Mesas", "Wi-Fi", "Silêncio"],
+        hours: "8h às 20h",
+        available: true
+      }
+    ]
+  },
+  {
+    id: "torre-7",
+    name: "Torre 7",
+    position: { x: 75, y: 45 },
+    spaces: [
+      {
+        id: "espaco-terraco-7",
+        name: "Espaço com Terraço",
+        capacity: 35,
+        amenities: ["Terraço", "Vista", "Mobiliário", "Iluminação"],
+        hours: "8h às 22h",
+        available: true
+      },
+      {
+        id: "brinquedoteca-7",
+        name: "Brinquedoteca com Terraço Leitura",
+        capacity: 20,
+        amenities: ["Brinquedos", "Terraço", "Livros", "Segurança"],
         hours: "8h às 18h",
         available: true
       }
     ]
   },
   {
-    id: "torre-d",
-    name: "Torre D",
-    position: { x: 65, y: 50 },
+    id: "torre-8",
+    name: "Torre 8",
+    position: { x: 85, y: 30 },
     spaces: [
       {
-        id: "quadra-d",
-        name: "Quadra Poliesportiva D",
-        capacity: 30,
-        amenities: ["Iluminação", "Vestiário", "Arquibancada"],
-        hours: "6h às 22h",
+        id: "salao-reunioes-8",
+        name: "Salão de Reuniões com Terraço",
+        capacity: 20,
+        amenities: ["Mesa", "Projetor", "Wi-Fi", "Terraço", "Ar-condicionado"],
+        hours: "8h às 18h",
         available: true
       },
       {
-        id: "piscina-d",
-        name: "Área da Piscina D",
-        capacity: 50,
-        amenities: ["Piscina", "Ducha", "Deck", "Guarda-vidas"],
-        hours: "6h às 20h",
+        id: "foyer-cinema-8",
+        name: "Foyer de Cinema",
+        capacity: 15,
+        amenities: ["Poltronas", "Iluminação", "Decoração"],
+        hours: "19h às 23h",
+        available: true
+      },
+      {
+        id: "sala-projecao-8",
+        name: "Sala de Projeção",
+        capacity: 8,
+        amenities: ["Projetor", "Som", "Controles", "Ar-condicionado"],
+        hours: "19h às 23h",
         available: false
+      },
+      {
+        id: "cinema-8",
+        name: "Cinema",
+        capacity: 40,
+        amenities: ["Poltronas", "Tela", "Som Surround", "Ar-condicionado"],
+        hours: "19h às 23h",
+        available: true
       }
     ]
   },
   {
-    id: "torre-e",
-    name: "Torre E",
-    position: { x: 80, y: 40 },
+    id: "torre-9",
+    name: "Torre 9",
+    position: { x: 20, y: 60 },
     spaces: [
       {
-        id: "coworking-e",
-        name: "Espaço Coworking E",
+        id: "salao-festas-9",
+        name: "Salão de Festas com Copa",
+        capacity: 85,
+        amenities: ["Copa", "Som", "Iluminação", "Ar-condicionado", "Varanda"],
+        hours: "8h às 2h",
+        available: true
+      },
+      {
+        id: "espaco-gourmet-9",
+        name: "Espaço Gourmet",
+        capacity: 50,
+        amenities: ["Churrasqueira", "Bancada", "Geladeira", "Pia", "Forno"],
+        hours: "8h às 22h",
+        available: true
+      },
+      {
+        id: "brinquedoteca-9",
+        name: "Brinquedoteca com Terraço",
         capacity: 25,
-        amenities: ["Mesas", "Wi-Fi", "Impressora", "Café"],
-        hours: "6h às 22h",
+        amenities: ["Brinquedos", "Terraço", "Segurança", "Climatização"],
+        hours: "8h às 18h",
+        available: false
+      },
+      {
+        id: "espaco-stadium-9",
+        name: "Espaço Stadium",
+        capacity: 100,
+        amenities: ["Telão", "Som", "Arquibancada", "Climatização"],
+        hours: "8h às 23h",
         available: true
       }
     ]
