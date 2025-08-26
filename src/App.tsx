@@ -12,6 +12,7 @@ import MapasChurrasqueiras from "./pages/MapasChurrasqueiras";
 import MapasEspacos from "./pages/MapasEspacos";
 import NotFound from "./pages/NotFound";
 import Horarios from "./pages/Horarios";
+import RamaisUteis from "./pages/RamaisUteis";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/horarios" element={<Horarios />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/contatos" element={<Contatos />} />
+          <Route path="/ramais-uteis" element={<RamaisUteis />} />
           <Route path="/manual-app" element={<ManualApp />} />
           <Route path="/mapas-churrasqueiras" element={<MapasChurrasqueiras />} />
           <Route path="/mapas-espacos" element={<MapasEspacos />} />

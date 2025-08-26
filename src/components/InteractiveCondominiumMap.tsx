@@ -1,10 +1,10 @@
-import { useState } from "react";
+import condominioImage from "@/assets/condominio-vista-aerea.png";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { X, MapPin, Users, Clock, Wifi, Car, ExternalLink } from "lucide-react";
+import { Car, Clock, ExternalLink, MapPin, Users, Wifi, X } from "lucide-react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import condominioImage from "@/assets/condominio-vista-aerea.png";
 
 interface Tower {
   id: string;
@@ -25,7 +25,7 @@ const towers: Tower[] = [
   {
     id: "torre-1",
     name: "Torre 1",
-    position: { x: 15, y: 35 },
+    position: { x: 80.73, y: 47.87 },
     spaces: [
       {
         id: "salao-festas-1",
@@ -53,7 +53,7 @@ const towers: Tower[] = [
   {
     id: "torre-2",
     name: "Torre 2",
-    position: { x: 25, y: 45 },
+    position: { x: 66.28, y: 38.10 },
     spaces: [
       {
         id: "espaco-teen-2",
@@ -74,7 +74,7 @@ const towers: Tower[] = [
   {
     id: "torre-3",
     name: "Torre 3",
-    position: { x: 35, y: 30 },
+    position: { x: 55.40, y: 21.02 },
     spaces: [
       {
         id: "salao-festas-3",
@@ -88,7 +88,7 @@ const towers: Tower[] = [
   {
     id: "torre-4",
     name: "Torre 4",
-    position: { x: 45, y: 40 },
+    position: { x: 38.54, y: 18.82 },
     spaces: [
       {
         id: "oficina-bricolagem-4",
@@ -109,7 +109,7 @@ const towers: Tower[] = [
   {
     id: "torre-5",
     name: "Torre 5",
-    position: { x: 55, y: 50 },
+    position: { x: 25.17, y: 18.41 },
     spaces: [
       {
         id: "espaco-gourmet-5",
@@ -137,7 +137,7 @@ const towers: Tower[] = [
   {
     id: "torre-6",
     name: "Torre 6",
-    position: { x: 65, y: 35 },
+    position: { x: 10.80, y: 36.59 },
     spaces: [
       {
         id: "espaco-yoga-6",
@@ -158,7 +158,7 @@ const towers: Tower[] = [
   {
     id: "torre-7",
     name: "Torre 7",
-    position: { x: 75, y: 45 },
+    position: { x: 23.67, y: 42.37 },
     spaces: [
       {
         id: "espaco-terraco-7",
@@ -179,7 +179,7 @@ const towers: Tower[] = [
   {
     id: "torre-8",
     name: "Torre 8",
-    position: { x: 85, y: 30 },
+    position: { x: 35.96, y: 47.46 },
     spaces: [
       {
         id: "salao-reunioes-8",
@@ -214,7 +214,7 @@ const towers: Tower[] = [
   {
     id: "torre-9",
     name: "Torre 9",
-    position: { x: 20, y: 60 },
+    position: { x: 54.24, y: 52.54 },
     spaces: [
       {
         id: "salao-festas-9",
@@ -267,55 +267,60 @@ const InteractiveCondominiumMap = () => {
 
   return (
     <div className="relative">
-      <div className="relative bg-white rounded-lg overflow-hidden shadow-lg border">
-        <img 
-          src={condominioImage} 
-          alt="Vista aérea do condomínio" 
-          className="w-full h-[600px] object-cover"
-        />
-        
-        {/* Overlay escuro para destacar os pontos */}
-        <div className="absolute inset-0 bg-black/20" />
-        
-        {/* Pontos interativos das torres */}
-        {towers.map((tower) => (
-          <button
-            key={tower.id}
-            className={`absolute w-6 h-6 rounded-full transition-all duration-300 transform hover:scale-125 focus:outline-none focus:ring-4 focus:ring-primary/50 ${
-              hoveredTower === tower.id || selectedTower?.id === tower.id
-                ? "bg-primary shadow-lg shadow-primary/50 animate-pulse"
-                : "bg-primary/80 hover:bg-primary"
-            }`}
-            style={{
-              left: `${tower.position.x}%`,
-              top: `${tower.position.y}%`,
-              transform: "translate(-50%, -50%)"
-            }}
-            onClick={() => setSelectedTower(tower)}
-            onMouseEnter={() => setHoveredTower(tower.id)}
-            onMouseLeave={() => setHoveredTower(null)}
-            aria-label={`Abrir detalhes da ${tower.name}`}
-          >
-            <div className="w-full h-full rounded-full bg-white/90 flex items-center justify-center">
-              <MapPin className="h-3 w-3 text-primary" />
+      <Card className="w-full h-[500px] lg:h-[600px] overflow-auto">
+        <div className="relative min-w-[800px] min-h-[500px] w-full h-full">
+          <img 
+            src={condominioImage} 
+            alt="Vista aérea do condomínio" 
+            className="w-full h-full object-cover"
+          />
+          
+          {/* Overlay escuro para destacar os pontos */}
+          <div className="absolute inset-0 bg-black/20" />
+          
+          {/* Pontos interativos das torres */}
+          {towers.map((tower) => (
+            <button
+              key={tower.id}
+              className={`absolute w-12 h-12 rounded-full transition-all duration-300 transform hover:scale-125 focus:outline-none focus:ring-4 focus:ring-primary/50 ${
+                hoveredTower === tower.id || selectedTower?.id === tower.id
+                  ? "bg-primary shadow-lg shadow-primary/50 animate-pulse"
+                  : "bg-primary/80 hover:bg-primary"
+              }`}
+              style={{
+                left: `${tower.position.x}%`,
+                top: `${tower.position.y}%`,
+                transform: "translate(-50%, -50%)"
+              }}
+              onClick={() => setSelectedTower(tower)}
+              onMouseEnter={() => setHoveredTower(tower.id)}
+              onMouseLeave={() => setHoveredTower(null)}
+              aria-label={`Abrir detalhes da ${tower.name}`}
+            >
+              <div className="absolute -top-8 left-1/2 -translate-x-1/2 text-base font-semibold text-white bg-black/70 px-2 py-1 rounded-md whitespace-nowrap pointer-events-none">
+                {tower.name}
+              </div>
+              <div className="w-full h-full rounded-full bg-white/90 flex items-center justify-center">
+                <MapPin className="h-6 w-6 text-primary" />
+              </div>
+            </button>
+          ))}
+          
+          {/* Tooltip para torre em hover */}
+          {hoveredTower && (
+            <div 
+              className="absolute pointer-events-none z-10 bg-black/80 text-white px-3 py-1 rounded-lg text-sm font-medium"
+              style={{
+                left: `${towers.find(t => t.id === hoveredTower)?.position.x}%`,
+                top: `${(towers.find(t => t.id === hoveredTower)?.position.y || 0) - 8}%`,
+                transform: "translate(-50%, -100%)"
+              }}
+            >
+              {towers.find(t => t.id === hoveredTower)?.name}
             </div>
-          </button>
-        ))}
-        
-        {/* Tooltip para torre em hover */}
-        {hoveredTower && (
-          <div 
-            className="absolute pointer-events-none z-10 bg-black/80 text-white px-3 py-1 rounded-lg text-sm font-medium"
-            style={{
-              left: `${towers.find(t => t.id === hoveredTower)?.position.x}%`,
-              top: `${(towers.find(t => t.id === hoveredTower)?.position.y || 0) - 8}%`,
-              transform: "translate(-50%, -100%)"
-            }}
-          >
-            {towers.find(t => t.id === hoveredTower)?.name}
-          </div>
-        )}
-      </div>
+          )}
+        </div>
+      </Card>
       
       {/* Modal com detalhes da torre */}
       {selectedTower && (
