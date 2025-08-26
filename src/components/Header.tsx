@@ -1,4 +1,4 @@
-import { FileText, Home, HelpCircle, Phone, Smartphone, MapPin, Building } from "lucide-react";
+import { FileText, Home, HelpCircle, Phone, Smartphone, MapPin, Building, Clock } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
@@ -7,7 +7,8 @@ const Header = () => {
 
   const navigationItems = [
     { path: "/", label: "Início", icon: Home },
-    { path: "/manual", label: "Manual", icon: FileText },
+    { path: "/manual", label: "Guia do Morador", icon: FileText },
+    { path: "/horarios", label: "Horários", icon: Clock },
     { path: "/faq", label: "FAQ", icon: HelpCircle },
     { path: "/contatos", label: "Contatos Úteis", icon: Phone },
     { path: "/manual-app", label: "Manual de utilização do app MO", icon: Smartphone },
@@ -23,7 +24,7 @@ const Header = () => {
             <img src={logo} alt="Reserva Parque Clube" className="h-12 w-12" />
             <div className="text-primary-foreground">
               <h1 className="text-xl font-bold">Reserva Parque Clube</h1>
-              <p className="text-sm opacity-90">Manual Digital do Morador</p>
+              <p className="text-sm opacity-90">Manual Digital da Comunidade</p>
             </div>
           </Link>
         </div>

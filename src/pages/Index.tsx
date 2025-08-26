@@ -5,7 +5,7 @@ import FeatureCard from "@/components/FeatureCard";
 const Index = () => {
   const features = [
     {
-      title: "Manual do Morador",
+      title: "Guia do Morador",
       description: "Guia completo com orientações sobre água, energia, reformas e manutenção",
       icon: FileText,
       to: "/manual"
@@ -35,7 +35,7 @@ const Index = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-text-primary mb-4">
-            Bem-vindo ao Manual Digital do Morador
+            Bem-vindo ao Manual Digital da Comunidade
           </h1>
           <p className="text-lg text-text-secondary max-w-2xl mx-auto">
             Seu guia completo e prático para viver bem no Reserva Parque Clube. Encontre

@@ -6,33 +6,27 @@ import { Smartphone, Download, User, Key, Bell, Calendar, MessageSquare, CreditC
 const ManualApp = () => {
   const sections = [
     {
-      title: "Download e Instalação",
-      icon: Download,
-      content: [
-        "Baixe o app 'MO - Morador' na App Store (iOS) ou Google Play Store (Android)",
-        "Instale o aplicativo no seu dispositivo",
-        "Certifique-se de ter uma conexão estável com a internet"
-      ]
-    },
-    {
       title: "Primeiro Acesso",
       icon: User,
       content: [
-        "Abra o aplicativo e selecione 'Reserva Parque Clube'",
-        "Digite seu CPF e a senha fornecida pela administração",
-        "Complete seu perfil com informações pessoais",
-        "Confirme seu email e número de telefone"
+        "Solicite o envio/reenvio do e-mail de boas-vindas para o WhatsApp 61 99858-7580",
+        "Localize o e-mail 'Primeiro Acesso' e crie sua senha",
+        "Baixe o APP Morador On-line 2.0",
+        "Acesse o APP com os dados abaixo:",
+        "Endereço Portal Condomínio: reservaparqueclube.mo.app.br"
       ]
     },
     {
       title: "Funcionalidades Principais",
       icon: Smartphone,
       content: [
-        "Visualizar extratos e boletos do condomínio",
-        "Fazer reservas de áreas comuns",
-        "Comunicar-se com a administração",
-        "Receber avisos e comunicados importantes",
-        "Registrar ocorrências e solicitações de manutenção"
+        "Agendar Mudanças",
+        "Reservar Espaços",
+        "Acessar Documentos Importantes",
+        "Cadastrar Prestadores e Visitantes",
+        "Registrar Ocorrências",
+        "Cadastrar moradores adicionais",
+        "Acessar Boletos"
       ]
     },
     {
@@ -247,11 +241,23 @@ const ManualApp = () => {
                   <li className="flex gap-3">
                     <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">1</span>
                     <div>
-                      <strong>Baixe o aplicativo:</strong> Faça o download do aplicativo "Morador Online 2.0" na Google Play Store (Android) ou App Store (iOS), ou acesse a versão web através do navegador.
+                      <strong>Solicite seu acesso:</strong> Se você ainda não recebeu, solicite o envio ou reenvio do e-mail de boas-vindas para o WhatsApp <a href="https://wa.me/5561998587580" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">61 99858-7580</a>.
                     </div>
                   </li>
                   <li className="flex gap-3">
                     <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">2</span>
+                    <div>
+                      <strong>Crie sua senha:</strong> Localize o e-mail com o título "Primeiro Acesso" na sua caixa de entrada e siga as instruções para criar sua senha pessoal.
+                    </div>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">3</span>
+                    <div>
+                      <strong>Baixe o aplicativo:</strong> Faça o download do aplicativo "Morador Online 2.0" na Google Play Store (Android) ou App Store (iOS), ou acesse a versão web através do navegador.
+                    </div>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">4</span>
                     <div>
                       <strong>Digite o endereço do condomínio:</strong> No campo "Endereço Portal Condomínio", digite exatamente: 
                       <code className="bg-gray-200 px-2 py-1 rounded text-sm ml-1 font-mono">reservaparqueclube.mo.app.br</code>
@@ -263,19 +269,19 @@ const ManualApp = () => {
                     </div>
                   </li>
                   <li className="flex gap-3">
-                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">3</span>
+                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">5</span>
                     <div><strong>Insira seu email:</strong> No campo "Seu endereço de email", digite o email que você cadastrou ou que foi fornecido pela administração.</div>
                   </li>
                   <li className="flex gap-3">
-                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">4</span>
-                    <div><strong>Digite sua senha:</strong> Insira a senha que você recebeu ou criou durante o cadastro.</div>
+                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">6</span>
+                    <div><strong>Digite sua senha:</strong> Insira a senha que você criou.</div>
                   </li>
                   <li className="flex gap-3">
-                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">5</span>
+                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">7</span>
                     <div><strong>Aceite os termos:</strong> Marque a opção "Li e aceito as políticas de privacidade".</div>
                   </li>
                   <li className="flex gap-3">
-                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">6</span>
+                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">8</span>
                     <div><strong>Faça o login:</strong> Clique no botão "ACESSAR" para entrar no aplicativo.</div>
                   </li>
                 </ol>
@@ -286,7 +292,7 @@ const ManualApp = () => {
                   <AlertCircle className="h-5 w-5 text-yellow-600 flex-shrink-0 mt-0.5" />
                   <div>
                     <p className="text-yellow-800 text-sm">
-                      <strong>Importante:</strong> Se você não tem login e senha, entre em contato com a administração do condomínio para obter suas credenciais de acesso.
+                      <strong>Não recebeu o e-mail?</strong> Se você não encontrar o e-mail de "Primeiro Acesso", verifique sua caixa de spam ou entre em contato pelo WhatsApp para solicitar o reenvio.
                     </p>
                   </div>
                 </div>

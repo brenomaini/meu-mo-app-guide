@@ -11,6 +11,7 @@ import ManualApp from "./pages/ManualApp";
 import MapasChurrasqueiras from "./pages/MapasChurrasqueiras";
 import MapasEspacos from "./pages/MapasEspacos";
 import NotFound from "./pages/NotFound";
+import Horarios from "./pages/Horarios";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/manual" element={<Manual />} />
+          <Route path="/horarios" element={<Horarios />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/contatos" element={<Contatos />} />
           <Route path="/manual-app" element={<ManualApp />} />
