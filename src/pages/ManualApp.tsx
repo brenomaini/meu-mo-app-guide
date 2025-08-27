@@ -1,7 +1,7 @@
 import Layout from "@/components/Layout";
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Smartphone, Download, User, Key, Bell, Calendar, MessageSquare, CreditCard, AlertTriangle, Users, Lightbulb, MessagesSquare, BookOpen, AlertCircle, CheckCircle, Map, MapPin } from "lucide-react";
+import { AlertCircle, AlertTriangle, Bell, BookOpen, Calendar, CheckCircle, CreditCard, Download, Key, Lightbulb, MessageSquare, RefreshCw, Shield, Smartphone, User, Users } from "lucide-react";
 
 const ManualApp = () => {
   const sections = [
@@ -111,7 +111,7 @@ const ManualApp = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-text-primary">Versão Web</h3>
-                  <p className="text-sm text-text-secondary">Acesse pelo navegador</p>
+                  <p className="text-sm text-text-secondary">reservaparqueclube.mo.app.br</p>
                 </div>
               </a>
               
@@ -152,7 +152,7 @@ const ManualApp = () => {
         <div className="mb-12">
           <Card className="p-6 border-primary/20 bg-primary/5">
             <h2 className="text-xl font-bold text-text-primary mb-4 flex items-center gap-2">
-              <User className="h-5 w-5" />
+              <BookOpen className="h-5 w-5" />
               Sumário dos Tutoriais
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -180,11 +180,17 @@ const ManualApp = () => {
                   • Como Dar Sugestões na Plataforma
                 </a>
               </div>
+              <div>
+                <h3 className="font-semibold text-text-primary mb-2">Participação</h3>
+                <a href="#assembleias" className="text-primary hover:text-primary/80 text-sm block">
+                  • Como Participar de Assembleias Online
+                </a>
+              </div>
             </div>
           </Card>
         </div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12">
           {sections.map((section, index) => {
             const Icon = section.icon;
             
@@ -210,14 +216,14 @@ const ManualApp = () => {
           })}
         </div>
 
-        {/* Conteúdo Principal */}
-        <div className="mt-12">
-          <h2 className="text-2xl font-bold text-text-primary mb-8 text-center">
+        {/* Guias Detalhados */}
+        <div className="space-y-8">
+          <h2 className="text-2xl font-bold text-text-primary text-center">
             Guias Detalhados de Comunicação
           </h2>
           
           {/* Como Fazer Login no Aplicativo */}
-          <Card id="como-logar" className="mb-8 p-6 border-green-200 bg-green-50/50">
+          <Card id="como-logar" className="p-6 border-green-200 bg-green-50/50">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 rounded-lg bg-green-100">
                 <Key className="h-7 w-7 text-green-600" />
@@ -234,93 +240,168 @@ const ManualApp = () => {
               </p>
             </div>
 
-            <div className="space-y-4">
+            {/* Tabs para diferentes plataformas */}
+            <Tabs defaultValue="android" className="mb-6">
+              <TabsList className="grid w-full grid-cols-2">
+                <TabsTrigger value="android">Android</TabsTrigger>
+                <TabsTrigger value="ios">iOS</TabsTrigger>
+              </TabsList>
+              <TabsContent value="android" className="space-y-4">
+                <div className="bg-white p-4 rounded-lg border">
+                  <h4 className="font-semibold mb-2">Download na Google Play Store</h4>
+                  <p className="text-sm text-gray-600 mb-3">
+                    Abra a Google Play Store e pesquise por "Morador Online" e clique em "Instalar"
+                  </p>
+                  <div className="bg-gray-100 p-4 rounded border border-dashed">
+                    <p className="text-sm text-gray-600 italic">📱 Imagem: Aplicativo Play Store Morador Online</p>
+                  </div>
+                </div>
+              </TabsContent>
+              <TabsContent value="ios" className="space-y-4">
+                <div className="bg-white p-4 rounded-lg border">
+                  <h4 className="font-semibold mb-2">Download na App Store</h4>
+                  <p className="text-sm text-gray-600 mb-3">
+                    Abra a App Store e pesquise por "Morador Online" e clique em "Obter"
+                  </p>
+                  <div className="bg-gray-100 p-4 rounded border border-dashed">
+                    <p className="text-sm text-gray-600 italic">📱 Imagem: Aplicativo App Store Morador Online</p>
+                  </div>
+                </div>
+              </TabsContent>
+            </Tabs>
+
+            <div className="space-y-6">
               <div>
-                <h4 className="font-semibold text-text-primary mb-2">Passo a Passo:</h4>
-                <ol className="space-y-3 text-text-secondary">
-                  <li className="flex gap-3">
-                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">1</span>
+                <h4 className="font-semibold text-text-primary mb-4">Passo a Passo do Login:</h4>
+                <ol className="space-y-4 text-text-secondary">
+                  <li className="flex gap-4">
+                    <span className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">1</span>
                     <div>
                       <strong>Solicite seu acesso:</strong> Se você ainda não recebeu, solicite o envio ou reenvio do e-mail de boas-vindas para o WhatsApp <a href="https://wa.me/5561998587580" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">61 99858-7580</a>.
                     </div>
                   </li>
-                  <li className="flex gap-3">
-                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">2</span>
+                  <li className="flex gap-4">
+                    <span className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">2</span>
                     <div>
-                      <strong>Crie sua senha:</strong> Localize o e-mail com o título "Primeiro Acesso" na sua caixa de entrada e siga as instruções para criar sua senha pessoal.
-                    </div>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">3</span>
-                    <div>
-                      <strong>Baixe o aplicativo:</strong> Faça o download do aplicativo "Morador Online 2.0" na Google Play Store (Android) ou App Store (iOS), ou acesse a versão web através do navegador.
-                    </div>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">4</span>
-                    <div>
-                      <strong>Digite o endereço do condomínio:</strong> No campo "Endereço Portal Condomínio", digite exatamente: 
-                      <code className="bg-gray-200 px-2 py-1 rounded text-sm ml-1 font-mono">reservaparqueclube.mo.app.br</code>
-                      <div className="mt-2 p-3 bg-gray-100 rounded-lg border border-dashed border-gray-300">
-                        <p className="text-sm text-gray-600 italic">
-                          📱 Espaço reservado para imagem: Tela de login mobile mostrando o campo preenchido
-                        </p>
+                      <strong>Localize o e-mail de boas-vindas:</strong> Procure pelo e-mail com o título "Primeiro Acesso" na sua caixa de entrada. Se não encontrar, verifique a pasta de spam.
+                      <div className="mt-3 p-3 bg-gray-100 rounded-lg border border-dashed border-gray-300">
+                        <p className="text-sm text-gray-600 italic">📧 Imagem: E-mail de boas-vindas com endereço do portal</p>
                       </div>
                     </div>
                   </li>
-                  <li className="flex gap-3">
-                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">5</span>
-                    <div><strong>Insira seu email:</strong> No campo "Seu endereço de email", digite o email que você cadastrou ou que foi fornecido pela administração.</div>
+                  <li className="flex gap-4">
+                    <span className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">3</span>
+                    <div>
+                      <strong>Abra o aplicativo:</strong> Após instalar, abra o aplicativo e você verá a tela de login principal.
+                      <div className="mt-3 p-3 bg-gray-100 rounded-lg border border-dashed border-gray-300">
+                        <p className="text-sm text-gray-600 italic">📱 Imagem: Tela de login principal do aplicativo</p>
+                      </div>
+                    </div>
                   </li>
-                  <li className="flex gap-3">
-                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">6</span>
-                    <div><strong>Digite sua senha:</strong> Insira a senha que você criou.</div>
+                  <li className="flex gap-4">
+                    <span className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">4</span>
+                    <div>
+                      <strong>Digite o endereço do condomínio:</strong> No campo "Endereço Portal Condomínio", digite exatamente: 
+                      <code className="bg-gray-200 px-2 py-1 rounded text-sm ml-2 font-mono">reservaparqueclube.mo.app.br</code>
+                    </div>
                   </li>
-                  <li className="flex gap-3">
-                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">7</span>
+                  <li className="flex gap-4">
+                    <span className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">5</span>
+                    <div><strong>Insira seu email:</strong> No campo "E-mail", digite o email que você cadastrou ou que foi fornecido pela administração.</div>
+                  </li>
+                  <li className="flex gap-4">
+                    <span className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">6</span>
+                    <div><strong>Digite sua senha:</strong> Insira a senha que você criou no primeiro acesso.</div>
+                  </li>
+                  <li className="flex gap-4">
+                    <span className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">7</span>
                     <div><strong>Aceite os termos:</strong> Marque a opção "Li e aceito as políticas de privacidade".</div>
                   </li>
-                  <li className="flex gap-3">
-                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">8</span>
+                  <li className="flex gap-4">
+                    <span className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">8</span>
                     <div><strong>Faça o login:</strong> Clique no botão "ACESSAR" para entrar no aplicativo.</div>
                   </li>
                 </ol>
               </div>
 
-              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mt-6">
+              {/* Recomendação de Senha Segura */}
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
                 <div className="flex items-start gap-3">
-                  <AlertCircle className="h-5 w-5 text-yellow-600 flex-shrink-0 mt-0.5" />
+                  <Shield className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
                   <div>
-                    <p className="text-yellow-800 text-sm">
-                      <strong>Não recebeu o e-mail?</strong> Se você não encontrar o e-mail de "Primeiro Acesso", verifique sua caixa de spam ou entre em contato pelo WhatsApp para solicitar o reenvio.
+                    <h4 className="font-semibold text-blue-800 mb-2">🔒 Recomendação de Senha Segura</h4>
+                    <p className="text-blue-800 text-sm mb-2">
+                      Para sua segurança, utilize uma senha forte com:
+                    </p>
+                    <ul className="text-blue-800 text-sm space-y-1 ml-4">
+                      <li>• Pelo menos 8 caracteres</li>
+                      <li>• Combinação de letras maiúsculas e minúsculas</li>
+                      <li>• Números e caracteres especiais (@, #, $, &)</li>
+                    </ul>
+                    <p className="text-blue-800 text-sm mt-2">
+                      <strong>Exemplo:</strong> <code className="bg-blue-200 px-1 rounded">S3nha@Segura2025</code>
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-green-50 border border-green-200 rounded-lg p-4 mt-4">
+              {/* Alternar entre Contas */}
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-4">
                 <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                  <RefreshCw className="h-5 w-5 text-purple-600 flex-shrink-0 mt-0.5" />
                   <div>
-                    <p className="text-green-800 text-sm">
-                      <strong>Dica:</strong> O aplicativo também oferece a opção "Acesso com digital" para facilitar logins futuros, caso seu dispositivo suporte biometria.
+                    <h4 className="font-semibold text-purple-800 mb-2">Alternar entre Contas</h4>
+                    <p className="text-purple-800 text-sm mb-2">
+                      Você pode alternar facilmente entre diferentes contas sem sair do aplicativo:
                     </p>
+                    <ol className="text-purple-800 text-sm space-y-1 ml-4">
+                      <li>1. Clique no menu (três pontos) no canto superior esquerdo</li>
+                      <li>2. Selecione "Sair da conta" e confirme</li>
+                      <li>3. Clique em "Trocar Conta" na tela de login</li>
+                      <li>4. Insira as credenciais da nova conta</li>
+                    </ol>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-6 p-4 bg-gray-50 rounded-lg">
-                <h4 className="font-semibold text-text-primary mb-2">Tela de Login (Web):</h4>
-                <p className="text-sm text-text-secondary mb-4">Exemplo de como a tela aparece na versão web:</p>
-                <div className="bg-white p-4 rounded border border-dashed border-gray-300">
-                  <p className="text-sm text-gray-600 italic">📱 Espaço reservado para imagem da tela de login web</p>
+              {/* Problemas Frequentes */}
+              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                <h4 className="font-semibold text-yellow-800 mb-3">⚠️ Problemas Frequentes</h4>
+                <div className="space-y-3">
+                  <div>
+                    <p className="font-medium text-yellow-800 text-sm">Endereço do Portal incorreto:</p>
+                    <p className="text-yellow-700 text-sm">Certifique-se de digitar corretamente o endereço informado no e-mail de boas-vindas.</p>
+                  </div>
+                  <div>
+                    <p className="font-medium text-yellow-800 text-sm">E-mail ou senha incorretos:</p>
+                    <p className="text-yellow-700 text-sm">Verifique se está usando o email correto e se a senha está digitada sem erros. Use "Esqueci a senha" se necessário.</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* FAQ */}
+              <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+                <h4 className="font-semibold text-gray-800 mb-3">❓ Dúvidas Frequentes</h4>
+                <div className="space-y-3 text-sm">
+                  <div>
+                    <p className="font-medium text-gray-800">Onde encontro o Endereço do Portal?</p>
+                    <p className="text-gray-600">No e-mail de boas-vindas enviado pela administração do condomínio.</p>
+                  </div>
+                  <div>
+                    <p className="font-medium text-gray-800">Esqueci minha senha, o que faço?</p>
+                    <p className="text-gray-600">Clique em "Problemas com acesso?" e selecione "Esqueci a senha".</p>
+                  </div>
+                  <div>
+                    <p className="font-medium text-gray-800">Esqueci meu e-mail, o que faço?</p>
+                    <p className="text-gray-600">Entre em contato com a administração do condomínio por motivos de segurança.</p>
+                  </div>
                 </div>
               </div>
             </div>
           </Card>
 
           {/* Como Falar com o Síndico sobre algo URGENTE */}
-          <Card id="sindico-urgente" className="mb-8 p-6 border-red-200 bg-red-50/50">
+          <Card id="sindico-urgente" className="p-6 border-red-200 bg-red-50/50">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 rounded-lg bg-red-100">
                 <AlertTriangle className="h-7 w-7 text-red-600" />
@@ -339,232 +420,352 @@ const ManualApp = () => {
             </div>
 
             <div className="space-y-4">
-              <div>
-                <h4 className="font-semibold text-text-primary mb-2">Passo a Passo:</h4>
-                <ol className="space-y-3 text-text-secondary">
-                  <li className="flex gap-3">
-                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">1</span>
-                    <div>
-                      <strong>Acesse a seção de Ocorrências:</strong> No menu lateral esquerdo da plataforma, clique em "Ocorrências".
-                      <div className="mt-2 p-3 bg-gray-100 rounded-lg border border-dashed border-gray-300">
-                        <p className="text-sm text-gray-600 italic">
-                          📱 Espaço reservado para imagem: Tela de Ocorrências (versão web e mobile)
-                        </p>
-                      </div>
-                    </div>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">2</span>
-                    <div><strong>Preencha o Título:</strong> No campo "Titulo", insira um título descritivo e claro sobre a urgência. Ex: "Vazamento de Água no Bloco X", "Portão da Garagem Quebrado".</div>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">3</span>
-                    <div><strong>Descreva a Ocorrência:</strong> No campo "Texto Ocorrência", detalhe o problema de forma concisa e com todas as informações relevantes. Inclua o local exato, o que está acontecendo e, se possível, a gravidade da situação.</div>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">4</span>
-                    <div><strong>Selecione o Tipo de Ocorrência:</strong> No campo "Tipo Ocorrencia", selecione a opção que melhor se encaixa na sua situação. Para urgências, "Reclamacao" ou "Outros Assuntos" são as mais indicadas.</div>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="bg-red-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">5</span>
-                    <div className="bg-red-100 border border-red-300 rounded-lg p-3">
-                      <strong className="text-red-800">⚠️ DIFERENÇA IMPORTANTE - Encaminhe para o Síndico:</strong> 
-                      <span className="text-red-700"> No campo "Encaminhar para:", selecione </span>
-                      <strong className="text-red-800">"Síndico/Representante da Torre..."</strong>
-                      <span className="text-red-700"> (não Administração).</span>
-                    </div>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">6</span>
-                    <div><strong>Anexe Fotos/Imagens (Opcional, mas recomendado):</strong> Se possível, anexe fotos ou vídeos que comprovem a urgência da situação. Isso pode agilizar a resolução do problema.</div>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">7</span>
-                    <div><strong>Registre a Ocorrência:</strong> Após preencher todos os campos, clique no botão "Registrar Ocorrência".</div>
-                  </li>
-                </ol>
+              <h4 className="font-semibold text-text-primary mb-2">Passo a Passo:</h4>
+              <ol className="space-y-3 text-text-secondary">
+                <li className="flex gap-3">
+                  <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">1</span>
+                  <div>
+                    <strong>Acesse a seção de Ocorrências:</strong> No menu lateral esquerdo da plataforma, clique em "Ocorrências".
+                  </div>
+                </li>
+                <li className="flex gap-3">
+                  <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">2</span>
+                  <div>
+                    <strong>Criar nova ocorrência:</strong> Clique no botão "Nova Ocorrência" ou "Registrar Ocorrência".
+                  </div>
+                </li>
+                <li className="flex gap-3">
+                  <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">3</span>
+                  <div>
+                    <strong>Defina o título:</strong> No campo "Título", insira um título descritivo e claro sobre a urgência. 
+                    Ex: "Vazamento de Água no Bloco X", "Portão da Garagem Quebrado".
+                  </div>
+                </li>
+                <li className="flex gap-3">
+                  <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">4</span>
+                  <div>
+                    <strong>Marque como urgente:</strong> Selecione a opção "URGENTE" ou "ALTA PRIORIDADE" se disponível.
+                  </div>
+                </li>
+                <li className="flex gap-3">
+                  <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">5</span>
+                  <div>
+                    <strong>Descreva detalhadamente:</strong> No campo de descrição, forneça o máximo de detalhes possível sobre o problema, incluindo localização específica, horário e gravidade.
+                  </div>
+                </li>
+                <li className="flex gap-3">
+                  <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">6</span>
+                  <div>
+                    <strong>Anexe evidências:</strong> Se possível, anexe fotos ou vídeos que comprovem a urgência da situação.
+                  </div>
+                </li>
+                <li className="flex gap-3">
+                  <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">7</span>
+                  <div>
+                    <strong>Envie a ocorrência:</strong> Clique em "Enviar" ou "Registrar" para submeter a ocorrência urgente.
+                  </div>
+                </li>
+              </ol>
+
+              <div className="bg-red-50 border border-red-200 rounded-lg p-4 mt-6">
+                <div className="flex items-start gap-3">
+                  <AlertCircle className="h-5 w-5 text-red-600 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-red-800 text-sm">
+                      <strong>Lembre-se:</strong> Para emergências reais (incêndio, vazamentos graves, acidentes), 
+                      sempre entre em contato por telefone primeiro e registre na plataforma depois para documentar.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </Card>
 
-          {/* Como Falar com a Administração sobre Amenidades e Chatices */}
-          <Card id="administracao" className="mb-8 p-6 border-blue-200 bg-blue-50/50">
+          {/* Como Falar com a Administração */}
+          <Card id="administracao" className="p-6 border-blue-200 bg-blue-50/50">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 rounded-lg bg-blue-100">
                 <Users className="h-7 w-7 text-blue-600" />
               </div>
               <h3 className="text-xl font-semibold text-blue-700">
-                Como Falar com a Administração sobre Amenidades e Chatices
+                Como Falar com a Administração sobre Amenidades e Questões Gerais
               </h3>
             </div>
 
             <div className="space-y-4">
-              <div>
-                <h4 className="font-semibold text-text-primary mb-2">Passo a Passo:</h4>
-                <ol className="space-y-3 text-text-secondary">
-                  <li className="flex gap-3">
-                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">1</span>
-                    <div>
-                      <strong>Acesse a seção de Ocorrências:</strong> No menu lateral esquerdo da plataforma, clique em "Ocorrências".
-                      <div className="mt-2 p-3 bg-gray-100 rounded-lg border border-dashed border-gray-300">
-                        <p className="text-sm text-gray-600 italic">
-                          📱 Espaço reservado para imagem: Tela de Ocorrências para Administração (versão web e mobile)
-                        </p>
-                      </div>
-                    </div>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">2</span>
-                    <div><strong>Preencha o Título:</strong> No campo "Titulo", insira um título descritivo e claro sobre o assunto. Ex: "Sugestão de Melhoria na Área de Lazer", "Barulho Excessivo no Bloco Y", "Problema com Coleta de Lixo".</div>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">3</span>
-                    <div><strong>Descreva a Ocorrência:</strong> No campo "Texto Ocorrência", detalhe o problema ou sugestão de forma concisa e com todas as informações relevantes. Seja específico sobre o local, o horário (se aplicável) e o impacto da situação.</div>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">4</span>
-                    <div><strong>Selecione o Tipo de Ocorrência:</strong> No campo "Tipo Ocorrencia", selecione a opção que melhor se encaixa na sua situação. Para reclamações, escolha "Reclamacao". Para sugestões, escolha "Sugestao". Para outros assuntos, "Outros Assuntos".</div>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="bg-blue-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">5</span>
-                    <div className="bg-blue-100 border border-blue-300 rounded-lg p-3">
-                      <strong className="text-blue-800">📋 DIFERENÇA IMPORTANTE - Encaminhe para a Administração:</strong> 
-                      <span className="text-blue-700"> No campo "Encaminhar para:", selecione </span>
-                      <strong className="text-blue-800">"Administração"</strong>
-                      <span className="text-blue-700"> (não Síndico).</span>
-                    </div>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">6</span>
-                    <div><strong>Anexe Fotos/Imagens (Opcional):</strong> Se tiver fotos ou vídeos que ajudem a ilustrar o problema ou a sugestão, anexe-os. Isso pode facilitar a compreensão e a resolução por parte da administração.</div>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">7</span>
-                    <div><strong>Registre a Ocorrência:</strong> Após preencher todos os campos, clique no botão "Registrar Ocorrência".</div>
-                  </li>
-                </ol>
+              <h4 className="font-semibold text-text-primary mb-2">Passo a Passo:</h4>
+              <ol className="space-y-3 text-text-secondary">
+                <li className="flex gap-3">
+                  <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">1</span>
+                  <div>
+                    <strong>Acesse o Chat:</strong> No menu principal, localize e clique na opção "Chat" ou "Mensagens".
+                  </div>
+                </li>
+                <li className="flex gap-3">
+                  <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">2</span>
+                  <div>
+                    <strong>Selecione o destinatário:</strong> Escolha "Administração" ou "Suporte" como destinatário da mensagem.
+                  </div>
+                </li>
+                <li className="flex gap-3">
+                  <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">3</span>
+                  <div>
+                    <strong>Digite sua mensagem:</strong> Escreva de forma clara e objetiva sobre sua questão, dúvida ou solicitação.
+                  </div>
+                </li>
+                <li className="flex gap-3">
+                  <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">4</span>
+                  <div>
+                    <strong>Anexe documentos se necessário:</strong> Utilize a opção de anexo para enviar fotos, documentos ou comprovantes relacionados.
+                  </div>
+                </li>
+                <li className="flex gap-3">
+                  <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">5</span>
+                  <div>
+                    <strong>Envie a mensagem:</strong> Clique no botão "Enviar" para submeter sua mensagem à administração.
+                  </div>
+                </li>
+                <li className="flex gap-3">
+                  <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">6</span>
+                  <div>
+                    <strong>Acompanhe a resposta:</strong> Você receberá uma notificação quando houver resposta. O histórico fica salvo no chat.
+                  </div>
+                </li>
+              </ol>
+
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mt-6">
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-blue-800 text-sm">
+                      <strong>Dica:</strong> O horário de atendimento da administração é de Segunda a Sexta, das 8h às 18h. 
+                      Mensagens enviadas fora deste horário serão respondidas no próximo dia útil.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </Card>
 
-          {/* Como Dar Sugestões na Plataforma */}
-          <Card id="sugestoes" className="mb-8 p-6 border-green-200 bg-green-50/50">
+          {/* Como Dar Sugestões */}
+          <Card id="sugestoes" className="p-6 border-purple-200 bg-purple-50/50">
             <div className="flex items-center gap-3 mb-6">
-              <div className="p-3 rounded-lg bg-green-100">
-                <Lightbulb className="h-7 w-7 text-green-600" />
+              <div className="p-3 rounded-lg bg-purple-100">
+                <Lightbulb className="h-7 w-7 text-purple-600" />
               </div>
-              <h3 className="text-xl font-semibold text-green-700">
-                Como Dar Sugestões na Plataforma Morador Online
+              <h3 className="text-xl font-semibold text-purple-700">
+                Como Dar Sugestões na Plataforma
               </h3>
+            </div>
+
+            <div className="space-y-4">
+              <h4 className="font-semibold text-text-primary mb-2">Passo a Passo:</h4>
+              <ol className="space-y-3 text-text-secondary">
+                <li className="flex gap-3">
+                  <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">1</span>
+                  <div>
+                    <strong>Acesse "Sugestões" ou "Feedback":</strong> Procure no menu por uma seção dedicada a sugestões ou use o chat da administração.
+                  </div>
+                </li>
+                <li className="flex gap-3">
+                  <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">2</span>
+                  <div>
+                    <strong>Categorize sua sugestão:</strong> Indique se é sobre melhorias nas áreas comuns, serviços, tecnologia, etc.
+                  </div>
+                </li>
+                <li className="flex gap-3">
+                  <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">3</span>
+                  <div>
+                    <strong>Seja específico e construtivo:</strong> Descreva claramente sua ideia, explicando os benefícios e como poderia ser implementada.
+                  </div>
+                </li>
+                <li className="flex gap-3">
+                  <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">4</span>
+                  <div>
+                    <strong>Forneça justificativas:</strong> Explique por que a sugestão seria benéfica para o condomínio e os moradores.
+                  </div>
+                </li>
+                <li className="flex gap-3">
+                  <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">5</span>
+                  <div>
+                    <strong>Envie sua sugestão:</strong> Submeta sua ideia e acompanhe se haverá retorno da administração.
+                  </div>
+                </li>
+              </ol>
+
+              <div className="bg-purple-50 border border-purple-200 rounded-lg p-4 mt-6">
+                <div className="flex items-start gap-3">
+                  <Lightbulb className="h-5 w-5 text-purple-600 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-purple-800 text-sm">
+                      <strong>Lembre-se:</strong> Sugestões construtivas e bem fundamentadas têm maior chance de serem consideradas. 
+                      Seja respeitoso e considere a viabilidade financeira e técnica de sua proposta.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Card>
+
+          {/* Como Participar de Assembleias Online */}
+          <Card id="assembleias" className="p-6 border-indigo-200 bg-indigo-50/50">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="p-3 rounded-lg bg-indigo-100">
+                <Users className="h-7 w-7 text-indigo-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-indigo-700">
+                Como Participar de Assembleias Online
+              </h3>
+            </div>
+            
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
+              <p className="text-blue-800 text-sm">
+                <strong>IMPORTANTE:</strong> A funcionalidade de Assembleia Online é o espaço oficial onde você participa das reuniões, vota em pautas importantes e acompanha os resultados de forma prática, transparente e segura.
+              </p>
             </div>
 
             <div className="space-y-6">
               <div>
-                <h4 className="font-semibold text-text-primary mb-3 text-lg">1. Dando Sugestões Formais (via Ocorrências)</h4>
-                <p className="text-text-secondary mb-4">Para sugestões que você deseja que a administração analise formalmente, utilize a seção de Ocorrências:</p>
-                
-                <ol className="space-y-3 text-text-secondary">
-                  <li className="flex gap-3">
-                    <span className="bg-green-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">1</span>
+                <h4 className="font-semibold text-text-primary mb-4">Como Acessar e Participar:</h4>
+                <ol className="space-y-4 text-text-secondary">
+                  <li className="flex gap-4">
+                    <span className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">1</span>
                     <div>
-                      <strong>Acesse a seção de Ocorrências:</strong> No menu lateral esquerdo da plataforma, clique em "Ocorrências".
-                      <div className="mt-2 p-3 bg-gray-100 rounded-lg border border-dashed border-gray-300">
-                        <p className="text-sm text-gray-600 italic">
-                          📱 Espaço reservado para imagem: Tela de Ocorrências para Sugestões (versão web e mobile)
-                        </p>
-                      </div>
+                      <strong>Acesse a funcionalidade:</strong> No menu de Serviços, localize e toque no ícone "Assembleia Online".
                     </div>
                   </li>
-                  <li className="flex gap-3">
-                    <span className="bg-green-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">2</span>
-                    <div><strong>Preencha o Título:</strong> No campo "Titulo", insira um título claro e objetivo para sua sugestão. Ex: "Sugestão para Implantação de Coleta Seletiva", "Ideia para Melhoria da Segurança".</div>
+                  <li className="flex gap-4">
+                    <span className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">2</span>
+                    <div>
+                      <strong>Atualize a tela:</strong> Arraste de cima para baixo para garantir que as informações estejam atualizadas.
+                    </div>
                   </li>
-                  <li className="flex gap-3">
-                    <span className="bg-green-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">3</span>
-                    <div><strong>Descreva a Sugestão:</strong> No campo "Texto Ocorrência", detalhe sua sugestão, explicando os benefícios e, se possível, como ela poderia ser implementada.</div>
+                  <li className="flex gap-4">
+                    <span className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">3</span>
+                    <div>
+                      <strong>Navegue pelas abas:</strong> Você verá duas abas principais:
+                      <ul className="mt-2 ml-4 space-y-1">
+                        <li>• <strong>Assembleias Futuras e Atuais</strong> - Para assembleias que vão acontecer ou estão em andamento</li>
+                        <li>• <strong>Assembleias Passadas</strong> - Para consultar assembleias já finalizadas</li>
+                      </ul>
+                    </div>
                   </li>
-                  <li className="flex gap-3">
-                    <span className="bg-green-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">4</span>
-                    <div><strong>Selecione o Tipo de Ocorrência:</strong> No campo "Tipo Ocorrencia", selecione a opção "Sugestao".</div>
+                  <li className="flex gap-4">
+                    <span className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">4</span>
+                    <div>
+                      <strong>Confirme sua presença:</strong> Na assembleia desejada, toque no botão "Confirmar Presença". Isso é obrigatório para acessar as funcionalidades.
+                    </div>
                   </li>
-                  <li className="flex gap-3">
-                    <span className="bg-green-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">5</span>
-                    <div><strong>Encaminhe para a Administração:</strong> No campo "Encaminhar para:", selecione "Administração".</div>
+                  <li className="flex gap-4">
+                    <span className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">5</span>
+                    <div>
+                      <strong>Verifique sua situação:</strong> Após confirmar presença, clique em "Ver Situação" para verificar se você está autorizado a votar.
+                    </div>
                   </li>
-                  <li className="flex gap-3">
-                    <span className="bg-green-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">6</span>
-                    <div><strong>Anexe Fotos/Imagens (Opcional):</strong> Se tiver imagens ou documentos que complementem sua sugestão, anexe-os.</div>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="bg-green-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">7</span>
-                    <div><strong>Registre a Ocorrência:</strong> Após preencher todos os campos, clique no botão "Registrar Ocorrência".</div>
+                  <li className="flex gap-4">
+                    <span className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">6</span>
+                    <div>
+                      <strong>Entre na assembleia:</strong> Clique no botão "Entrar" para acessar todos os recursos disponíveis.
+                    </div>
                   </li>
                 </ol>
               </div>
 
-              <div>
-                <h4 className="font-semibold text-text-primary mb-3 text-lg">2. Dando Sugestões e Debatendo Ideias (via Fórum)</h4>
-                <p className="text-text-secondary mb-4">Para sugestões que você gostaria de debater com outros moradores e coletar opiniões, o Fórum é o local ideal:</p>
-                
-                <ol className="space-y-3 text-text-secondary">
-                  <li className="flex gap-3">
-                    <span className="bg-green-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">1</span>
-                    <div><strong>Acesse a seção de Fórum:</strong> No menu lateral esquerdo da plataforma, clique em "Fórum".</div>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="bg-green-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">2</span>
-                    <div><strong>Crie um Novo Tópico:</strong> Dentro do Fórum, procure pela opção "Crie seu Tópico" ou similar.</div>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="bg-green-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">3</span>
-                    <div><strong>Defina o Título do Tópico:</strong> Dê um título claro e convidativo para sua sugestão/ideia.</div>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="bg-green-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">4</span>
-                    <div><strong>Descreva sua Sugestão:</strong> No corpo do tópico, detalhe sua sugestão e convide os moradores a participar do debate.</div>
-                  </li>
-                  <li className="flex gap-3">
-                    <span className="bg-green-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">5</span>
-                    <div><strong>Publique o Tópico:</strong> Após escrever, publique o tópico para que outros moradores possam visualizá-lo e interagir.</div>
-                  </li>
+              {/* Funcionalidades Disponíveis */}
+              <div className="bg-indigo-50 border border-indigo-200 rounded-lg p-4">
+                <h4 className="font-semibold text-indigo-800 mb-3">📋 Funcionalidades Disponíveis na Assembleia</h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-indigo-800 text-sm">
+                  <div className="space-y-2">
+                    <p>• <strong>Votação:</strong> Vote nas pautas abertas</p>
+                    <p>• <strong>Resultados:</strong> Acompanhe os resultados em tempo real</p>
+                    <p>• <strong>Documentos:</strong> Acesse arquivos anexados</p>
+                  </div>
+                  <div className="space-y-2">
+                    <p>• <strong>Perguntas Públicas:</strong> Envie e comente perguntas</p>
+                    <p>• <strong>Solicitar Fala:</strong> Peça para falar durante a assembleia</p>
+                    <p>• <strong>Videoconferência:</strong> Participe ao vivo (se disponível)</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Como Votar */}
+              <div className="bg-white border border-gray-200 rounded-lg p-4">
+                <h4 className="font-semibold text-gray-800 mb-3">🗳️ Como Votar nas Pautas</h4>
+                <ol className="text-gray-700 text-sm space-y-2 ml-4">
+                  <li>1. Acesse a aba "Votação" dentro dos detalhes da assembleia</li>
+                  <li>2. Leia atentamente a descrição de cada pauta</li>
+                  <li>3. Selecione uma das opções de resposta disponíveis</li>
+                  <li>4. Adicione uma justificativa (opcional)</li>
+                  <li>5. Toque no botão "Votar" e confirme sua escolha</li>
+                  <li>6. Acompanhe seus votos na aba "Meus Votos"</li>
                 </ol>
+              </div>
+
+              {/* Tipos de Assembleia */}
+              <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
+                <h4 className="font-semibold text-gray-800 mb-3">📊 Tipos de Assembleia</h4>
+                <div className="space-y-3 text-sm">
+                  <div>
+                    <p className="font-medium text-gray-800">Assembleia Ordinária:</p>
+                    <p className="text-gray-600">Ocorre em períodos definidos (geralmente 1 vez por ano). Objetivo: aprovação de contas, eleição de síndico, previsão orçamentária.</p>
+                  </div>
+                  <div>
+                    <p className="font-medium text-gray-800">Assembleia Extraordinária:</p>
+                    <p className="text-gray-600">Sempre que necessário, fora da agenda regular. Objetivo: decisões urgentes ou pontuais, como obras ou mudanças nas regras.</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Dúvidas Frequentes */}
+              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                <h4 className="font-semibold text-yellow-800 mb-3">❓ Dúvidas Frequentes sobre Assembleias</h4>
+                <div className="space-y-3 text-sm">
+                  <div>
+                    <p className="font-medium text-yellow-800">Confirmei presença, mas não consigo votar. O que fazer?</p>
+                    <p className="text-yellow-700">Verifique sua situação no botão "Ver Situação". Pode haver problemas cadastrais ou a votação pode ser específica para outra torre.</p>
+                  </div>
+                  <div>
+                    <p className="font-medium text-yellow-800">Tenho mais de uma unidade. Isso afeta meu voto?</p>
+                    <p className="text-yellow-700">Sim. O sistema calcula automaticamente os votos com base na quantidade de unidades vinculadas ao seu nome.</p>
+                  </div>
+                  <div>
+                    <p className="font-medium text-yellow-800">Não vejo a assembleia listada. O que pode ser?</p>
+                    <p className="text-yellow-700">Deslize a tela para baixo para forçar a atualização. Se ainda não aparecer, contate a administração.</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Dicas Importantes */}
+              <div className="bg-green-50 border border-green-200 rounded-lg p-4">
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <h4 className="font-semibold text-green-800 mb-2">💡 Dicas Importantes</h4>
+                    <ul className="text-green-800 text-sm space-y-1 ml-4">
+                      <li>• O período de votação é limitado; fique atento aos horários</li>
+                      <li>• Moradores com pendências podem ter restrições para votar</li>
+                      <li>• Os resultados são atualizados em tempo real</li>
+                      <li>• Use a seção de perguntas para esclarecer dúvidas de forma respeitosa</li>
+                      <li>• Para emergências reais, sempre contate por telefone primeiro</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
           </Card>
         </div>
-
-        <Card className="mt-8 p-6 bg-primary/5 border-primary/20">
-          <h2 className="text-xl font-semibold text-text-primary mb-4">Dicas Importantes</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <h3 className="font-medium text-text-primary mb-2">Suporte Técnico</h3>
-              <p className="text-sm text-text-secondary">
-                Em caso de problemas técnicos com o app, entre em contato com a administração 
-                ou acesse a seção de ajuda dentro do aplicativo.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-medium text-text-primary mb-2">Atualizações</h3>
-              <p className="text-sm text-text-secondary">
-                Mantenha o app sempre atualizado para ter acesso às novas funcionalidades 
-                e correções de segurança.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-medium text-text-primary mb-2">Segurança</h3>
-              <p className="text-sm text-text-secondary">
-                Nunca compartilhe sua senha com terceiros. Use uma senha forte e 
-                altere-a periodicamente.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-medium text-text-primary mb-2">Conectividade</h3>
-              <p className="text-sm text-text-secondary">
-                Para melhor experiência, use o app com conexão Wi-Fi estável. 
-                Algumas funções podem não funcionar offline.
-              </p>
-            </div>
-          </div>
+        {/* Resumo Rápido */}
+     
+        <Card className="mt-12 p-6 bg-gray-50">
+          <h3 className="text-xl font-semibold text-text-primary mb-4">📋 Resumo Rápido - Primeiro Acesso</h3>
+          <ol className="space-y-2 text-text-secondary">
+            <li>1. Baixe o app Morador Online na Play Store (Android) ou App Store (iOS)</li>
+            <li>2. Abra o app, insira o Endereço do Portal, e-mail e senha</li>
+            <li>3. Use a funcionalidade "Alternar conta" para múltiplos perfis</li>
+            <li>4. Para assembleias: Serviços → Assembleia Online → Confirmar Presença → Entrar</li>
+            <li>5. Consulte as Dúvidas Frequentes em caso de problemas</li>
+            <li>6. Aproveite todas as funcionalidades do App</li>
+          </ol>
         </Card>
       </div>
     </Layout>
