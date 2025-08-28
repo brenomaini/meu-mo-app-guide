@@ -32,7 +32,7 @@ const towers: Tower[] = [
         name: "Salão de Festas com Copa",
         capacity: 50, // SALÃO DE FESTAS - Bloco 1
         amenities: ["Copa", "Iluminação", "Ar-condicionado"],
-        hours: "8h às 2h"
+        hours: "10h às 2h"
       },
       {
         id: "home-office-1",
@@ -46,7 +46,7 @@ const towers: Tower[] = [
         name: "Espaço Gourmet",
         capacity: 25, // ESPAÇO GOURMET - TORRE 01
         amenities: ["Bancada", "Geladeira", "Pia", "Forno", "Forno-microondas"],
-        hours: "8h às 2h"
+        hours: "10h às 2h"
       }
     ]
   },
@@ -67,7 +67,7 @@ const towers: Tower[] = [
         name: "Salão de Festa com Copa",
         capacity: 35, // SALÃO DE FESTAS - Bloco 2
         amenities: ["Copa","Iluminação", "Ar-condicionado"],
-        hours: "8h às 2h"
+        hours: "10h às 2h"
       }
     ]
   },
@@ -81,7 +81,7 @@ const towers: Tower[] = [
         name: "Salão de Festas com Copa",
         capacity: 35, // SALÃO DE FESTAS - Bloco 3
         amenities: ["Copa", "Iluminação", "Ar-condicionado"],
-        hours: "8h às 2h"
+        hours: "10h às 2h"
       }
     ]
   },
@@ -116,7 +116,7 @@ const towers: Tower[] = [
         name: "Espaço Gourmet",
         capacity: 0, // Informação indisponível
         amenities: ["Bancada", "Geladeira", "Pia"],
-        hours: "8h às 22h"
+        hours: "10h às 22h"
       },
       {
         id: "salao-jogos-5",
@@ -193,7 +193,7 @@ const towers: Tower[] = [
         name: "Cinema",
         capacity: 0, // Informação indisponível
         amenities: ["Poltronas", "Tela", "Som Surround", "Ar-condicionado"],
-        hours: "19h às 23h"
+        hours: "XXh às XXh"
       }
     ]
   },
@@ -207,14 +207,14 @@ const towers: Tower[] = [
         name: "Salão de Festas com Copa",
         capacity: 35, // Salão de Festas - Torre 09
         amenities: ["Copa", "Iluminação", "Ar-condicionado", "Varanda"],
-        hours: "8h às 2h"
+        hours: "10h às 2h"
       },
       {
         id: "espaco-gourmet-9",
         name: "Espaço Gourmet",
         capacity: 25, // Espaço Gourmet - Torre 09
         amenities: ["Churrasqueira", "Bancada", "Geladeira", "Pia", "Forno"],
-        hours: "8h às 22h"
+        hours: "10h às 22h"
       },
       {
         id: "brinquedoteca-9",
@@ -228,7 +228,7 @@ const towers: Tower[] = [
         name: "Espaço Stadium",
         capacity: 30, // ESPAÇO STADIUM
         amenities: ["Telão", "Arquibancada", "Climatização"],
-        hours: "8h às 23h"
+        hours: "10h às 23h"
       }
     ]
   }

@@ -103,7 +103,7 @@ const MapasChurrasqueiras = () => {
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span>Churrasqueiras:</span>
-                  <span>9h às 2h</span>
+                  <span>10h às 2h</span>
                 </div>
               </div>
             </div>
