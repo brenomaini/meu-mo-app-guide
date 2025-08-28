@@ -92,681 +92,770 @@ const ManualApp = () => {
           </p>
         </div>
 
-        {/* Links de Acesso */}
-        <div className="mb-8">
-          <Card className="p-6 border-primary/30 bg-gradient-to-r from-primary/5 to-primary/10">
-            <h2 className="text-xl font-bold text-text-primary mb-4 flex items-center gap-2">
-              <Download className="h-5 w-5" />
-              Links de Acesso ao Aplicativo
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <a 
-                href="https://reservaparqueclube.mo.app.br/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 p-4 bg-white rounded-lg border border-primary/20 hover:border-primary/40 transition-colors group"
-              >
-                <div className="p-2 rounded-lg bg-blue-100 group-hover:bg-blue-200 transition-colors">
-                  <Smartphone className="h-6 w-6 text-blue-600" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-text-primary">Versão Web</h3>
-                  <p className="text-sm text-text-secondary">reservaparqueclube.mo.app.br</p>
-                </div>
-              </a>
-              
-              <a 
-                href="https://play.google.com/store/apps/details?id=br.app.mo.novomo&hl=pt_BR" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 p-4 bg-white rounded-lg border border-primary/20 hover:border-primary/40 transition-colors group"
-              >
-                <div className="p-2 rounded-lg bg-green-100 group-hover:bg-green-200 transition-colors">
-                  <Download className="h-6 w-6 text-green-600" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-text-primary">Google Play</h3>
-                  <p className="text-sm text-text-secondary">Para Android</p>
-                </div>
-              </a>
-              
-              <a 
-                href="https://apps.apple.com/br/app/morador-online-2-0/id1598971439" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 p-4 bg-white rounded-lg border border-primary/20 hover:border-primary/40 transition-colors group"
-              >
-                <div className="p-2 rounded-lg bg-gray-100 group-hover:bg-gray-200 transition-colors">
-                  <Download className="h-6 w-6 text-gray-600" />
-                </div>
-                <div>
-                  <h3 className="font-semibold text-text-primary">App Store</h3>
-                  <p className="text-sm text-text-secondary">Para iOS</p>
-                </div>
-              </a>
-            </div>
-          </Card>
-        </div>
+        {/* Navegação Principal com Tabs */}
+        <Tabs defaultValue="inicio" className="w-full">
+          <TabsList className="grid w-full grid-cols-5">
+            <TabsTrigger value="inicio">Primeiros Passos</TabsTrigger>
+            <TabsTrigger value="comunicacao">Comunicação</TabsTrigger>
+            <TabsTrigger value="assembleias">Assembleias</TabsTrigger>
+            <TabsTrigger value="transparencia">Transparência</TabsTrigger>
+            <TabsTrigger value="funcionalidades">Funcionalidades</TabsTrigger>
+          </TabsList>
 
-        {/* Sumário */}
-        <div className="mb-12">
-          <Card className="p-6 border-primary/20 bg-primary/5">
-            <h2 className="text-xl font-bold text-text-primary mb-4 flex items-center gap-2">
-              <BookOpen className="h-5 w-5" />
-              Sumário dos Tutoriais
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <h3 className="font-semibold text-text-primary mb-2">Primeiro Acesso</h3>
-                <a href="#como-logar" className="text-primary hover:text-primary/80 text-sm block">
-                  • Como Fazer Login no Aplicativo
-                </a>
-              </div>
-              <div>
-                <h3 className="font-semibold text-text-primary mb-2">Comunicação Urgente</h3>
-                <a href="#sindico-urgente" className="text-primary hover:text-primary/80 text-sm block">
-                  • Como Falar com o Síndico sobre algo URGENTE
-                </a>
-              </div>
-              <div>
-                <h3 className="font-semibold text-text-primary mb-2">Comunicação Geral</h3>
-                <a href="#administracao" className="text-primary hover:text-primary/80 text-sm block">
-                  • Como Falar com a Administração sobre Amenidades e Chatices
-                </a>
-              </div>
-              <div>
-                <h3 className="font-semibold text-text-primary mb-2">Sugestões</h3>
-                <a href="#sugestoes" className="text-primary hover:text-primary/80 text-sm block">
-                  • Como Dar Sugestões na Plataforma
-                </a>
-              </div>
-              <div>
-                <h3 className="font-semibold text-text-primary mb-2">Participação</h3>
-                <a href="#assembleias" className="text-primary hover:text-primary/80 text-sm block">
-                  • Como Participar de Assembleias Online
-                </a>
-              </div>
+          {/* Tab - Primeiros Passos */}
+          <TabsContent value="inicio" className="space-y-6">
+            <div className="text-center mb-6">
+              <h2 className="text-2xl font-bold text-green-800 mb-2">Primeiros Passos</h2>
+              <p className="text-gray-600">Como começar a usar o aplicativo</p>
             </div>
-          </Card>
-        </div>
-        
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-12">
-          {sections.map((section, index) => {
-            const Icon = section.icon;
-            
-            return (
-              <Card key={index} className="p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="p-2 rounded-lg bg-primary/10">
-                    <Icon className="h-6 w-6 text-primary" />
-                  </div>
-                  <h2 className="text-xl font-semibold text-text-primary">{section.title}</h2>
-                </div>
-                
-                <ul className="space-y-3">
-                  {section.content.map((item, itemIndex) => (
-                    <li key={itemIndex} className="flex items-start gap-3">
-                      <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
-                      <span className="text-text-secondary">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </Card>
-            );
-          })}
-        </div>
 
-        {/* Guias Detalhados */}
-        <div className="space-y-8">
-          <h2 className="text-2xl font-bold text-text-primary text-center">
-            Guias Detalhados de Comunicação
-          </h2>
-          
-          {/* Como Fazer Login no Aplicativo */}
-          <Card id="como-logar" className="p-6 border-green-200 bg-green-50/50">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="p-3 rounded-lg bg-green-100">
-                <Key className="h-7 w-7 text-green-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-green-700">
-                Como Fazer Login no Aplicativo
+            {/* Links de Acesso */}
+            <Card className="p-6 border-primary/30 bg-gradient-to-r from-primary/5 to-primary/10">
+              <h3 className="text-xl font-bold text-text-primary mb-4 flex items-center gap-2">
+                <Download className="h-5 w-5" />
+                Links de Acesso ao Aplicativo
               </h3>
-            </div>
-            
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
-              <p className="text-blue-800 text-sm">
-                <strong>IMPORTANTE:</strong> Este manual irá guiá-lo sobre como fazer o primeiro acesso ao aplicativo Morador Online. 
-                É importante seguir estes passos para configurar corretamente sua conta.
-              </p>
-            </div>
-
-            {/* Tabs para diferentes plataformas */}
-            <Tabs defaultValue="android" className="mb-6">
-              <TabsList className="grid w-full grid-cols-2">
-                <TabsTrigger value="android">Android</TabsTrigger>
-                <TabsTrigger value="ios">iOS</TabsTrigger>
-              </TabsList>
-              <TabsContent value="android" className="space-y-4">
-                <div className="bg-white p-4 rounded-lg border">
-                  <h4 className="font-semibold mb-2">Download na Google Play Store</h4>
-                  <p className="text-sm text-gray-600 mb-3">
-                    Abra a Google Play Store e pesquise por "Morador Online" e clique em "Instalar"
-                  </p>
-                  <div className="bg-gray-100 p-4 rounded border border-dashed">
-                    <p className="text-sm text-gray-600 italic">📱 Imagem: Aplicativo Play Store Morador Online</p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <a 
+                  href="https://reservaparqueclube.mo.app.br/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 p-4 bg-white rounded-lg border border-primary/20 hover:border-primary/40 transition-colors group"
+                >
+                  <div className="p-2 rounded-lg bg-blue-100 group-hover:bg-blue-200 transition-colors">
+                    <Smartphone className="h-6 w-6 text-blue-600" />
                   </div>
-                </div>
-              </TabsContent>
-              <TabsContent value="ios" className="space-y-4">
-                <div className="bg-white p-4 rounded-lg border">
-                  <h4 className="font-semibold mb-2">Download na App Store</h4>
-                  <p className="text-sm text-gray-600 mb-3">
-                    Abra a App Store e pesquise por "Morador Online" e clique em "Obter"
-                  </p>
-                  <div className="bg-gray-100 p-4 rounded border border-dashed">
-                    <p className="text-sm text-gray-600 italic">📱 Imagem: Aplicativo App Store Morador Online</p>
-                  </div>
-                </div>
-              </TabsContent>
-            </Tabs>
-
-            <div className="space-y-6">
-              <div>
-                <h4 className="font-semibold text-text-primary mb-4">Passo a Passo do Login:</h4>
-                <ol className="space-y-4 text-text-secondary">
-                  <li className="flex gap-4">
-                    <span className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">1</span>
-                    <div>
-                      <strong>Solicite seu acesso:</strong> Se você ainda não recebeu, solicite o envio ou reenvio do e-mail de boas-vindas para o WhatsApp <a href="https://wa.me/5561998587580" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">61 99858-7580</a>.
-                    </div>
-                  </li>
-                  <li className="flex gap-4">
-                    <span className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">2</span>
-                    <div>
-                      <strong>Localize o e-mail de boas-vindas:</strong> Procure pelo e-mail com o título "Primeiro Acesso" na sua caixa de entrada. Se não encontrar, verifique a pasta de spam.
-                      <div className="mt-3 p-3 bg-gray-100 rounded-lg border border-dashed border-gray-300">
-                        <p className="text-sm text-gray-600 italic">📧 Imagem: E-mail de boas-vindas com endereço do portal</p>
-                      </div>
-                    </div>
-                  </li>
-                  <li className="flex gap-4">
-                    <span className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">3</span>
-                    <div>
-                      <strong>Abra o aplicativo:</strong> Após instalar, abra o aplicativo e você verá a tela de login principal.
-                      <div className="mt-3 p-3 bg-gray-100 rounded-lg border border-dashed border-gray-300">
-                        <p className="text-sm text-gray-600 italic">📱 Imagem: Tela de login principal do aplicativo</p>
-                      </div>
-                    </div>
-                  </li>
-                  <li className="flex gap-4">
-                    <span className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">4</span>
-                    <div>
-                      <strong>Digite o endereço do condomínio:</strong> No campo "Endereço Portal Condomínio", digite exatamente: 
-                      <code className="bg-gray-200 px-2 py-1 rounded text-sm ml-2 font-mono">reservaparqueclube.mo.app.br</code>
-                    </div>
-                  </li>
-                  <li className="flex gap-4">
-                    <span className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">5</span>
-                    <div><strong>Insira seu email:</strong> No campo "E-mail", digite o email que você cadastrou ou que foi fornecido pela administração.</div>
-                  </li>
-                  <li className="flex gap-4">
-                    <span className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">6</span>
-                    <div><strong>Digite sua senha:</strong> Insira a senha que você criou no primeiro acesso.</div>
-                  </li>
-                  <li className="flex gap-4">
-                    <span className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">7</span>
-                    <div><strong>Aceite os termos:</strong> Marque a opção "Li e aceito as políticas de privacidade".</div>
-                  </li>
-                  <li className="flex gap-4">
-                    <span className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">8</span>
-                    <div><strong>Faça o login:</strong> Clique no botão "ACESSAR" para entrar no aplicativo.</div>
-                  </li>
-                </ol>
-              </div>
-
-              {/* Recomendação de Senha Segura */}
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
-                <div className="flex items-start gap-3">
-                  <Shield className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
                   <div>
-                    <h4 className="font-semibold text-blue-800 mb-2">🔒 Recomendação de Senha Segura</h4>
-                    <p className="text-blue-800 text-sm mb-2">
-                      Para sua segurança, utilize uma senha forte com:
-                    </p>
-                    <ul className="text-blue-800 text-sm space-y-1 ml-4">
-                      <li>• Pelo menos 8 caracteres</li>
-                      <li>• Combinação de letras maiúsculas e minúsculas</li>
-                      <li>• Números e caracteres especiais (@, #, $, &)</li>
+                    <h4 className="font-semibold text-text-primary">Versão Web</h4>
+                    <p className="text-sm text-text-secondary">reservaparqueclube.mo.app.br</p>
+                  </div>
+                </a>
+                
+                <a 
+                  href="https://play.google.com/store/apps/details?id=br.app.mo.novomo&hl=pt_BR" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 p-4 bg-white rounded-lg border border-primary/20 hover:border-primary/40 transition-colors group"
+                >
+                  <div className="p-2 rounded-lg bg-green-100 group-hover:bg-green-200 transition-colors">
+                    <Download className="h-6 w-6 text-green-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-text-primary">Google Play</h4>
+                    <p className="text-sm text-text-secondary">Para Android</p>
+                  </div>
+                </a>
+                
+                <a 
+                  href="https://apps.apple.com/br/app/morador-online-2-0/id1598971439" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-3 p-4 bg-white rounded-lg border border-primary/20 hover:border-primary/40 transition-colors group"
+                >
+                  <div className="p-2 rounded-lg bg-gray-100 group-hover:bg-gray-200 transition-colors">
+                    <Download className="h-6 w-6 text-gray-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-text-primary">App Store</h4>
+                    <p className="text-sm text-text-secondary">Para iOS</p>
+                  </div>
+                </a>
+              </div>
+            </Card>
+
+            {/* Funcionalidades Principais em Grid */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              {sections.map((section, index) => {
+                const Icon = section.icon;
+                
+                return (
+                  <Card key={index} className="p-6">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="p-2 rounded-lg bg-primary/10">
+                        <Icon className="h-6 w-6 text-primary" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-text-primary">{section.title}</h3>
+                    </div>
+                    
+                    <ul className="space-y-3">
+                      {section.content.map((item, itemIndex) => (
+                        <li key={itemIndex} className="flex items-start gap-3">
+                          <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0"></div>
+                          <span className="text-text-secondary">{item}</span>
+                        </li>
+                      ))}
                     </ul>
-                    <p className="text-blue-800 text-sm mt-2">
-                      <strong>Exemplo:</strong> <code className="bg-blue-200 px-1 rounded">S3nha@Segura2025</code>
-                    </p>
-                  </div>
+                  </Card>
+                );
+              })}
+            </div>
+
+            {/* Como Fazer Login - Tutorial Completo */}
+            <Card className="p-6 border-green-200 bg-green-50/50">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="p-3 rounded-lg bg-green-100">
+                  <Key className="h-7 w-7 text-green-600" />
                 </div>
+                <h3 className="text-xl font-semibold text-green-700">
+                  Tutorial Completo - Como Fazer Login
+                </h3>
               </div>
 
-              {/* Alternar entre Contas */}
-              <div className="bg-purple-50 border border-purple-200 rounded-lg p-4">
-                <div className="flex items-start gap-3">
-                  <RefreshCw className="h-5 w-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <div>
-                    <h4 className="font-semibold text-purple-800 mb-2">Alternar entre Contas</h4>
-                    <p className="text-purple-800 text-sm mb-2">
-                      Você pode alternar facilmente entre diferentes contas sem sair do aplicativo:
+              <Tabs defaultValue="passo-a-passo" className="w-full">
+                <TabsList className="grid w-full grid-cols-3">
+                  <TabsTrigger value="passo-a-passo">Passo a Passo</TabsTrigger>
+                  <TabsTrigger value="dicas">Dicas de Segurança</TabsTrigger>
+                  <TabsTrigger value="problemas">Solucionando Problemas</TabsTrigger>
+                </TabsList>
+
+                <TabsContent value="passo-a-passo" className="space-y-6">
+                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                    <p className="text-blue-800 text-sm">
+                      <strong>IMPORTANTE:</strong> Este tutorial irá guiá-lo sobre como fazer o primeiro acesso ao aplicativo Morador Online.
                     </p>
-                    <ol className="text-purple-800 text-sm space-y-1 ml-4">
-                      <li>1. Clique no menu (três pontos) no canto superior esquerdo</li>
-                      <li>2. Selecione "Sair da conta" e confirme</li>
-                      <li>3. Clique em "Trocar Conta" na tela de login</li>
-                      <li>4. Insira as credenciais da nova conta</li>
+                  </div>
+
+                  <div className="space-y-4">
+                    <h4 className="font-semibold text-text-primary">Passos para Login:</h4>
+                    <ol className="space-y-4 text-text-secondary">
+                      <li className="flex gap-4">
+                        <span className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">1</span>
+                        <div>
+                          <strong>Solicite seu acesso:</strong> WhatsApp <a href="https://wa.me/5561998587580" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">61 99858-7580</a>
+                        </div>
+                      </li>
+                      <li className="flex gap-4">
+                        <span className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">2</span>
+                        <div>
+                          <strong>Baixe o aplicativo:</strong> Google Play Store ou App Store
+                        </div>
+                      </li>
+                      <li className="flex gap-4">
+                        <span className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">3</span>
+                        <div>
+                          <strong>Digite o endereço do portal:</strong> 
+                          <code className="bg-gray-200 px-2 py-1 rounded text-sm ml-2 font-mono">reservaparqueclube.mo.app.br</code>
+                        </div>
+                      </li>
+                      <li className="flex gap-4">
+                        <span className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">4</span>
+                        <div><strong>Insira seu email e senha</strong></div>
+                      </li>
+                      <li className="flex gap-4">
+                        <span className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">5</span>
+                        <div><strong>Aceite os termos</strong> e clique em "ACESSAR"</div>
+                      </li>
                     </ol>
                   </div>
-                </div>
-              </div>
+                </TabsContent>
 
-              {/* Problemas Frequentes */}
-              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
-                <h4 className="font-semibold text-yellow-800 mb-3">⚠️ Problemas Frequentes</h4>
-                <div className="space-y-3">
-                  <div>
-                    <p className="font-medium text-yellow-800 text-sm">Endereço do Portal incorreto:</p>
-                    <p className="text-yellow-700 text-sm">Certifique-se de digitar corretamente o endereço informado no e-mail de boas-vindas.</p>
+                <TabsContent value="dicas" className="space-y-6">
+                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                    <div className="flex items-start gap-3">
+                      <Shield className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <h4 className="font-semibold text-blue-800 mb-2">🔒 Senha Segura</h4>
+                        <ul className="text-blue-800 text-sm space-y-1 ml-4">
+                          <li>• Pelo menos 8 caracteres</li>
+                          <li>• Letras maiúsculas e minúsculas</li>
+                          <li>• Números e símbolos</li>
+                        </ul>
+                        <p className="text-blue-800 text-sm mt-2">
+                          <strong>Exemplo:</strong> <code className="bg-blue-200 px-1 rounded">MinhaSenh@123</code>
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <p className="font-medium text-yellow-800 text-sm">E-mail ou senha incorretos:</p>
-                    <p className="text-yellow-700 text-sm">Verifique se está usando o email correto e se a senha está digitada sem erros. Use "Esqueci a senha" se necessário.</p>
-                  </div>
-                </div>
-              </div>
 
-              {/* FAQ */}
-              <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
-                <h4 className="font-semibold text-gray-800 mb-3">❓ Dúvidas Frequentes</h4>
-                <div className="space-y-3 text-sm">
-                  <div>
-                    <p className="font-medium text-gray-800">Onde encontro o Endereço do Portal?</p>
-                    <p className="text-gray-600">No e-mail de boas-vindas enviado pela administração do condomínio.</p>
+                  <div className="bg-purple-50 border border-purple-200 rounded-lg p-4">
+                    <div className="flex items-start gap-3">
+                      <RefreshCw className="h-5 w-5 text-purple-600 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <h4 className="font-semibold text-purple-800 mb-2">Alternar Contas</h4>
+                        <p className="text-purple-800 text-sm">
+                          Use "Trocar Conta" na tela de login para alternar entre diferentes unidades.
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <p className="font-medium text-gray-800">Esqueci minha senha, o que faço?</p>
-                    <p className="text-gray-600">Clique em "Problemas com acesso?" e selecione "Esqueci a senha".</p>
-                  </div>
-                  <div>
-                    <p className="font-medium text-gray-800">Esqueci meu e-mail, o que faço?</p>
-                    <p className="text-gray-600">Entre em contato com a administração do condomínio por motivos de segurança.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Card>
+                </TabsContent>
 
-          {/* Como Falar com o Síndico sobre algo URGENTE */}
-          <Card id="sindico-urgente" className="p-6 border-red-200 bg-red-50/50">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="p-3 rounded-lg bg-red-100">
-                <AlertTriangle className="h-7 w-7 text-red-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-red-700">
-                Como Falar com o Síndico sobre algo URGENTE
-              </h3>
-            </div>
-            
-            <div className="bg-orange-50 border border-orange-200 rounded-lg p-4 mb-6">
-              <p className="text-orange-800 text-sm">
-                <strong>IMPORTANTE:</strong> Para emergências que exijam ação imediata (ex: vazamento grave, incêndio, etc.), 
-                o contato telefônico direto com a portaria ou síndico ainda é o mais indicado. A ocorrência deve ser 
-                registrada na plataforma posteriormente para formalização.
-              </p>
-            </div>
+                <TabsContent value="problemas" className="space-y-6">
+                  <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+                    <h4 className="font-semibold text-yellow-800 mb-3">⚠️ Problemas Comuns</h4>
+                    <div className="space-y-3">
+                      <div>
+                        <p className="font-medium text-yellow-800 text-sm">Endereço incorreto:</p>
+                        <p className="text-yellow-700 text-sm">Verifique se digitou exatamente como no email de boas-vindas.</p>
+                      </div>
+                      <div>
+                        <p className="font-medium text-yellow-800 text-sm">Email/senha incorretos:</p>
+                        <p className="text-yellow-700 text-sm">Use "Esqueci a senha" se necessário.</p>
+                      </div>
+                    </div>
+                  </div>
+                </TabsContent>
+              </Tabs>
+            </Card>
 
-            <div className="space-y-4">
-              <h4 className="font-semibold text-text-primary mb-2">Passo a Passo:</h4>
-              <ol className="space-y-3 text-text-secondary">
-                <li className="flex gap-3">
-                  <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">1</span>
-                  <div>
-                    <strong>Acesse a seção de Ocorrências:</strong> No menu lateral esquerdo da plataforma, clique em "Ocorrências".
-                  </div>
-                </li>
-                <li className="flex gap-3">
-                  <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">2</span>
-                  <div>
-                    <strong>Criar nova ocorrência:</strong> Clique no botão "Nova Ocorrência" ou "Registrar Ocorrência".
-                  </div>
-                </li>
-                <li className="flex gap-3">
-                  <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">3</span>
-                  <div>
-                    <strong>Defina o título:</strong> No campo "Título", insira um título descritivo e claro sobre a urgência. 
-                    Ex: "Vazamento de Água no Bloco X", "Portão da Garagem Quebrado".
-                  </div>
-                </li>
-                <li className="flex gap-3">
-                  <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">4</span>
-                  <div>
-                    <strong>Marque como urgente:</strong> Selecione a opção "URGENTE" ou "ALTA PRIORIDADE" se disponível.
-                  </div>
-                </li>
-                <li className="flex gap-3">
-                  <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">5</span>
-                  <div>
-                    <strong>Descreva detalhadamente:</strong> No campo de descrição, forneça o máximo de detalhes possível sobre o problema, incluindo localização específica, horário e gravidade.
-                  </div>
-                </li>
-                <li className="flex gap-3">
-                  <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">6</span>
-                  <div>
-                    <strong>Anexe evidências:</strong> Se possível, anexe fotos ou vídeos que comprovem a urgência da situação.
-                  </div>
-                </li>
-                <li className="flex gap-3">
-                  <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">7</span>
-                  <div>
-                    <strong>Envie a ocorrência:</strong> Clique em "Enviar" ou "Registrar" para submeter a ocorrência urgente.
-                  </div>
-                </li>
+            {/* Resumo Rápido */}
+            <Card className="p-6 bg-gray-50">
+              <h3 className="text-xl font-semibold text-text-primary mb-4">📋 Resumo Rápido</h3>
+              <ol className="space-y-2 text-text-secondary">
+                <li>1. Baixe o app Morador Online</li>
+                <li>2. Digite o endereço do portal, email e senha</li>
+                <li>3. Use "Alternar conta" para múltiplos perfis</li>
+                <li>4. Aproveite todas as funcionalidades!</li>
               </ol>
+            </Card>
+          </TabsContent>
 
-              <div className="bg-red-50 border border-red-200 rounded-lg p-4 mt-6">
-                <div className="flex items-start gap-3">
-                  <AlertCircle className="h-5 w-5 text-red-600 flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="text-red-800 text-sm">
-                      <strong>Lembre-se:</strong> Para emergências reais (incêndio, vazamentos graves, acidentes), 
-                      sempre entre em contato por telefone primeiro e registre na plataforma depois para documentar.
+          {/* Tab - Comunicação */}
+          <TabsContent value="comunicacao" className="space-y-6">
+            <div className="text-center mb-6">
+              <h2 className="text-2xl font-bold text-blue-800 mb-2">Comunicação</h2>
+              <p className="text-gray-600">Como se comunicar com a administração e síndico</p>
+            </div>
+
+            <Tabs defaultValue="urgente" className="w-full">
+              <TabsList className="grid w-full grid-cols-3">
+                <TabsTrigger value="urgente">Emergências</TabsTrigger>
+                <TabsTrigger value="geral">Comunicação Geral</TabsTrigger>
+                <TabsTrigger value="sugestoes">Sugestões</TabsTrigger>
+              </TabsList>
+
+              <TabsContent value="urgente" className="space-y-6">
+                <Card className="p-6 border-red-200 bg-red-50/50">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="p-3 rounded-lg bg-red-100">
+                      <AlertTriangle className="h-7 w-7 text-red-600" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-red-700">
+                      Como Reportar Emergências
+                    </h3>
+                  </div>
+                  
+                  <div className="bg-orange-50 border border-orange-200 rounded-lg p-4 mb-6">
+                    <p className="text-orange-800 text-sm">
+                      <strong>IMPORTANTE:</strong> Para emergências reais (incêndio, vazamentos graves), 
+                      sempre ligue primeiro e registre na plataforma depois.
                     </p>
                   </div>
-                </div>
-              </div>
-            </div>
-          </Card>
 
-          {/* Como Falar com a Administração */}
-          <Card id="administracao" className="p-6 border-blue-200 bg-blue-50/50">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="p-3 rounded-lg bg-blue-100">
-                <Users className="h-7 w-7 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-blue-700">
-                Como Falar com a Administração sobre Amenidades e Questões Gerais
-              </h3>
-            </div>
+                  <div className="space-y-4">
+                    <h4 className="font-semibold text-text-primary mb-2">Passo a Passo:</h4>
+                    <ol className="space-y-3 text-text-secondary">
+                      <li className="flex gap-3">
+                        <span className="bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">1</span>
+                        <div><strong>Acesse "Ocorrências"</strong> no menu</div>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">2</span>
+                        <div><strong>Clique "Nova Ocorrência"</strong></div>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">3</span>
+                        <div><strong>Marque como "URGENTE"</strong></div>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">4</span>
+                        <div><strong>Descreva detalhadamente</strong> o problema</div>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">5</span>
+                        <div><strong>Anexe fotos/vídeos</strong> se possível</div>
+                      </li>
+                    </ol>
+                  </div>
+                </Card>
+              </TabsContent>
 
-            <div className="space-y-4">
-              <h4 className="font-semibold text-text-primary mb-2">Passo a Passo:</h4>
-              <ol className="space-y-3 text-text-secondary">
-                <li className="flex gap-3">
-                  <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">1</span>
-                  <div>
-                    <strong>Acesse o Chat:</strong> No menu principal, localize e clique na opção "Chat" ou "Mensagens".
-                  </div>
-                </li>
-                <li className="flex gap-3">
-                  <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">2</span>
-                  <div>
-                    <strong>Selecione o destinatário:</strong> Escolha "Administração" ou "Suporte" como destinatário da mensagem.
-                  </div>
-                </li>
-                <li className="flex gap-3">
-                  <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">3</span>
-                  <div>
-                    <strong>Digite sua mensagem:</strong> Escreva de forma clara e objetiva sobre sua questão, dúvida ou solicitação.
-                  </div>
-                </li>
-                <li className="flex gap-3">
-                  <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">4</span>
-                  <div>
-                    <strong>Anexe documentos se necessário:</strong> Utilize a opção de anexo para enviar fotos, documentos ou comprovantes relacionados.
-                  </div>
-                </li>
-                <li className="flex gap-3">
-                  <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">5</span>
-                  <div>
-                    <strong>Envie a mensagem:</strong> Clique no botão "Enviar" para submeter sua mensagem à administração.
-                  </div>
-                </li>
-                <li className="flex gap-3">
-                  <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">6</span>
-                  <div>
-                    <strong>Acompanhe a resposta:</strong> Você receberá uma notificação quando houver resposta. O histórico fica salvo no chat.
-                  </div>
-                </li>
-              </ol>
-
-              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mt-6">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="text-blue-800 text-sm">
-                      <strong>Dica:</strong> O horário de atendimento da administração é de Segunda a Sexta, das 8h às 18h. 
-                      Mensagens enviadas fora deste horário serão respondidas no próximo dia útil.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Card>
-
-          {/* Como Dar Sugestões */}
-          <Card id="sugestoes" className="p-6 border-purple-200 bg-purple-50/50">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="p-3 rounded-lg bg-purple-100">
-                <Lightbulb className="h-7 w-7 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-purple-700">
-                Como Dar Sugestões na Plataforma
-              </h3>
-            </div>
-
-            <div className="space-y-4">
-              <h4 className="font-semibold text-text-primary mb-2">Passo a Passo:</h4>
-              <ol className="space-y-3 text-text-secondary">
-                <li className="flex gap-3">
-                  <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">1</span>
-                  <div>
-                    <strong>Acesse "Sugestões" ou "Feedback":</strong> Procure no menu por uma seção dedicada a sugestões ou use o chat da administração.
-                  </div>
-                </li>
-                <li className="flex gap-3">
-                  <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">2</span>
-                  <div>
-                    <strong>Categorize sua sugestão:</strong> Indique se é sobre melhorias nas áreas comuns, serviços, tecnologia, etc.
-                  </div>
-                </li>
-                <li className="flex gap-3">
-                  <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">3</span>
-                  <div>
-                    <strong>Seja específico e construtivo:</strong> Descreva claramente sua ideia, explicando os benefícios e como poderia ser implementada.
-                  </div>
-                </li>
-                <li className="flex gap-3">
-                  <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">4</span>
-                  <div>
-                    <strong>Forneça justificativas:</strong> Explique por que a sugestão seria benéfica para o condomínio e os moradores.
-                  </div>
-                </li>
-                <li className="flex gap-3">
-                  <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">5</span>
-                  <div>
-                    <strong>Envie sua sugestão:</strong> Submeta sua ideia e acompanhe se haverá retorno da administração.
-                  </div>
-                </li>
-              </ol>
-
-              <div className="bg-purple-50 border border-purple-200 rounded-lg p-4 mt-6">
-                <div className="flex items-start gap-3">
-                  <Lightbulb className="h-5 w-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                  <div>
-                    <p className="text-purple-800 text-sm">
-                      <strong>Lembre-se:</strong> Sugestões construtivas e bem fundamentadas têm maior chance de serem consideradas. 
-                      Seja respeitoso e considere a viabilidade financeira e técnica de sua proposta.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Card>
-
-          {/* Como Participar de Assembleias Online */}
-          <Card id="assembleias" className="p-6 border-indigo-200 bg-indigo-50/50">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="p-3 rounded-lg bg-indigo-100">
-                <Users className="h-7 w-7 text-indigo-600" />
-              </div>
-              <h3 className="text-xl font-semibold text-indigo-700">
-                Como Participar de Assembleias Online
-              </h3>
-            </div>
-            
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
-              <p className="text-blue-800 text-sm">
-                <strong>IMPORTANTE:</strong> A funcionalidade de Assembleia Online é o espaço oficial onde você participa das reuniões, vota em pautas importantes e acompanha os resultados de forma prática, transparente e segura.
-              </p>
-            </div>
-
-            <div className="space-y-6">
-              <div>
-                <h4 className="font-semibold text-text-primary mb-4">Como Acessar e Participar:</h4>
-                <ol className="space-y-4 text-text-secondary">
-                  <li className="flex gap-4">
-                    <span className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">1</span>
-                    <div>
-                      <strong>Acesse a funcionalidade:</strong> No menu de Serviços, localize e toque no ícone "Assembleia Online".
+              <TabsContent value="geral" className="space-y-6">
+                <Card className="p-6 border-blue-200 bg-blue-50/50">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="p-3 rounded-lg bg-blue-100">
+                      <MessageSquare className="h-7 w-7 text-blue-600" />
                     </div>
-                  </li>
-                  <li className="flex gap-4">
-                    <span className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">2</span>
-                    <div>
-                      <strong>Atualize a tela:</strong> Arraste de cima para baixo para garantir que as informações estejam atualizadas.
-                    </div>
-                  </li>
-                  <li className="flex gap-4">
-                    <span className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">3</span>
-                    <div>
-                      <strong>Navegue pelas abas:</strong> Você verá duas abas principais:
-                      <ul className="mt-2 ml-4 space-y-1">
-                        <li>• <strong>Assembleias Futuras e Atuais</strong> - Para assembleias que vão acontecer ou estão em andamento</li>
-                        <li>• <strong>Assembleias Passadas</strong> - Para consultar assembleias já finalizadas</li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li className="flex gap-4">
-                    <span className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">4</span>
-                    <div>
-                      <strong>Confirme sua presença:</strong> Na assembleia desejada, toque no botão "Confirmar Presença". Isso é obrigatório para acessar as funcionalidades.
-                    </div>
-                  </li>
-                  <li className="flex gap-4">
-                    <span className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">5</span>
-                    <div>
-                      <strong>Verifique sua situação:</strong> Após confirmar presença, clique em "Ver Situação" para verificar se você está autorizado a votar.
-                    </div>
-                  </li>
-                  <li className="flex gap-4">
-                    <span className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">6</span>
-                    <div>
-                      <strong>Entre na assembleia:</strong> Clique no botão "Entrar" para acessar todos os recursos disponíveis.
-                    </div>
-                  </li>
-                </ol>
-              </div>
+                    <h3 className="text-xl font-semibold text-blue-700">
+                      Comunicação com a Administração
+                    </h3>
+                  </div>
 
-              {/* Funcionalidades Disponíveis */}
-              <div className="bg-indigo-50 border border-indigo-200 rounded-lg p-4">
-                <h4 className="font-semibold text-indigo-800 mb-3">📋 Funcionalidades Disponíveis na Assembleia</h4>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-indigo-800 text-sm">
-                  <div className="space-y-2">
-                    <p>• <strong>Votação:</strong> Vote nas pautas abertas</p>
-                    <p>• <strong>Resultados:</strong> Acompanhe os resultados em tempo real</p>
-                    <p>• <strong>Documentos:</strong> Acesse arquivos anexados</p>
-                  </div>
-                  <div className="space-y-2">
-                    <p>• <strong>Perguntas Públicas:</strong> Envie e comente perguntas</p>
-                    <p>• <strong>Solicitar Fala:</strong> Peça para falar durante a assembleia</p>
-                    <p>• <strong>Videoconferência:</strong> Participe ao vivo (se disponível)</p>
-                  </div>
-                </div>
-              </div>
+                  <div className="space-y-4">
+                    <ol className="space-y-3 text-text-secondary">
+                      <li className="flex gap-3">
+                        <span className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">1</span>
+                        <div><strong>Acesse o "Chat"</strong> no menu principal</div>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">2</span>
+                        <div><strong>Selecione "Administração"</strong></div>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">3</span>
+                        <div><strong>Digite sua mensagem</strong> de forma clara</div>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">4</span>
+                        <div><strong>Anexe documentos</strong> se necessário</div>
+                      </li>
+                    </ol>
 
-              {/* Como Votar */}
-              <div className="bg-white border border-gray-200 rounded-lg p-4">
-                <h4 className="font-semibold text-gray-800 mb-3">🗳️ Como Votar nas Pautas</h4>
-                <ol className="text-gray-700 text-sm space-y-2 ml-4">
-                  <li>1. Acesse a aba "Votação" dentro dos detalhes da assembleia</li>
-                  <li>2. Leia atentamente a descrição de cada pauta</li>
-                  <li>3. Selecione uma das opções de resposta disponíveis</li>
-                  <li>4. Adicione uma justificativa (opcional)</li>
-                  <li>5. Toque no botão "Votar" e confirme sua escolha</li>
-                  <li>6. Acompanhe seus votos na aba "Meus Votos"</li>
-                </ol>
-              </div>
+                    <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mt-6">
+                      <div className="flex items-start gap-3">
+                        <CheckCircle className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                        <div>
+                          <p className="text-blue-800 text-sm">
+                            <strong>Horário:</strong> Segunda a Sexta, 8h às 18h
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Card>
+              </TabsContent>
 
-              {/* Tipos de Assembleia */}
-              <div className="bg-gray-50 border border-gray-200 rounded-lg p-4">
-                <h4 className="font-semibold text-gray-800 mb-3">📊 Tipos de Assembleia</h4>
-                <div className="space-y-3 text-sm">
-                  <div>
-                    <p className="font-medium text-gray-800">Assembleia Ordinária:</p>
-                    <p className="text-gray-600">Ocorre em períodos definidos (geralmente 1 vez por ano). Objetivo: aprovação de contas, eleição de síndico, previsão orçamentária.</p>
+              <TabsContent value="sugestoes" className="space-y-6">
+                <Card className="p-6 border-purple-200 bg-purple-50/50">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="p-3 rounded-lg bg-purple-100">
+                      <Lightbulb className="h-7 w-7 text-purple-600" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-purple-700">
+                      Como Dar Sugestões
+                    </h3>
                   </div>
-                  <div>
-                    <p className="font-medium text-gray-800">Assembleia Extraordinária:</p>
-                    <p className="text-gray-600">Sempre que necessário, fora da agenda regular. Objetivo: decisões urgentes ou pontuais, como obras ou mudanças nas regras.</p>
-                  </div>
-                </div>
-              </div>
 
-              {/* Dúvidas Frequentes */}
-              <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
-                <h4 className="font-semibold text-yellow-800 mb-3">❓ Dúvidas Frequentes sobre Assembleias</h4>
-                <div className="space-y-3 text-sm">
-                  <div>
-                    <p className="font-medium text-yellow-800">Confirmei presença, mas não consigo votar. O que fazer?</p>
-                    <p className="text-yellow-700">Verifique sua situação no botão "Ver Situação". Pode haver problemas cadastrais ou a votação pode ser específica para outra torre.</p>
+                  <div className="space-y-4">
+                    <ol className="space-y-3 text-text-secondary">
+                      <li className="flex gap-3">
+                        <span className="bg-purple-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">1</span>
+                        <div><strong>Use o chat</strong> ou seção "Sugestões"</div>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="bg-purple-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">2</span>
+                        <div><strong>Categorize</strong> sua sugestão</div>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="bg-purple-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">3</span>
+                        <div><strong>Seja específico</strong> e construtivo</div>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="bg-purple-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">4</span>
+                        <div><strong>Explique os benefícios</strong> da proposta</div>
+                      </li>
+                    </ol>
                   </div>
-                  <div>
-                    <p className="font-medium text-yellow-800">Tenho mais de uma unidade. Isso afeta meu voto?</p>
-                    <p className="text-yellow-700">Sim. O sistema calcula automaticamente os votos com base na quantidade de unidades vinculadas ao seu nome.</p>
-                  </div>
-                  <div>
-                    <p className="font-medium text-yellow-800">Não vejo a assembleia listada. O que pode ser?</p>
-                    <p className="text-yellow-700">Deslize a tela para baixo para forçar a atualização. Se ainda não aparecer, contate a administração.</p>
-                  </div>
-                </div>
-              </div>
+                </Card>
+              </TabsContent>
+            </Tabs>
+          </TabsContent>
 
-              {/* Dicas Importantes */}
-              <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <div>
-                    <h4 className="font-semibold text-green-800 mb-2">💡 Dicas Importantes</h4>
-                    <ul className="text-green-800 text-sm space-y-1 ml-4">
-                      <li>• O período de votação é limitado; fique atento aos horários</li>
-                      <li>• Moradores com pendências podem ter restrições para votar</li>
-                      <li>• Os resultados são atualizados em tempo real</li>
-                      <li>• Use a seção de perguntas para esclarecer dúvidas de forma respeitosa</li>
-                      <li>• Para emergências reais, sempre contate por telefone primeiro</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+          {/* Tab - Assembleias */}
+          <TabsContent value="assembleias" className="space-y-6">
+            <div className="text-center mb-6">
+              <h2 className="text-2xl font-bold text-indigo-800 mb-2">Assembleias Online</h2>
+              <p className="text-gray-600">Como participar das assembleias do condomínio</p>
             </div>
-          </Card>
-        </div>
-        {/* Resumo Rápido */}
-     
-        <Card className="mt-12 p-6 bg-gray-50">
-          <h3 className="text-xl font-semibold text-text-primary mb-4">📋 Resumo Rápido - Primeiro Acesso</h3>
-          <ol className="space-y-2 text-text-secondary">
-            <li>1. Baixe o app Morador Online na Play Store (Android) ou App Store (iOS)</li>
-            <li>2. Abra o app, insira o Endereço do Portal, e-mail e senha</li>
-            <li>3. Use a funcionalidade "Alternar conta" para múltiplos perfis</li>
-            <li>4. Para assembleias: Serviços → Assembleia Online → Confirmar Presença → Entrar</li>
-            <li>5. Consulte as Dúvidas Frequentes em caso de problemas</li>
-            <li>6. Aproveite todas as funcionalidades do App</li>
-          </ol>
-        </Card>
+
+            <Tabs defaultValue="como-participar" className="w-full">
+              <TabsList className="grid w-full grid-cols-3">
+                <TabsTrigger value="como-participar">Como Participar</TabsTrigger>
+                <TabsTrigger value="como-votar">Como Votar</TabsTrigger>
+                <TabsTrigger value="duvidas-assembleia">Dúvidas</TabsTrigger>
+              </TabsList>
+
+              <TabsContent value="como-participar" className="space-y-6">
+                <Card className="p-6 border-indigo-200 bg-indigo-50/50">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="p-3 rounded-lg bg-indigo-100">
+                      <Users className="h-7 w-7 text-indigo-600" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-indigo-700">
+                      Participando de Assembleias
+                    </h3>
+                  </div>
+
+                  <div className="space-y-4">
+                    <ol className="space-y-4 text-text-secondary">
+                      <li className="flex gap-4">
+                        <span className="bg-indigo-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">1</span>
+                        <div><strong>Acesse "Serviços" → "Assembleia Online"</strong></div>
+                      </li>
+                      <li className="flex gap-4">
+                        <span className="bg-indigo-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">2</span>
+                        <div><strong>Atualize a tela</strong> (arraste de cima para baixo)</div>
+                      </li>
+                      <li className="flex gap-4">
+                        <span className="bg-indigo-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">3</span>
+                        <div><strong>Confirme sua presença</strong> na assembleia desejada</div>
+                      </li>
+                      <li className="flex gap-4">
+                        <span className="bg-indigo-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">4</span>
+                        <div><strong>Verifique sua situação</strong> (botão "Ver Situação")</div>
+                      </li>
+                      <li className="flex gap-4">
+                        <span className="bg-indigo-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">5</span>
+                        <div><strong>Clique "Entrar"</strong> para acessar todas as funcionalidades</div>
+                      </li>
+                    </ol>
+                  </div>
+
+                  <div className="bg-indigo-50 border border-indigo-200 rounded-lg p-4 mt-6">
+                    <h4 className="font-semibold text-indigo-800 mb-3">📋 Funcionalidades Disponíveis</h4>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-indigo-800 text-sm">
+                      <div>• Votação nas pautas</div>
+                      <div>• Resultados em tempo real</div>
+                      <div>• Documentos anexados</div>
+                      <div>• Perguntas públicas</div>
+                      <div>• Solicitar fala</div>
+                      <div>• Videoconferência</div>
+                    </div>
+                  </div>
+                </Card>
+              </TabsContent>
+
+              <TabsContent value="como-votar" className="space-y-6">
+                <Card className="p-6 border-green-200 bg-green-50/50">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="p-3 rounded-lg bg-green-100">
+                      <CheckCircle className="h-7 w-7 text-green-600" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-green-700">
+                      Como Votar nas Pautas
+                    </h3>
+                  </div>
+
+                  <div className="space-y-4">
+                    <ol className="space-y-3 text-text-secondary">
+                      <li className="flex gap-3">
+                        <span className="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">1</span>
+                        <div><strong>Acesse a aba "Votação"</strong></div>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">2</span>
+                        <div><strong>Leia a descrição</strong> da pauta</div>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">3</span>
+                        <div><strong>Selecione sua opção</strong> de voto</div>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">4</span>
+                        <div><strong>Adicione justificativa</strong> (opcional)</div>
+                      </li>
+                      <li className="flex gap-3">
+                        <span className="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">5</span>
+                        <div><strong>Confirme seu voto</strong></div>
+                      </li>
+                    </ol>
+
+                    <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 mt-6">
+                      <h4 className="font-semibold text-gray-800 mb-3">📊 Tipos de Assembleia</h4>
+                      <div className="space-y-3 text-sm">
+                        <div>
+                          <p className="font-medium text-gray-800">Ordinária:</p>
+                          <p className="text-gray-600">Anual - aprovação de contas, eleições</p>
+                        </div>
+                        <div>
+                          <p className="font-medium text-gray-800">Extraordinária:</p>
+                          <p className="text-gray-600">Quando necessário - decisões urgentes</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Card>
+              </TabsContent>
+
+              <TabsContent value="duvidas-assembleia" className="space-y-6">
+                <Card className="p-6 border-yellow-200 bg-yellow-50/50">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="p-3 rounded-lg bg-yellow-100">
+                      <AlertCircle className="h-7 w-7 text-yellow-600" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-yellow-700">
+                      Dúvidas Frequentes
+                    </h3>
+                  </div>
+
+                  <div className="space-y-4">
+                    <div className="space-y-4 text-sm">
+                      <div className="border-l-4 border-yellow-500 pl-4">
+                        <p className="font-medium text-yellow-800">Confirmei presença mas não consigo votar</p>
+                        <p className="text-yellow-700">Verifique sua situação no botão "Ver Situação". Pode haver problemas cadastrais.</p>
+                      </div>
+                      <div className="border-l-4 border-blue-500 pl-4">
+                        <p className="font-medium text-blue-800">Tenho múltiplas unidades</p>
+                        <p className="text-blue-700">O sistema calcula automaticamente os votos baseado nas unidades vinculadas.</p>
+                      </div>
+                      <div className="border-l-4 border-green-500 pl-4">
+                        <p className="font-medium text-green-800">Não vejo a assembleia</p>
+                        <p className="text-green-700">Atualize a tela deslizando para baixo. Se persistir, contate a administração.</p>
+                      </div>
+                    </div>
+                  </div>
+                </Card>
+              </TabsContent>
+            </Tabs>
+          </TabsContent>
+
+          {/* Tab - Transparência */}
+          <TabsContent value="transparencia" className="space-y-6">
+            <div className="text-center mb-6">
+              <h2 className="text-2xl font-bold text-green-800 mb-2">Transparência</h2>
+              <p className="text-gray-600">Acesse documentos e informações do condomínio</p>
+            </div>
+
+            <Tabs defaultValue="acesso" className="w-full">
+              <TabsList className="grid w-full grid-cols-3">
+                <TabsTrigger value="acesso">Como Acessar</TabsTrigger>
+                <TabsTrigger value="documentos">Visualizar Documentos</TabsTrigger>
+                <TabsTrigger value="duvidas">Dúvidas Frequentes</TabsTrigger>
+              </TabsList>
+
+              <TabsContent value="acesso" className="space-y-6">
+                <Card>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-green-800 mb-6 flex items-center gap-2">
+                      <Shield className="h-5 w-5" />
+                      Acesso ao Portal de Transparência
+                    </h3>
+                    
+                    <div className="space-y-6">
+                      <div className="flex items-start gap-3">
+                        <div className="bg-green-100 text-green-800 rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold">
+                          1
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-gray-800">Pela Tela Principal</h4>
+                          <p className="text-gray-600 mt-1">
+                            Na tela principal do aplicativo, toque no card "Transparência" para acessar diretamente.
+                          </p>
+                          <div className="mt-3">
+                            <img 
+                              src="/src/assets/tela-principal-transparencia.png" 
+                              alt="Tela principal com card Transparência"
+                              className="border rounded-lg shadow-sm max-w-md"
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-3">
+                        <div className="bg-green-100 text-green-800 rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold">
+                          2
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-gray-800">Pela Tela de Serviços</h4>
+                          <p className="text-gray-600 mt-1">
+                            Acesse "Serviços" no menu inferior e depois toque em "Transparência".
+                          </p>
+                          <div className="mt-3">
+                            <img 
+                              src="/src/assets/transparencia-acesso-pela-tela-servicos.png" 
+                              alt="Acesso pela tela de serviços"
+                              className="border rounded-lg shadow-sm max-w-md"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Card>
+              </TabsContent>
+
+              <TabsContent value="documentos" className="space-y-6">
+                <Card>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-green-800 mb-6 flex items-center gap-2">
+                      <BookOpen className="h-5 w-5" />
+                      Visualizando e Baixando Documentos
+                    </h3>
+                    
+                    <div className="space-y-6">
+                      <div className="flex items-start gap-3">
+                        <div className="bg-green-100 text-green-800 rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold">
+                          1
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-gray-800">Expandir Card do Documento</h4>
+                          <p className="text-gray-600 mt-1">
+                            Toque no card do documento desejado para ver as opções disponíveis.
+                          </p>
+                          <div className="mt-3">
+                            <img 
+                              src="/src/assets/transparencia-card-expandido-acoes.png" 
+                              alt="Card expandido com opções"
+                              className="border rounded-lg shadow-sm max-w-md"
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="flex items-start gap-3">
+                        <div className="bg-green-100 text-green-800 rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold">
+                          2
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-gray-800">Ver ou Baixar Arquivo</h4>
+                          <p className="text-gray-600 mt-1">
+                            Use o botão "Ver/Baixar arquivo" para visualizar o documento no navegador ou fazer o download.
+                          </p>
+                          <div className="mt-3">
+                            <img 
+                              src="/src/assets/btn-ver-baixar-arquivo.png" 
+                              alt="Botão ver/baixar arquivo"
+                              className="border rounded-lg shadow-sm max-w-sm"
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className="bg-blue-50 p-4 rounded-lg">
+                        <div className="flex items-start gap-2">
+                          <Lightbulb className="h-5 w-5 text-blue-600 mt-0.5" />
+                          <div>
+                            <h4 className="font-semibold text-blue-800">Dica Importante</h4>
+                            <p className="text-blue-700 text-sm">
+                              Os documentos podem ser visualizados diretamente no aplicativo ou baixados para o dispositivo para consulta posterior.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Card>
+              </TabsContent>
+
+              <TabsContent value="duvidas" className="space-y-6">
+                <Card>
+                  <div className="p-6">
+                    <h3 className="text-xl font-semibold text-green-800 mb-6 flex items-center gap-2">
+                      <MessageSquare className="h-5 w-5" />
+                      Perguntas Frequentes - Transparência
+                    </h3>
+                    
+                    <div className="space-y-6">
+                      <div className="border-l-4 border-green-500 pl-4">
+                        <h4 className="font-semibold text-green-800">Não consigo visualizar o documento</h4>
+                        <p className="text-gray-600 mt-1">
+                          Verifique sua conexão com a internet e tente novamente. Se o problema persistir, 
+                          entre em contato com a administração.
+                        </p>
+                      </div>
+
+                      <div className="border-l-4 border-blue-500 pl-4">
+                        <h4 className="font-semibold text-blue-800">O download não está funcionando</h4>
+                        <p className="text-gray-600 mt-1">
+                          Certifique-se de que há espaço suficiente no dispositivo e que as permissões 
+                          de download estão habilitadas no navegador.
+                        </p>
+                      </div>
+
+                      <div className="border-l-4 border-orange-500 pl-4">
+                        <h4 className="font-semibold text-orange-800">Não encontro o documento que preciso</h4>
+                        <p className="text-gray-600 mt-1">
+                          Os documentos são atualizados regularmente. Se não encontrar o que procura, 
+                          verifique com a administração se o documento já foi disponibilizado.
+                        </p>
+                      </div>
+
+                      <div className="border-l-4 border-purple-500 pl-4">
+                        <h4 className="font-semibold text-purple-800">Posso acessar documentos antigos?</h4>
+                        <p className="text-gray-600 mt-1">
+                          Sim, o portal mantém um histórico dos documentos. Use os filtros de data 
+                          para encontrar documentos de períodos anteriores.
+                        </p>
+                      </div>
+
+                      <div className="bg-amber-50 p-4 rounded-lg">
+                        <div className="flex items-start gap-2">
+                          <AlertTriangle className="h-5 w-5 text-amber-600 mt-0.5" />
+                          <div>
+                            <h4 className="font-semibold text-amber-800">Precisa de Mais Ajuda?</h4>
+                            <p className="text-amber-700 text-sm">
+                              Entre em contato com a administração pelos canais oficiais disponíveis na seção "Contatos" do aplicativo.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Card>
+              </TabsContent>
+            </Tabs>
+          </TabsContent>
+
+          {/* Tab - Funcionalidades */}
+          <TabsContent value="funcionalidades" className="space-y-6">
+            <div className="text-center mb-6">
+              <h2 className="text-2xl font-bold text-purple-800 mb-2">Funcionalidades</h2>
+              <p className="text-gray-600">Todas as funcionalidades do aplicativo</p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <Card className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 rounded-lg bg-primary/10">
+                    <Calendar className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-text-primary">Reservas</h3>
+                </div>
+                <ul className="space-y-2 text-text-secondary">
+                  <li>• Churrasqueiras</li>
+                  <li>• Salão de festas</li>
+                  <li>• Quadras esportivas</li>
+                  <li>• Espaços comuns</li>
+                </ul>
+              </Card>
+
+              <Card className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 rounded-lg bg-primary/10">
+                    <CreditCard className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-text-primary">Financeiro</h3>
+                </div>
+                <ul className="space-y-2 text-text-secondary">
+                  <li>• Visualizar boletos</li>
+                  <li>• Pagamento via PIX</li>
+                  <li>• Histórico de pagamentos</li>
+                  <li>• Comprovantes</li>
+                </ul>
+              </Card>
+
+              <Card className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 rounded-lg bg-primary/10">
+                    <User className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-text-primary">Cadastros</h3>
+                </div>
+                <ul className="space-y-2 text-text-secondary">
+                  <li>• Prestadores de serviços</li>
+                  <li>• Visitantes</li>
+                  <li>• Moradores adicionais</li>
+                  <li>• Veículos</li>
+                </ul>
+              </Card>
+
+              <Card className="p-6">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 rounded-lg bg-primary/10">
+                    <Bell className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-text-primary">Comunicação</h3>
+                </div>
+                <ul className="space-y-2 text-text-secondary">
+                  <li>• Chat com administração</li>
+                  <li>• Notificações</li>
+                  <li>• Comunicados</li>
+                  <li>• Ocorrências</li>
+                </ul>
+              </Card>
+            </div>
+          </TabsContent>
+        </Tabs>
       </div>
     </Layout>
   );

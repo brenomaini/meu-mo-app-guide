@@ -1,6 +1,6 @@
-import { FileText, Home, HelpCircle, Phone, Smartphone, MapPin, Building, Clock } from "lucide-react";
-import { Link, useLocation } from "react-router-dom";
 import logo from "@/assets/logo.png";
+import { Building, Clock, FileText, HelpCircle, Home, MapPin, Phone, Smartphone } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const location = useLocation();
@@ -19,13 +19,13 @@ const Header = () => {
 
   return (
     <header className="bg-header-bg shadow-header">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between py-4">
-          <Link to="/" className="flex items-center space-x-3">
-            <img src={logo} alt="Reserva Parque Clube" className="h-12 w-12" />
+      <div className="container mx-auto px-6">
+        <div className="flex items-center justify-between py-8">
+          <Link to="/" className="flex items-center space-x-4">
+            <img src={logo} alt="Reserva Parque Clube" className="h-16 w-16" />
             <div className="text-primary-foreground">
-              <h1 className="text-xl font-bold">Reserva Parque Clube</h1>
-              <p className="text-sm opacity-90">Manual Digital da Comunidade</p>
+              <h1 className="text-2xl font-bold">Reserva Parque Clube</h1>
+              <p className="text-base opacity-90">Manual Digital da Comunidade</p>
             </div>
           </Link>
         </div>
@@ -40,14 +40,14 @@ const Header = () => {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`flex items-center space-x-2 px-4 py-2 rounded-lg transition-colors ${
+                  className={`flex items-center space-x-2 px-5 py-3 rounded-lg transition-colors ${
                     isActive
                       ? "bg-primary/20 text-primary-foreground"
                       : "text-primary-foreground/80 hover:bg-primary/10 hover:text-primary-foreground"
                   }`}
                 >
-                  <Icon className="h-4 w-4" />
-                  <span className="text-sm font-medium">{item.label}</span>
+                  <Icon className="h-5 w-5" />
+                  <span className="text-base font-medium">{item.label}</span>
                 </Link>
               );
             })}

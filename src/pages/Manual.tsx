@@ -1,6 +1,6 @@
 import Layout from "@/components/Layout";
 import { Card } from "@/components/ui/card";
-import { AlertTriangle, Droplets, Zap, Wrench, Paintbrush, Sparkles } from "lucide-react";
+import { AlertTriangle, Download, Droplets, FileText, Paintbrush, Sparkles, Wrench, Zap } from "lucide-react";
 
 const Manual = () => {
   return (
@@ -67,11 +67,72 @@ const Manual = () => {
               </div>
             </div>
           </Card>
+          
+          {/* Informação sobre especificações técnicas */}
+          <Card className="p-6 mb-6 border-amber-200 bg-amber-50">
+            <div className="flex items-start gap-4">
+              <Zap className="h-6 w-6 text-amber-600 mt-1 flex-shrink-0" />
+              <div>
+                <h3 className="text-lg font-semibold text-amber-800 mb-2">Especificações Técnicas da Unidade</h3>
+                <p className="text-amber-800 font-medium">
+                  <strong>IMPORTANTE:</strong> As especificações elétricas e hidráulicas de cada unidade estão disponíveis através do QR Code localizado na parte de trás da porta do quadro elétrico da sua unidade.
+                </p>
+                <p className="text-amber-700 mt-2 text-sm">
+                  Este QR Code contém informações detalhadas sobre a infraestrutura da sua unidade, essenciais para planejamento de reformas e manutenções.
+                </p>
+              </div>
+            </div>
+          </Card>
         </section>
 
         {/* Normas para Reformas */}
         <section className="mb-12">
           <h2 className="text-2xl font-semibold text-primary mb-6">Diretrizes para Reformas e Instalações</h2>
+          
+          {/* Downloads para Obras */}
+          <Card className="p-6 mb-6 bg-blue-50 border-blue-200">
+            <div className="flex items-start gap-4 mb-4">
+              <Download className="h-6 w-6 text-blue-600 mt-1 flex-shrink-0" />
+              <div>
+                <h3 className="text-lg font-semibold text-blue-800 mb-2">Downloads para Obras</h3>
+                <p className="text-blue-700 mb-4">
+                  Documentos essenciais para planejamento e execução de obras e reformas:
+                </p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <a 
+                    href="/Formulário  para Plano de Obras e Reformas - RPC.pdf" 
+                    download
+                    className="flex items-center gap-3 p-4 bg-white rounded-lg border border-blue-200 hover:border-blue-400 hover:bg-blue-50 transition-colors"
+                  >
+                    <FileText className="h-5 w-5 text-blue-600" />
+                    <div>
+                      <p className="font-medium text-blue-800">Formulário para Plano de Obras</p>
+                      <p className="text-sm text-blue-600">PDF - Documento obrigatório</p>
+                    </div>
+                    <Download className="h-4 w-4 text-blue-500 ml-auto" />
+                  </a>
+                  
+                  <a 
+                    href="/Manual Proprietário.pdf" 
+                    download
+                    className="flex items-center gap-3 p-4 bg-white rounded-lg border border-blue-200 hover:border-blue-400 hover:bg-blue-50 transition-colors"
+                  >
+                    <FileText className="h-5 w-5 text-blue-600" />
+                    <div>
+                      <p className="font-medium text-blue-800">Manual do Proprietário Completo</p>
+                      <p className="text-sm text-blue-600">PDF - Guia completo</p>
+                    </div>
+                    <Download className="h-4 w-4 text-blue-500 ml-auto" />
+                  </a>
+                </div>
+                
+                <p className="text-blue-700 text-sm mt-4">
+                  <strong>Importante:</strong> O formulário de plano de obras é obrigatório para todas as reformas e deve ser entregue à administração antes do início dos trabalhos.
+                </p>
+              </div>
+            </div>
+          </Card>
           
           <Card className="p-6 mb-6 border-orange-200 bg-orange-50">
             <div className="flex items-start gap-4">

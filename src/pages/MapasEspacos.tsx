@@ -1,7 +1,7 @@
+import InteractiveCondominiumMap from "@/components/InteractiveCondominiumMap";
 import Layout from "@/components/Layout";
 import { Card } from "@/components/ui/card";
-import { MapPin, Calendar, Info } from "lucide-react";
-import InteractiveCondominiumMap from "@/components/InteractiveCondominiumMap";
+import { Calendar, Info, MapPin } from "lucide-react";
 
 const MapasEspacos = () => {
   return (
@@ -73,7 +73,7 @@ const MapasEspacos = () => {
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
                   <span>Salão de Festas:</span>
-                  <span>10h às 22h</span>
+                  <span>8h às 2h</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Quadras:</span>
@@ -85,7 +85,7 @@ const MapasEspacos = () => {
                 </div>
                 <div className="flex justify-between">
                   <span>Academia:</span>
-                  <span>6h às 22h</span>
+                  <span>6h às 23h</span>
                 </div>
               </div>
             </div>

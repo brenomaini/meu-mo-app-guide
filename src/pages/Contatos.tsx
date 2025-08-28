@@ -1,8 +1,13 @@
 import Layout from "@/components/Layout";
 import { Card } from "@/components/ui/card";
-import { Phone, Clock, MapPin, Shield, Wrench, Zap } from "lucide-react";
+import { Clock, Phone, Zap } from "lucide-react";
 
 const Contatos = () => {
+  const condominiumContacts = [
+    { label: "Administração do Condomínio", phone: "+55 61 9858-7580", hours: "Segunda a Sexta: 8h às 18h" },
+    { label: "Portaria do Condomínio", phone: "+55 61 9 8262-0053", hours: "24 horas" },
+  ];
+
   const contacts = [
     {
       category: "Serviços Públicos",
@@ -13,7 +18,6 @@ const Contatos = () => {
         { label: "SUPERGASBRAS", phone: "0800 704 3433", hours: "Atendimento de emergência: 24h" },
         { label: "NEOENERGIA (Agência Nacional de Energia Elétrica)", phone: "116", hours: "24 horas" },
         { label: "Defesa Civil", phone: "199", hours: "24 horas" },
-        { label: "PROCON Rio", phone: "162", hours: "Segunda a Sexta: 7h às 21h; Sábado e Domingo: 8h às 18h" },
       ]
     },
     {
@@ -31,6 +35,37 @@ const Contatos = () => {
     <Layout>
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold text-text-primary mb-8">Contatos Úteis</h1>
+        
+        {/* Contatos do Condomínio */}
+        <Card className="mb-6 p-6 bg-green-50 border-green-200">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="p-2 rounded-lg bg-green-100">
+              <Phone className="h-5 w-5 text-green-600" />
+            </div>
+            <h2 className="text-xl font-semibold text-green-800">Contatos do Condomínio</h2>
+          </div>
+          
+          <div className="space-y-4">
+            {condominiumContacts.map((item, index) => (
+              <div key={index} className="border-l-2 border-green-300 pl-4">
+                <h3 className="font-medium text-green-800">{item.label}</h3>
+                <div className="flex items-center gap-2 mt-1">
+                  <Phone className="h-4 w-4 text-green-600" />
+                  <a 
+                    href={`tel:${item.phone}`} 
+                    className="text-green-600 hover:text-green-700 font-medium"
+                  >
+                    {item.phone}
+                  </a>
+                </div>
+                <div className="flex items-center gap-2 mt-1">
+                  <Clock className="h-4 w-4 text-green-500" />
+                  <span className="text-sm text-green-600">{item.hours}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </Card>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {contacts.map((category) => {

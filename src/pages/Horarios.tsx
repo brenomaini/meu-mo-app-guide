@@ -1,5 +1,6 @@
 import Layout from "@/components/Layout";
 import { Card } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 
 const Horarios = () => {
   return (
@@ -7,6 +8,25 @@ const Horarios = () => {
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold text-text-primary mb-8">Horários do Condomínio</h1>
         <div className="grid md:grid-cols-2 gap-6">
+          <Card className="p-6 border-primary/30 bg-gradient-to-r from-primary/5 to-primary/10">
+            <h3 className="text-lg font-semibold text-primary mb-2">Funcionamento da Administração</h3>
+            <p className="text-text-secondary">Segunda a sexta-feira: 8h às 18h</p>
+            <p className="text-text-secondary">Sábado: 8h às 16h</p>
+            <div className="mt-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
+              <p className="text-blue-800 text-sm">
+                <strong>Comunicações fora desse horário:</strong> Entre em contato com a portaria
+              </p>
+              <p className="text-blue-700 text-sm mt-1">
+                Ramal: <strong>200</strong> ou aperte a tecla <strong>"Portaria"</strong>
+              </p>
+              <Link 
+                to="/ramais" 
+                className="text-blue-600 hover:text-blue-800 text-sm underline inline-block mt-2"
+              >
+                Ver todos os ramais úteis →
+              </Link>
+            </div>
+          </Card>
           <Card className="p-6">
             <h3 className="text-lg font-semibold text-primary mb-2">Obras</h3>
             <p className="text-text-secondary">Segunda a sexta-feira: 08h às 12h | 13h às 17h</p>

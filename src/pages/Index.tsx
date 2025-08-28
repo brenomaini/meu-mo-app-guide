@@ -53,19 +53,19 @@ const Index = () => {
       title: "Mapa de Churrasqueiras",
       description: "Localização e informações sobre as churrasqueiras",
       icon: UtensilsCrossed,
-      to: "/churrasqueiras"
+      to: "/mapas-churrasqueiras"
     },
     {
       title: "Mapa de Espaços",
       description: "Localização das torres e espaços comuns do condomínio",
       icon: Map,
-      to: "/espacos"
+      to: "/mapas-espacos"
     },
     {
       title: "Ramais Úteis",
       description: "Lista completa de ramais internos do condomínio",
       icon: Phone,
-      to: "/ramais"
+      to: "/ramais-uteis"
     }
   ];
 
