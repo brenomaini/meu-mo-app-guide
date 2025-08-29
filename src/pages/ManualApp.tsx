@@ -67,16 +67,6 @@ const ManualApp = () => {
         "Acompanhe o histórico de conversas",
         "Horário de atendimento: Segunda a Sexta, 8h às 18h"
       ]
-    },
-    {
-      title: "Pagamentos",
-      icon: CreditCard,
-      content: [
-        "Visualize boletos em aberto na aba 'Financeiro'",
-        "Pague diretamente pelo app via PIX ou cartão",
-        "Acompanhe o histórico de pagamentos",
-        "Receba comprovantes por email automaticamente"
-      ]
     }
   ];
 
