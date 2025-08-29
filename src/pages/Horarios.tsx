@@ -11,7 +11,7 @@ const Horarios = () => {
           <Card className="p-6 border-primary/30 bg-gradient-to-r from-primary/5 to-primary/10">
             <h3 className="text-lg font-semibold text-primary mb-2">Funcionamento da Administração</h3>
             <p className="text-text-secondary">Segunda a sexta-feira: 8h às 18h</p>
-            <p className="text-text-secondary">Sábado: 8h às 16h</p>
+            <p className="text-text-secondary">Sábado: 8h às 12h</p>
             <div className="mt-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
               <p className="text-blue-800 text-sm">
                 <strong>Comunicações fora desse horário:</strong> Entre em contato com a portaria
