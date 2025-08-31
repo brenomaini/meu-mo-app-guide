@@ -1,7 +1,24 @@
 import Layout from "@/components/Layout";
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { AlertCircle, AlertTriangle, Bell, BookOpen, Calendar, CheckCircle, CreditCard, Download, Key, Lightbulb, MessageSquare, RefreshCw, Shield, Smartphone, User, Users } from "lucide-react";
+import {
+  AlertCircle,
+  AlertTriangle,
+  Bell,
+  BookOpen,
+  Calendar,
+  CheckCircle,
+  CreditCard,
+  Download,
+  Key,
+  Lightbulb,
+  MessageSquare,
+  RefreshCw,
+  Shield,
+  Smartphone,
+  User,
+  Users,
+} from "lucide-react";
 
 const ManualApp = () => {
   const sections = [
@@ -13,8 +30,8 @@ const ManualApp = () => {
         "Localize o e-mail 'Primeiro Acesso' e crie sua senha",
         "Baixe o APP Morador On-line 2.0",
         "Acesse o APP com os dados abaixo:",
-        "Endereço Portal Condomínio: reservaparqueclube.mo.app.br"
-      ]
+        "Endereço Portal Condomínio: reservaparqueclube.mo.app.br",
+      ],
     },
     {
       title: "Funcionalidades Principais",
@@ -26,8 +43,8 @@ const ManualApp = () => {
         "Cadastrar Prestadores e Visitantes",
         "Registrar Ocorrências",
         "Cadastrar moradores adicionais",
-        "Acessar Boletos"
-      ]
+        "Acessar Boletos",
+      ],
     },
     {
       title: "Alteração de Senha",
@@ -36,8 +53,8 @@ const ManualApp = () => {
         "Acesse 'Meu Perfil' no menu principal",
         "Selecione 'Alterar Senha'",
         "Digite a senha atual e a nova senha",
-        "Confirme a nova senha e salve as alterações"
-      ]
+        "Confirme a nova senha e salve as alterações",
+      ],
     },
     {
       title: "Notificações",
@@ -45,8 +62,8 @@ const ManualApp = () => {
       content: [
         "Permita notificações para receber avisos importantes",
         "Configure quais tipos de notificação deseja receber",
-        "As notificações incluem: vencimentos, comunicados e reservas"
-      ]
+        "As notificações incluem: vencimentos, comunicados e reservas",
+      ],
     },
     {
       title: "Reservas de Áreas Comuns",
@@ -55,8 +72,8 @@ const ManualApp = () => {
         "Acesse 'Reservas' no menu principal",
         "Selecione a área desejada (churrasqueira, salão de festas, etc.)",
         "Escolha data e horário disponível",
-        "Confirme a reserva e efetue o pagamento se necessário"
-      ]
+        "Confirme a reserva e efetue o pagamento se necessário",
+      ],
     },
     {
       title: "Chat com Administração",
@@ -65,9 +82,9 @@ const ManualApp = () => {
         "Use o chat integrado para contato direto",
         "Envie fotos e documentos quando necessário",
         "Acompanhe o histórico de conversas",
-        "Horário de atendimento: Segunda a Sexta, 8h às 18h"
-      ]
-    }
+        "Horário de atendimento: Segunda a Sexta, 8h às 18h",
+      ],
+    },
   ];
 
   return (
@@ -78,7 +95,8 @@ const ManualApp = () => {
             Manual de Utilização do App MO
           </h1>
           <p className="text-lg text-text-secondary max-w-2xl mx-auto">
-            Guia completo para usar o aplicativo do morador e aproveitar todas as funcionalidades disponíveis.
+            Guia completo para usar o aplicativo do morador e aproveitar todas
+            as funcionalidades disponíveis.
           </p>
         </div>
 
@@ -95,7 +113,9 @@ const ManualApp = () => {
           {/* Tab - Primeiros Passos */}
           <TabsContent value="inicio" className="space-y-6">
             <div className="text-center mb-6">
-              <h2 className="text-2xl font-bold text-green-800 mb-2">Primeiros Passos</h2>
+              <h2 className="text-2xl font-bold text-green-800 mb-2">
+                Primeiros Passos
+              </h2>
               <p className="text-gray-600">Como começar a usar o aplicativo</p>
             </div>
 
@@ -106,9 +126,9 @@ const ManualApp = () => {
                 Links de Acesso ao Aplicativo
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <a 
-                  href="https://reservaparqueclube.mo.app.br/" 
-                  target="_blank" 
+                <a
+                  href="https://reservaparqueclube.mo.app.br/"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 p-4 bg-white rounded-lg border border-primary/20 hover:border-primary/40 transition-colors group"
                 >
@@ -116,14 +136,18 @@ const ManualApp = () => {
                     <Smartphone className="h-6 w-6 text-blue-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-text-primary">Versão Web</h4>
-                    <p className="text-sm text-text-secondary">reservaparqueclube.mo.app.br</p>
+                    <h4 className="font-semibold text-text-primary">
+                      Versão Web
+                    </h4>
+                    <p className="text-sm text-text-secondary">
+                      reservaparqueclube.mo.app.br
+                    </p>
                   </div>
                 </a>
-                
-                <a 
-                  href="https://play.google.com/store/apps/details?id=br.app.mo.novomo&hl=pt_BR" 
-                  target="_blank" 
+
+                <a
+                  href="https://play.google.com/store/apps/details?id=br.app.mo.novomo&hl=pt_BR"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 p-4 bg-white rounded-lg border border-primary/20 hover:border-primary/40 transition-colors group"
                 >
@@ -131,14 +155,16 @@ const ManualApp = () => {
                     <Download className="h-6 w-6 text-green-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-text-primary">Google Play</h4>
+                    <h4 className="font-semibold text-text-primary">
+                      Google Play
+                    </h4>
                     <p className="text-sm text-text-secondary">Para Android</p>
                   </div>
                 </a>
-                
-                <a 
-                  href="https://apps.apple.com/br/app/morador-online-2-0/id1598971439" 
-                  target="_blank" 
+
+                <a
+                  href="https://apps.apple.com/br/app/morador-online-2-0/id1598971439"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 p-4 bg-white rounded-lg border border-primary/20 hover:border-primary/40 transition-colors group"
                 >
@@ -146,7 +172,9 @@ const ManualApp = () => {
                     <Download className="h-6 w-6 text-gray-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-text-primary">App Store</h4>
+                    <h4 className="font-semibold text-text-primary">
+                      App Store
+                    </h4>
                     <p className="text-sm text-text-secondary">Para iOS</p>
                   </div>
                 </a>
@@ -157,16 +185,18 @@ const ManualApp = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               {sections.map((section, index) => {
                 const Icon = section.icon;
-                
+
                 return (
                   <Card key={index} className="p-6">
                     <div className="flex items-center gap-3 mb-4">
                       <div className="p-2 rounded-lg bg-primary/10">
                         <Icon className="h-6 w-6 text-primary" />
                       </div>
-                      <h3 className="text-xl font-semibold text-text-primary">{section.title}</h3>
+                      <h3 className="text-xl font-semibold text-text-primary">
+                        {section.title}
+                      </h3>
                     </div>
-                    
+
                     <ul className="space-y-3">
                       {section.content.map((item, itemIndex) => (
                         <li key={itemIndex} className="flex items-start gap-3">
@@ -195,45 +225,77 @@ const ManualApp = () => {
                 <TabsList className="grid w-full grid-cols-3">
                   <TabsTrigger value="passo-a-passo">Passo a Passo</TabsTrigger>
                   <TabsTrigger value="dicas">Dicas de Segurança</TabsTrigger>
-                  <TabsTrigger value="problemas">Solucionando Problemas</TabsTrigger>
+                  <TabsTrigger value="problemas">
+                    Solucionando Problemas
+                  </TabsTrigger>
                 </TabsList>
 
                 <TabsContent value="passo-a-passo" className="space-y-6">
                   <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
                     <p className="text-blue-800 text-sm">
-                      <strong>IMPORTANTE:</strong> Este tutorial irá guiá-lo sobre como fazer o primeiro acesso ao aplicativo Morador Online.
+                      <strong>IMPORTANTE:</strong> Este tutorial irá guiá-lo
+                      sobre como fazer o primeiro acesso ao aplicativo Morador
+                      Online.
                     </p>
                   </div>
 
                   <div className="space-y-4">
-                    <h4 className="font-semibold text-text-primary">Passos para Login:</h4>
+                    <h4 className="font-semibold text-text-primary">
+                      Passos para Login:
+                    </h4>
                     <ol className="space-y-4 text-text-secondary">
                       <li className="flex gap-4">
-                        <span className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">1</span>
+                        <span className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">
+                          1
+                        </span>
                         <div>
-                          <strong>Solicite seu acesso:</strong> WhatsApp <a href="https://wa.me/5561998587580" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">61 99858-7580</a>
+                          <strong>Solicite seu acesso:</strong> WhatsApp{" "}
+                          <a
+                            href="https://wa.me/5561998587580"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-500 hover:underline"
+                          >
+                            61 99858-7580
+                          </a>
                         </div>
                       </li>
                       <li className="flex gap-4">
-                        <span className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">2</span>
+                        <span className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">
+                          2
+                        </span>
                         <div>
-                          <strong>Baixe o aplicativo:</strong> Google Play Store ou App Store
+                          <strong>Baixe o aplicativo:</strong> Google Play Store
+                          ou App Store
                         </div>
                       </li>
                       <li className="flex gap-4">
-                        <span className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">3</span>
+                        <span className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">
+                          3
+                        </span>
                         <div>
-                          <strong>Digite o endereço do portal:</strong> 
-                          <code className="bg-gray-200 px-2 py-1 rounded text-sm ml-2 font-mono">reservaparqueclube.mo.app.br</code>
+                          <strong>Digite o endereço do portal:</strong>
+                          <code className="bg-gray-200 px-2 py-1 rounded text-sm ml-2 font-mono">
+                            reservaparqueclube.mo.app.br
+                          </code>
                         </div>
                       </li>
                       <li className="flex gap-4">
-                        <span className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">4</span>
-                        <div><strong>Insira seu email e senha</strong></div>
+                        <span className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">
+                          4
+                        </span>
+                        <div>
+                          <strong>Insira seu email e senha</strong>
+                        </div>
                       </li>
                       <li className="flex gap-4">
-                        <span className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">5</span>
-                        <div><strong>Aceite os termos</strong> e clique em "ACESSAR"</div>
+                        <span className="bg-primary text-primary-foreground rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">
+                          5
+                        </span>
+                        <div>
+                          <strong>Aceite os termos</strong> e clique em
+                          "ACESSAR"
+                        </div>
                       </li>
                     </ol>
                   </div>
@@ -244,14 +306,19 @@ const ManualApp = () => {
                     <div className="flex items-start gap-3">
                       <Shield className="h-5 w-5 text-blue-600 flex-shrink-0 mt-0.5" />
                       <div>
-                        <h4 className="font-semibold text-blue-800 mb-2">🔒 Senha Segura</h4>
+                        <h4 className="font-semibold text-blue-800 mb-2">
+                          🔒 Senha Segura
+                        </h4>
                         <ul className="text-blue-800 text-sm space-y-1 ml-4">
                           <li>• Pelo menos 8 caracteres</li>
                           <li>• Letras maiúsculas e minúsculas</li>
                           <li>• Números e símbolos</li>
                         </ul>
                         <p className="text-blue-800 text-sm mt-2">
-                          <strong>Exemplo:</strong> <code className="bg-blue-200 px-1 rounded">MinhaSenh@123</code>
+                          <strong>Exemplo:</strong>{" "}
+                          <code className="bg-blue-200 px-1 rounded">
+                            MinhaSenh@123
+                          </code>
                         </p>
                       </div>
                     </div>
@@ -261,9 +328,12 @@ const ManualApp = () => {
                     <div className="flex items-start gap-3">
                       <RefreshCw className="h-5 w-5 text-purple-600 flex-shrink-0 mt-0.5" />
                       <div>
-                        <h4 className="font-semibold text-purple-800 mb-2">Alternar Contas</h4>
+                        <h4 className="font-semibold text-purple-800 mb-2">
+                          Alternar Contas
+                        </h4>
                         <p className="text-purple-800 text-sm">
-                          Use "Trocar Conta" na tela de login para alternar entre diferentes unidades.
+                          Use "Trocar Conta" na tela de login para alternar
+                          entre diferentes unidades.
                         </p>
                       </div>
                     </div>
@@ -272,15 +342,26 @@ const ManualApp = () => {
 
                 <TabsContent value="problemas" className="space-y-6">
                   <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
-                    <h4 className="font-semibold text-yellow-800 mb-3">⚠️ Problemas Comuns</h4>
+                    <h4 className="font-semibold text-yellow-800 mb-3">
+                      ⚠️ Problemas Comuns
+                    </h4>
                     <div className="space-y-3">
                       <div>
-                        <p className="font-medium text-yellow-800 text-sm">Endereço incorreto:</p>
-                        <p className="text-yellow-700 text-sm">Verifique se digitou exatamente como no email de boas-vindas.</p>
+                        <p className="font-medium text-yellow-800 text-sm">
+                          Endereço incorreto:
+                        </p>
+                        <p className="text-yellow-700 text-sm">
+                          Verifique se digitou exatamente como no email de
+                          boas-vindas.
+                        </p>
                       </div>
                       <div>
-                        <p className="font-medium text-yellow-800 text-sm">Email/senha incorretos:</p>
-                        <p className="text-yellow-700 text-sm">Use "Esqueci a senha" se necessário.</p>
+                        <p className="font-medium text-yellow-800 text-sm">
+                          Email/senha incorretos:
+                        </p>
+                        <p className="text-yellow-700 text-sm">
+                          Use "Esqueci a senha" se necessário.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -290,7 +371,9 @@ const ManualApp = () => {
 
             {/* Resumo Rápido */}
             <Card className="p-6 bg-gray-50">
-              <h3 className="text-xl font-semibold text-text-primary mb-4">📋 Resumo Rápido</h3>
+              <h3 className="text-xl font-semibold text-text-primary mb-4">
+                📋 Resumo Rápido
+              </h3>
               <ol className="space-y-2 text-text-secondary">
                 <li>1. Baixe o app Morador Online</li>
                 <li>2. Digite o endereço do portal, email e senha</li>
@@ -303,8 +386,12 @@ const ManualApp = () => {
           {/* Tab - Comunicação */}
           <TabsContent value="comunicacao" className="space-y-6">
             <div className="text-center mb-6">
-              <h2 className="text-2xl font-bold text-blue-800 mb-2">Comunicação</h2>
-              <p className="text-gray-600">Como se comunicar com a administração e síndico</p>
+              <h2 className="text-2xl font-bold text-blue-800 mb-2">
+                Comunicação
+              </h2>
+              <p className="text-gray-600">
+                Como se comunicar com a administração e síndico
+              </p>
             </div>
 
             <Tabs defaultValue="urgente" className="w-full">
@@ -324,36 +411,59 @@ const ManualApp = () => {
                       Como Reportar Emergências
                     </h3>
                   </div>
-                  
+
                   <div className="bg-orange-50 border border-orange-200 rounded-lg p-4 mb-6">
                     <p className="text-orange-800 text-sm">
-                      <strong>IMPORTANTE:</strong> Para emergências reais (incêndio, vazamentos graves), 
-                      sempre ligue primeiro e registre na plataforma depois.
+                      <strong>IMPORTANTE:</strong> Para emergências reais
+                      (incêndio, vazamentos graves), sempre ligue primeiro e
+                      registre na plataforma depois.
                     </p>
                   </div>
 
                   <div className="space-y-4">
-                    <h4 className="font-semibold text-text-primary mb-2">Passo a Passo:</h4>
+                    <h4 className="font-semibold text-text-primary mb-2">
+                      Passo a Passo:
+                    </h4>
                     <ol className="space-y-3 text-text-secondary">
                       <li className="flex gap-3">
-                        <span className="bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">1</span>
-                        <div><strong>Acesse "Ocorrências"</strong> no menu</div>
+                        <span className="bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">
+                          1
+                        </span>
+                        <div>
+                          <strong>Acesse "Ocorrências"</strong> no menu
+                        </div>
                       </li>
                       <li className="flex gap-3">
-                        <span className="bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">2</span>
-                        <div><strong>Clique "Nova Ocorrência"</strong></div>
+                        <span className="bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">
+                          2
+                        </span>
+                        <div>
+                          <strong>Clique "Nova Ocorrência"</strong>
+                        </div>
                       </li>
                       <li className="flex gap-3">
-                        <span className="bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">3</span>
-                        <div><strong>Marque como "URGENTE"</strong></div>
+                        <span className="bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">
+                          3
+                        </span>
+                        <div>
+                          <strong>Marque como "URGENTE"</strong>
+                        </div>
                       </li>
                       <li className="flex gap-3">
-                        <span className="bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">4</span>
-                        <div><strong>Descreva detalhadamente</strong> o problema</div>
+                        <span className="bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">
+                          4
+                        </span>
+                        <div>
+                          <strong>Descreva detalhadamente</strong> o problema
+                        </div>
                       </li>
                       <li className="flex gap-3">
-                        <span className="bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">5</span>
-                        <div><strong>Anexe fotos/vídeos</strong> se possível</div>
+                        <span className="bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">
+                          5
+                        </span>
+                        <div>
+                          <strong>Anexe fotos/vídeos</strong> se possível
+                        </div>
                       </li>
                     </ol>
                   </div>
@@ -374,20 +484,36 @@ const ManualApp = () => {
                   <div className="space-y-4">
                     <ol className="space-y-3 text-text-secondary">
                       <li className="flex gap-3">
-                        <span className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">1</span>
-                        <div><strong>Acesse o "Chat"</strong> no menu principal</div>
+                        <span className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">
+                          1
+                        </span>
+                        <div>
+                          <strong>Acesse o "Chat"</strong> no menu principal
+                        </div>
                       </li>
                       <li className="flex gap-3">
-                        <span className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">2</span>
-                        <div><strong>Selecione "Administração"</strong></div>
+                        <span className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">
+                          2
+                        </span>
+                        <div>
+                          <strong>Selecione "Administração"</strong>
+                        </div>
                       </li>
                       <li className="flex gap-3">
-                        <span className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">3</span>
-                        <div><strong>Digite sua mensagem</strong> de forma clara</div>
+                        <span className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">
+                          3
+                        </span>
+                        <div>
+                          <strong>Digite sua mensagem</strong> de forma clara
+                        </div>
                       </li>
                       <li className="flex gap-3">
-                        <span className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">4</span>
-                        <div><strong>Anexe documentos</strong> se necessário</div>
+                        <span className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">
+                          4
+                        </span>
+                        <div>
+                          <strong>Anexe documentos</strong> se necessário
+                        </div>
                       </li>
                     </ol>
 
@@ -419,20 +545,36 @@ const ManualApp = () => {
                   <div className="space-y-4">
                     <ol className="space-y-3 text-text-secondary">
                       <li className="flex gap-3">
-                        <span className="bg-purple-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">1</span>
-                        <div><strong>Use o chat</strong> ou seção "Sugestões"</div>
+                        <span className="bg-purple-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">
+                          1
+                        </span>
+                        <div>
+                          <strong>Use o chat</strong> ou seção "Sugestões"
+                        </div>
                       </li>
                       <li className="flex gap-3">
-                        <span className="bg-purple-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">2</span>
-                        <div><strong>Categorize</strong> sua sugestão</div>
+                        <span className="bg-purple-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">
+                          2
+                        </span>
+                        <div>
+                          <strong>Categorize</strong> sua sugestão
+                        </div>
                       </li>
                       <li className="flex gap-3">
-                        <span className="bg-purple-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">3</span>
-                        <div><strong>Seja específico</strong> e construtivo</div>
+                        <span className="bg-purple-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">
+                          3
+                        </span>
+                        <div>
+                          <strong>Seja específico</strong> e construtivo
+                        </div>
                       </li>
                       <li className="flex gap-3">
-                        <span className="bg-purple-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">4</span>
-                        <div><strong>Explique os benefícios</strong> da proposta</div>
+                        <span className="bg-purple-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">
+                          4
+                        </span>
+                        <div>
+                          <strong>Explique os benefícios</strong> da proposta
+                        </div>
                       </li>
                     </ol>
                   </div>
@@ -444,13 +586,19 @@ const ManualApp = () => {
           {/* Tab - Assembleias */}
           <TabsContent value="assembleias" className="space-y-6">
             <div className="text-center mb-6">
-              <h2 className="text-2xl font-bold text-indigo-800 mb-2">Assembleias Online</h2>
-              <p className="text-gray-600">Como participar das assembleias do condomínio</p>
+              <h2 className="text-2xl font-bold text-indigo-800 mb-2">
+                Assembleias Online
+              </h2>
+              <p className="text-gray-600">
+                Como participar das assembleias do condomínio
+              </p>
             </div>
 
             <Tabs defaultValue="como-participar" className="w-full">
               <TabsList className="grid w-full grid-cols-3">
-                <TabsTrigger value="como-participar">Como Participar</TabsTrigger>
+                <TabsTrigger value="como-participar">
+                  Como Participar
+                </TabsTrigger>
                 <TabsTrigger value="como-votar">Como Votar</TabsTrigger>
                 <TabsTrigger value="duvidas-assembleia">Dúvidas</TabsTrigger>
               </TabsList>
@@ -469,30 +617,58 @@ const ManualApp = () => {
                   <div className="space-y-4">
                     <ol className="space-y-4 text-text-secondary">
                       <li className="flex gap-4">
-                        <span className="bg-indigo-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">1</span>
-                        <div><strong>Acesse "Serviços" → "Assembleia Online"</strong></div>
+                        <span className="bg-indigo-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">
+                          1
+                        </span>
+                        <div>
+                          <strong>
+                            Acesse "Serviços" → "Assembleia Online"
+                          </strong>
+                        </div>
                       </li>
                       <li className="flex gap-4">
-                        <span className="bg-indigo-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">2</span>
-                        <div><strong>Atualize a tela</strong> (arraste de cima para baixo)</div>
+                        <span className="bg-indigo-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">
+                          2
+                        </span>
+                        <div>
+                          <strong>Atualize a tela</strong> (arraste de cima para
+                          baixo)
+                        </div>
                       </li>
                       <li className="flex gap-4">
-                        <span className="bg-indigo-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">3</span>
-                        <div><strong>Confirme sua presença</strong> na assembleia desejada</div>
+                        <span className="bg-indigo-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">
+                          3
+                        </span>
+                        <div>
+                          <strong>Confirme sua presença</strong> na assembleia
+                          desejada
+                        </div>
                       </li>
                       <li className="flex gap-4">
-                        <span className="bg-indigo-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">4</span>
-                        <div><strong>Verifique sua situação</strong> (botão "Ver Situação")</div>
+                        <span className="bg-indigo-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">
+                          4
+                        </span>
+                        <div>
+                          <strong>Verifique sua situação</strong> (botão "Ver
+                          Situação")
+                        </div>
                       </li>
                       <li className="flex gap-4">
-                        <span className="bg-indigo-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">5</span>
-                        <div><strong>Clique "Entrar"</strong> para acessar todas as funcionalidades</div>
+                        <span className="bg-indigo-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">
+                          5
+                        </span>
+                        <div>
+                          <strong>Clique "Entrar"</strong> para acessar todas as
+                          funcionalidades
+                        </div>
                       </li>
                     </ol>
                   </div>
 
                   <div className="bg-indigo-50 border border-indigo-200 rounded-lg p-4 mt-6">
-                    <h4 className="font-semibold text-indigo-800 mb-3">📋 Funcionalidades Disponíveis</h4>
+                    <h4 className="font-semibold text-indigo-800 mb-3">
+                      📋 Funcionalidades Disponíveis
+                    </h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-indigo-800 text-sm">
                       <div>• Votação nas pautas</div>
                       <div>• Resultados em tempo real</div>
@@ -519,37 +695,67 @@ const ManualApp = () => {
                   <div className="space-y-4">
                     <ol className="space-y-3 text-text-secondary">
                       <li className="flex gap-3">
-                        <span className="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">1</span>
-                        <div><strong>Acesse a aba "Votação"</strong></div>
+                        <span className="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">
+                          1
+                        </span>
+                        <div>
+                          <strong>Acesse a aba "Votação"</strong>
+                        </div>
                       </li>
                       <li className="flex gap-3">
-                        <span className="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">2</span>
-                        <div><strong>Leia a descrição</strong> da pauta</div>
+                        <span className="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">
+                          2
+                        </span>
+                        <div>
+                          <strong>Leia a descrição</strong> da pauta
+                        </div>
                       </li>
                       <li className="flex gap-3">
-                        <span className="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">3</span>
-                        <div><strong>Selecione sua opção</strong> de voto</div>
+                        <span className="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">
+                          3
+                        </span>
+                        <div>
+                          <strong>Selecione sua opção</strong> de voto
+                        </div>
                       </li>
                       <li className="flex gap-3">
-                        <span className="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">4</span>
-                        <div><strong>Adicione justificativa</strong> (opcional)</div>
+                        <span className="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">
+                          4
+                        </span>
+                        <div>
+                          <strong>Adicione justificativa</strong> (opcional)
+                        </div>
                       </li>
                       <li className="flex gap-3">
-                        <span className="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">5</span>
-                        <div><strong>Confirme seu voto</strong></div>
+                        <span className="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-0.5">
+                          5
+                        </span>
+                        <div>
+                          <strong>Confirme seu voto</strong>
+                        </div>
                       </li>
                     </ol>
 
                     <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 mt-6">
-                      <h4 className="font-semibold text-gray-800 mb-3">📊 Tipos de Assembleia</h4>
+                      <h4 className="font-semibold text-gray-800 mb-3">
+                        📊 Tipos de Assembleia
+                      </h4>
                       <div className="space-y-3 text-sm">
                         <div>
-                          <p className="font-medium text-gray-800">Ordinária:</p>
-                          <p className="text-gray-600">Anual - aprovação de contas, eleições</p>
+                          <p className="font-medium text-gray-800">
+                            Ordinária:
+                          </p>
+                          <p className="text-gray-600">
+                            Anual - aprovação de contas, eleições
+                          </p>
                         </div>
                         <div>
-                          <p className="font-medium text-gray-800">Extraordinária:</p>
-                          <p className="text-gray-600">Quando necessário - decisões urgentes</p>
+                          <p className="font-medium text-gray-800">
+                            Extraordinária:
+                          </p>
+                          <p className="text-gray-600">
+                            Quando necessário - decisões urgentes
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -571,16 +777,31 @@ const ManualApp = () => {
                   <div className="space-y-4">
                     <div className="space-y-4 text-sm">
                       <div className="border-l-4 border-yellow-500 pl-4">
-                        <p className="font-medium text-yellow-800">Confirmei presença mas não consigo votar</p>
-                        <p className="text-yellow-700">Verifique sua situação no botão "Ver Situação". Pode haver problemas cadastrais.</p>
+                        <p className="font-medium text-yellow-800">
+                          Confirmei presença mas não consigo votar
+                        </p>
+                        <p className="text-yellow-700">
+                          Verifique sua situação no botão "Ver Situação". Pode
+                          haver problemas cadastrais.
+                        </p>
                       </div>
                       <div className="border-l-4 border-blue-500 pl-4">
-                        <p className="font-medium text-blue-800">Tenho múltiplas unidades</p>
-                        <p className="text-blue-700">O sistema calcula automaticamente os votos baseado nas unidades vinculadas.</p>
+                        <p className="font-medium text-blue-800">
+                          Tenho múltiplas unidades
+                        </p>
+                        <p className="text-blue-700">
+                          O sistema calcula automaticamente os votos baseado nas
+                          unidades vinculadas.
+                        </p>
                       </div>
                       <div className="border-l-4 border-green-500 pl-4">
-                        <p className="font-medium text-green-800">Não vejo a assembleia</p>
-                        <p className="text-green-700">Atualize a tela deslizando para baixo. Se persistir, contate a administração.</p>
+                        <p className="font-medium text-green-800">
+                          Não vejo a assembleia
+                        </p>
+                        <p className="text-green-700">
+                          Atualize a tela deslizando para baixo. Se persistir,
+                          contate a administração.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -592,14 +813,20 @@ const ManualApp = () => {
           {/* Tab - Transparência */}
           <TabsContent value="transparencia" className="space-y-6">
             <div className="text-center mb-6">
-              <h2 className="text-2xl font-bold text-green-800 mb-2">Transparência</h2>
-              <p className="text-gray-600">Acesse documentos e informações do condomínio</p>
+              <h2 className="text-2xl font-bold text-green-800 mb-2">
+                Transparência
+              </h2>
+              <p className="text-gray-600">
+                Acesse documentos e informações do condomínio
+              </p>
             </div>
 
             <Tabs defaultValue="acesso" className="w-full">
               <TabsList className="grid w-full grid-cols-3">
                 <TabsTrigger value="acesso">Como Acessar</TabsTrigger>
-                <TabsTrigger value="documentos">Visualizar Documentos</TabsTrigger>
+                <TabsTrigger value="documentos">
+                  Visualizar Documentos
+                </TabsTrigger>
                 <TabsTrigger value="duvidas">Dúvidas Frequentes</TabsTrigger>
               </TabsList>
 
@@ -610,20 +837,23 @@ const ManualApp = () => {
                       <Shield className="h-5 w-5" />
                       Acesso ao Portal de Transparência
                     </h3>
-                    
+
                     <div className="space-y-6">
                       <div className="flex items-start gap-3">
                         <div className="bg-green-100 text-green-800 rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold">
                           1
                         </div>
                         <div>
-                          <h4 className="font-semibold text-gray-800">Pela Tela Principal</h4>
+                          <h4 className="font-semibold text-gray-800">
+                            Pela Tela Principal
+                          </h4>
                           <p className="text-gray-600 mt-1">
-                            Na tela principal do aplicativo, toque no card "Transparência" para acessar diretamente.
+                            Na tela principal do aplicativo, toque no card
+                            "Transparência" para acessar diretamente.
                           </p>
                           <div className="mt-3">
-                            <img 
-                              src="/src/assets/tela-principal-transparencia.png" 
+                            <img
+                              src="/assets/tela-principal-transparencia.png"
                               alt="Tela principal com card Transparência"
                               className="border rounded-lg shadow-sm max-w-md"
                             />
@@ -636,13 +866,16 @@ const ManualApp = () => {
                           2
                         </div>
                         <div>
-                          <h4 className="font-semibold text-gray-800">Pela Tela de Serviços</h4>
+                          <h4 className="font-semibold text-gray-800">
+                            Pela Tela de Serviços
+                          </h4>
                           <p className="text-gray-600 mt-1">
-                            Acesse "Serviços" no menu inferior e depois toque em "Transparência".
+                            Acesse "Serviços" no menu inferior e depois toque em
+                            "Transparência".
                           </p>
                           <div className="mt-3">
-                            <img 
-                              src="/src/assets/transparencia-acesso-pela-tela-servicos.png" 
+                            <img
+                              src="/assets/transparencia-acesso-pela-tela-servicos.png"
                               alt="Acesso pela tela de serviços"
                               className="border rounded-lg shadow-sm max-w-md"
                             />
@@ -661,20 +894,23 @@ const ManualApp = () => {
                       <BookOpen className="h-5 w-5" />
                       Visualizando e Baixando Documentos
                     </h3>
-                    
+
                     <div className="space-y-6">
                       <div className="flex items-start gap-3">
                         <div className="bg-green-100 text-green-800 rounded-full w-6 h-6 flex items-center justify-center text-sm font-semibold">
                           1
                         </div>
                         <div>
-                          <h4 className="font-semibold text-gray-800">Expandir Card do Documento</h4>
+                          <h4 className="font-semibold text-gray-800">
+                            Expandir Card do Documento
+                          </h4>
                           <p className="text-gray-600 mt-1">
-                            Toque no card do documento desejado para ver as opções disponíveis.
+                            Toque no card do documento desejado para ver as
+                            opções disponíveis.
                           </p>
                           <div className="mt-3">
-                            <img 
-                              src="/src/assets/transparencia-card-expandido-acoes.png" 
+                            <img
+                              src="/assets/transparencia-card-expandido-acoes.png"
                               alt="Card expandido com opções"
                               className="border rounded-lg shadow-sm max-w-md"
                             />
@@ -687,13 +923,16 @@ const ManualApp = () => {
                           2
                         </div>
                         <div>
-                          <h4 className="font-semibold text-gray-800">Ver ou Baixar Arquivo</h4>
+                          <h4 className="font-semibold text-gray-800">
+                            Ver ou Baixar Arquivo
+                          </h4>
                           <p className="text-gray-600 mt-1">
-                            Use o botão "Ver/Baixar arquivo" para visualizar o documento no navegador ou fazer o download.
+                            Use o botão "Ver/Baixar arquivo" para visualizar o
+                            documento no navegador ou fazer o download.
                           </p>
                           <div className="mt-3">
-                            <img 
-                              src="/src/assets/btn-ver-baixar-arquivo.png" 
+                            <img
+                              src="/assets/btn-ver-baixar-arquivo.png"
                               alt="Botão ver/baixar arquivo"
                               className="border rounded-lg shadow-sm max-w-sm"
                             />
@@ -705,9 +944,13 @@ const ManualApp = () => {
                         <div className="flex items-start gap-2">
                           <Lightbulb className="h-5 w-5 text-blue-600 mt-0.5" />
                           <div>
-                            <h4 className="font-semibold text-blue-800">Dica Importante</h4>
+                            <h4 className="font-semibold text-blue-800">
+                              Dica Importante
+                            </h4>
                             <p className="text-blue-700 text-sm">
-                              Os documentos podem ser visualizados diretamente no aplicativo ou baixados para o dispositivo para consulta posterior.
+                              Os documentos podem ser visualizados diretamente
+                              no aplicativo ou baixados para o dispositivo para
+                              consulta posterior.
                             </p>
                           </div>
                         </div>
@@ -724,37 +967,49 @@ const ManualApp = () => {
                       <MessageSquare className="h-5 w-5" />
                       Perguntas Frequentes - Transparência
                     </h3>
-                    
+
                     <div className="space-y-6">
                       <div className="border-l-4 border-green-500 pl-4">
-                        <h4 className="font-semibold text-green-800">Não consigo visualizar o documento</h4>
+                        <h4 className="font-semibold text-green-800">
+                          Não consigo visualizar o documento
+                        </h4>
                         <p className="text-gray-600 mt-1">
-                          Verifique sua conexão com a internet e tente novamente. Se o problema persistir, 
-                          entre em contato com a administração.
+                          Verifique sua conexão com a internet e tente
+                          novamente. Se o problema persistir, entre em contato
+                          com a administração.
                         </p>
                       </div>
 
                       <div className="border-l-4 border-blue-500 pl-4">
-                        <h4 className="font-semibold text-blue-800">O download não está funcionando</h4>
+                        <h4 className="font-semibold text-blue-800">
+                          O download não está funcionando
+                        </h4>
                         <p className="text-gray-600 mt-1">
-                          Certifique-se de que há espaço suficiente no dispositivo e que as permissões 
-                          de download estão habilitadas no navegador.
+                          Certifique-se de que há espaço suficiente no
+                          dispositivo e que as permissões de download estão
+                          habilitadas no navegador.
                         </p>
                       </div>
 
                       <div className="border-l-4 border-orange-500 pl-4">
-                        <h4 className="font-semibold text-orange-800">Não encontro o documento que preciso</h4>
+                        <h4 className="font-semibold text-orange-800">
+                          Não encontro o documento que preciso
+                        </h4>
                         <p className="text-gray-600 mt-1">
-                          Os documentos são atualizados regularmente. Se não encontrar o que procura, 
-                          verifique com a administração se o documento já foi disponibilizado.
+                          Os documentos são atualizados regularmente. Se não
+                          encontrar o que procura, verifique com a administração
+                          se o documento já foi disponibilizado.
                         </p>
                       </div>
 
                       <div className="border-l-4 border-purple-500 pl-4">
-                        <h4 className="font-semibold text-purple-800">Posso acessar documentos antigos?</h4>
+                        <h4 className="font-semibold text-purple-800">
+                          Posso acessar documentos antigos?
+                        </h4>
                         <p className="text-gray-600 mt-1">
-                          Sim, o portal mantém um histórico dos documentos. Use os filtros de data 
-                          para encontrar documentos de períodos anteriores.
+                          Sim, o portal mantém um histórico dos documentos. Use
+                          os filtros de data para encontrar documentos de
+                          períodos anteriores.
                         </p>
                       </div>
 
@@ -762,9 +1017,13 @@ const ManualApp = () => {
                         <div className="flex items-start gap-2">
                           <AlertTriangle className="h-5 w-5 text-amber-600 mt-0.5" />
                           <div>
-                            <h4 className="font-semibold text-amber-800">Precisa de Mais Ajuda?</h4>
+                            <h4 className="font-semibold text-amber-800">
+                              Precisa de Mais Ajuda?
+                            </h4>
                             <p className="text-amber-700 text-sm">
-                              Entre em contato com a administração pelos canais oficiais disponíveis na seção "Contatos" do aplicativo.
+                              Entre em contato com a administração pelos canais
+                              oficiais disponíveis na seção "Contatos" do
+                              aplicativo.
                             </p>
                           </div>
                         </div>
@@ -779,8 +1038,12 @@ const ManualApp = () => {
           {/* Tab - Funcionalidades */}
           <TabsContent value="funcionalidades" className="space-y-6">
             <div className="text-center mb-6">
-              <h2 className="text-2xl font-bold text-purple-800 mb-2">Funcionalidades</h2>
-              <p className="text-gray-600">Todas as funcionalidades do aplicativo</p>
+              <h2 className="text-2xl font-bold text-purple-800 mb-2">
+                Funcionalidades
+              </h2>
+              <p className="text-gray-600">
+                Todas as funcionalidades do aplicativo
+              </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -789,7 +1052,9 @@ const ManualApp = () => {
                   <div className="p-2 rounded-lg bg-primary/10">
                     <Calendar className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="text-xl font-semibold text-text-primary">Reservas</h3>
+                  <h3 className="text-xl font-semibold text-text-primary">
+                    Reservas
+                  </h3>
                 </div>
                 <ul className="space-y-2 text-text-secondary">
                   <li>• Churrasqueiras</li>
@@ -804,7 +1069,9 @@ const ManualApp = () => {
                   <div className="p-2 rounded-lg bg-primary/10">
                     <CreditCard className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="text-xl font-semibold text-text-primary">Financeiro</h3>
+                  <h3 className="text-xl font-semibold text-text-primary">
+                    Financeiro
+                  </h3>
                 </div>
                 <ul className="space-y-2 text-text-secondary">
                   <li>• Visualizar boletos</li>
@@ -819,7 +1086,9 @@ const ManualApp = () => {
                   <div className="p-2 rounded-lg bg-primary/10">
                     <User className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="text-xl font-semibold text-text-primary">Cadastros</h3>
+                  <h3 className="text-xl font-semibold text-text-primary">
+                    Cadastros
+                  </h3>
                 </div>
                 <ul className="space-y-2 text-text-secondary">
                   <li>• Prestadores de serviços</li>
@@ -834,7 +1103,9 @@ const ManualApp = () => {
                   <div className="p-2 rounded-lg bg-primary/10">
                     <Bell className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="text-xl font-semibold text-text-primary">Comunicação</h3>
+                  <h3 className="text-xl font-semibold text-text-primary">
+                    Comunicação
+                  </h3>
                 </div>
                 <ul className="space-y-2 text-text-secondary">
                   <li>• Chat com administração</li>

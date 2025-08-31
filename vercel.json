@@ -1,8 +1,3 @@
 {
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ]
+  // Reescritas removidas para permitir acesso direto a arquivos estáticos
 }
