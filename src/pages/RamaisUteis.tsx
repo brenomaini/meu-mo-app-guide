@@ -1,13 +1,6 @@
 import Layout from "@/components/Layout";
 import { Card } from "@/components/ui/card";
-import {
-  Barbell,
-  Building,
-  DoorOpen,
-  Home,
-  Phone,
-  UtensilsCrossed,
-} from "lucide-react";
+import { Building, DoorOpen, Home, Phone, UtensilsCrossed } from "lucide-react";
 
 const RamaisUteis = () => {
   const ramais = [
@@ -46,7 +39,7 @@ const RamaisUteis = () => {
     },
     {
       category: "Pilotis Torre 01",
-      icon: Barbell,
+      icon: Home,
       items: [
         { name: "Tech - Fone 01", ramal: "#10" },
         { name: "Tech - Fone 02", ramal: "#11" },
@@ -56,7 +49,7 @@ const RamaisUteis = () => {
     },
     {
       category: "Pilotis Torre 02",
-      icon: Barbell,
+      icon: Home,
       items: [
         { name: "Tech - Fone 01", ramal: "#20" },
         { name: "Tech - Fone 02", ramal: "#21" },
@@ -65,7 +58,7 @@ const RamaisUteis = () => {
     },
     {
       category: "Pilotis Torre 03",
-      icon: Barbell,
+      icon: Home,
       items: [
         { name: "Garagem", ramal: "#37" },
         { name: "Tech - Fone 01", ramal: "#38" },
@@ -75,7 +68,7 @@ const RamaisUteis = () => {
     },
     {
       category: "Pilotis Torre 04",
-      icon: Barbell,
+      icon: Home,
       items: [
         { name: "Tech - Fone 01", ramal: "#41" },
         { name: "Tech - Fone 02", ramal: "#42" },
