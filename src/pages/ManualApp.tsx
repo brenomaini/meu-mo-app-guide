@@ -381,6 +381,27 @@ const ManualApp = () => {
                 <li>4. Aproveite todas as funcionalidades!</li>
               </ol>
             </Card>
+
+            {/* Mais tutoriais */}
+            <Card className="p-6 bg-blue-50 border-blue-200 flex items-center justify-between">
+              <div>
+                <h3 className="text-lg font-semibold text-blue-800 mb-2">
+                  Mais tutoriais
+                </h3>
+                <p className="text-blue-700 text-sm mb-2">
+                  Clique para acessar o guia completo do morador com mais dicas
+                  e tutoriais.
+                </p>
+                <a
+                  href="https://docs.mo.app.br/guia-morador/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors font-medium"
+                >
+                  Acessar Guia do Morador
+                </a>
+              </div>
+            </Card>
           </TabsContent>
 
           {/* Tab - Comunicação */}
