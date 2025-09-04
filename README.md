@@ -1,73 +1,134 @@
-# Welcome to your Lovable project
+# Manual Digital do Residencial Parque do Clube
 
-## Project info
+## Sobre o Projeto
 
-**URL**: https://lovable.dev/projects/6f690d7d-2bd8-41dd-b5e6-36d832f06b07
+O **Manual Digital do Residencial Parque do Clube** é uma aplicação web moderna que centraliza todas as informações essenciais para os moradores do condomínio. O projeto oferece acesso fácil e intuitivo a:
 
-## How can I edit this code?
+- 📋 Guia completo do morador
+- 🗺️ Mapas interativos dos espaços e churrasqueiras
+- 📞 Contatos úteis
+- 🔗 Sistema de reservas integrado
+- 📱 Interface responsiva para todos os dispositivos
 
-There are several ways of editing your application.
+**URL do Projeto**: https://manualrpc.vercel.app
 
-**Use Lovable**
+## Como Colaborar
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/6f690d7d-2bd8-41dd-b5e6-36d832f06b07) and start prompting.
+**Este projeto é aberto à colaboração de todos os moradores!** 🏢✨
 
-Changes made via Lovable will be committed automatically to this repo.
+Você pode contribuir de várias maneiras:
 
-**Use your preferred IDE**
+### 1. Reportar Problemas ou Sugestões
+- Abra uma [Issue](https://github.com/seu-usuario/meu-mo-app-guide/issues) para reportar bugs ou sugerir melhorias
+- Descreva claramente o problema ou sugestão
+- Inclua capturas de tela se necessário
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### 2. Contribuir com Código
+Se você tem conhecimento técnico, pode:
+- Fazer fork do repositório
+- Criar uma branch para suas alterações
+- Enviar um Pull Request com suas melhorias
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### 3. Atualizar Informações
+Ajude a manter o manual sempre atualizado:
+- Informações de contatos
+- Novos espaços ou equipamentos
+- Correções de horários e procedimentos
+- Atualizações de empresas homologadas
 
-Follow these steps:
+## Como Editar o Código
+
+### Pré-requisitos
+- Node.js & npm instalados - [instalar com nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Git configurado
+
+### Passos para Desenvolvimento Local
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Passo 1: Clone o repositório
+git clone https://github.com/seu-usuario/meu-mo-app-guide.git
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Passo 2: Navegue para o diretório do projeto
+cd meu-mo-app-guide
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Passo 3: Instale as dependências
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Passo 4: Inicie o servidor de desenvolvimento
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### Fazendo Alterações
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```sh
+# 1. Faça suas alterações no código
+# 2. Teste localmente com npm run dev
+# 3. Faça commit das alterações
+git add .
+git commit -m "Descrição clara das alterações"
 
-**Use GitHub Codespaces**
+# 4. Envie para o GitHub
+git push origin main
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+**Deploy Automático**: Todas as alterações enviadas para o branch `main` são automaticamente deployadas na Vercel! 🚀
 
-## What technologies are used for this project?
+## Tecnologias Utilizadas
 
-This project is built with:
+Este projeto foi construído com tecnologias modernas:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- **Vite** - Build tool rápido e moderno
+- **TypeScript** - JavaScript com tipagem estática
+- **React** - Biblioteca para interfaces de usuário
+- **shadcn/ui** - Componentes de UI elegantes
+- **Tailwind CSS** - Framework CSS utilitário
+- **Lucide React** - Ícones modernos e consistentes
 
-## How can I deploy this project?
+## Deploy e Infraestrutura
 
-Simply open [Lovable](https://lovable.dev/projects/6f690d7d-2bd8-41dd-b5e6-36d832f06b07) and click on Share -> Publish.
+- **Hospedagem**: Vercel
+- **Domínio**: manualrpc.vercel.app
+- **Deploy**: Automático via GitHub
+- **SSL**: Habilitado automaticamente
 
-## Can I connect a custom domain to my Lovable project?
+## Estrutura do Projeto
 
-Yes, you can!
+```
+src/
+├── components/          # Componentes reutilizáveis
+│   ├── ui/             # Componentes base do shadcn/ui
+│   ├── Layout.tsx      # Layout principal
+│   ├── Header.tsx      # Cabeçalho
+│   └── Interactive*.tsx # Mapas interativos
+├── pages/              # Páginas da aplicação
+│   ├── Manual.tsx      # Guia do morador
+│   ├── MapasEspacos.tsx # Mapas dos espaços
+│   ├── MapasChurrasqueiras.tsx # Mapas das churrasqueiras
+│   └── Contatos.tsx    # Contatos úteis
+├── assets/             # Imagens e recursos
+└── lib/                # Utilitários e configurações
+```
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Para Administradores
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+### Atualizando Informações de Reserva
+Os IDs dos itens de reserva estão mapeados nos arquivos:
+- `src/components/InteractiveCondominiumMap.tsx`
+- `src/components/InteractiveChurrasqueirasMap.tsx`
+
+### Adicionando Novos Espaços
+1. Atualize os dados nos componentes de mapa
+2. Adicione as coordenadas corretas
+3. Configure os links de reserva apropriados
+
+## Licença
+
+Este projeto é de código aberto e está disponível para todos os moradores do Residencial Parque do Clube.
+
+## Contato
+
+Para dúvidas técnicas ou sugestões sobre o projeto, entre em contato através dos canais oficiais do condomínio ou abra uma issue neste repositório.
+
+---
+
+**Desenvolvido com ❤️ para a comunidade do Residencial Parque do Clube**
