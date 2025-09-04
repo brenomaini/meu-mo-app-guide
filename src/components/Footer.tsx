@@ -1,3 +1,5 @@
+import { Github } from "lucide-react";
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -17,8 +19,9 @@ const Footer = () => {
               href="https://github.com/brenomaini/meu-mo-app-guide"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline text-primary hover:text-primary/80"
+              className="inline-flex items-center gap-1 underline text-primary hover:text-primary/80"
             >
+              <Github className="h-4 w-4" />
               GitHub: brenomaini/meu-mo-app-guide
             </a>
           </p>
